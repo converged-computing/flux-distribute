@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: &name install-flux
+  labels:
+    app: *name
+spec:
+  selector:
+    matchLabels:
+      app: *name
+  template:
+    metadata:
+      labels:
+        app: *name
+    spec:
+      hostNetwork: true
+      hostPID: true
+      # The service account gives permission to list nodes, which we need
+      # to generate the flux config
+      serviceAccount: *name
+      containers:
+      - image: ghcr.io/converged-computing/flux-distribute:latest
+        imagePullPolicy: Always
+        name: *name
+        # nsenter enters the process of the running host (vs. container)
+        # You can sleep infinity and nsenter with bash to test or debug
+        #command: ["sleep", "infinity"]
+        command: ["/bin/bash"]        
+        args: ["/flux-install/entrypoint.sh"] 
+        resources:
+          requests:
+            {}
+          limits:
+            {}
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - name: hostpath
+          mountPath: /mnt/install
+      volumes:
+      - name: hostpath
+        hostPath:
+          path: /mnt/install
+          type: DirectoryOrCreate
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: install-flux
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: install-flux
+rules:
+- apiGroups: [""]
+  resources: ["nodes"]
+  verbs: ["get", "watch", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: &name install-flux
+subjects:
+- kind: ServiceAccount
+  name: *name
+  namespace: default
+roleRef:
+  kind: ClusterRole
+  name: *name
+  apiGroup: rbac.authorization.k8s.io
