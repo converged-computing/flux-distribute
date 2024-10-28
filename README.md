@@ -1,4 +1,4 @@
-# Flux Distribution
+# Flux Distribute
 
 This is an experiment to install Flux to Kubernetes nodes, where we could try:
 
