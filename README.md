@@ -113,7 +113,7 @@ root@kind-worker:/# flux resource list
       down      0        0        0 
 ```
 
-Boum!
+Boum! Bing badda... boom! 💥
 
 ## Limitations
 
