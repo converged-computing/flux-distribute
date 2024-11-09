@@ -1,0 +1,10 @@
+apiVersion: flux-framework.org/v1alpha2
+kind: MiniCluster
+metadata:
+  name: flux
+spec:
+  size: 8
+  flux:
+    topology: kary:2
+  containers:
+    - image: rockylinux:9

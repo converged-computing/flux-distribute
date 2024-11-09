@@ -139,6 +139,11 @@ And then see flux running! This is from the node, actually:
 kubectl logs install-flux-xxxx -f
 ```
 
+## Experiments
+
+ - [topology](topology): testing bringing up Flux miniclusters with different topologies, the idea being we can eventually extend to a distribution strategy (and test how the topology influences distribution performance).
+
+
 ## License
 
 HPCIC DevTools is distributed under the terms of the MIT license.
