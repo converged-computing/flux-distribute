@@ -1,0 +1,212 @@
+Collecting Jinja2
+  Obtaining dependency information for Jinja2 from https://files.pythonhosted.org/packages/31/80/3a54838c3fb461f6fec263ebf3a3a41771bd05190238de3486aae8540c36/jinja2-3.1.4-py3-none-any.whl.metadata
+  Downloading jinja2-3.1.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting MarkupSafe>=2.0 (from Jinja2)
+  Obtaining dependency information for MarkupSafe>=2.0 from https://files.pythonhosted.org/packages/53/8f/f339c98a178f3c1e545622206b40986a4c3307fe39f70ccd3d9df9a9e425/MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Downloading jinja2-3.1.4-py3-none-any.whl (133 kB)
+[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/133.3 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━[0m [32m71.7/133.3 kB[0m [31m3.0 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m133.3/133.3 kB[0m [31m4.0 MB/s[0m eta [36m0:00:00[0m
+[?25hDownloading MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+Installing collected packages: MarkupSafe, Jinja2
+Successfully installed Jinja2-3.1.4 MarkupSafe-3.0.2
+[33mWARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv[0m[33m
+[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m23.2.1[0m[39;49m -> [0m[32;49m24.3.1[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpython3 -m pip install --upgrade pip[0m
+NODES
+4
+TOPOLOGY diagram
+0 flux-sample-0: full
+└─ 1 flux-sample-1: full
+   └─ 2 flux-sample-2: full
+      └─ 3 flux-sample-3: full
+TOPOLOGY description
+kary:1
+EVENT create-archive-1
+
+real	0m3.000s
+user	0m1.100s
+sys	0m0.863s
+EVENT distribute-all-nodes-1
+
+real	0m2.238s
+user	0m0.001s
+sys	0m0.006s
+EVENT clean-all-nodes-1
+
+real	0m0.199s
+user	0m0.000s
+sys	0m0.008s
+EVENT delete-archive-all-nodes-1
+
+real	0m0.022s
+user	0m0.002s
+sys	0m0.006s
+EVENT create-leaf-nodes-1
+
+real	0m2.993s
+user	0m1.135s
+sys	0m0.834s
+EVENT distribute-leaf-nodes-1
+
+real	0m1.382s
+user	0m0.000s
+sys	0m0.007s
+EVENT clean-leaf-nodes-1
+
+real	0m0.190s
+user	0m0.002s
+sys	0m0.006s
+EVENT delete-archive-leaf-nodes-1
+
+real	0m0.021s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-middle-nodes-1
+
+real	0m2.988s
+user	0m1.118s
+sys	0m0.858s
+EVENT distribute-middle-nodes-0-1
+
+real	0m1.459s
+user	0m0.002s
+sys	0m0.005s
+EVENT distribute-middle-nodes-1-1
+
+real	0m1.384s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-middle-nodes-1
+
+real	0m0.190s
+user	0m0.001s
+sys	0m0.007s
+EVENT delete-archive-middle-nodes-1
+
+real	0m0.021s
+user	0m0.002s
+sys	0m0.006s
+EVENT create-archive-2
+
+real	0m6.058s
+user	0m2.298s
+sys	0m1.723s
+EVENT distribute-all-nodes-2
+
+real	0m4.237s
+user	0m0.000s
+sys	0m0.008s
+EVENT clean-all-nodes-2
+
+real	0m0.371s
+user	0m0.001s
+sys	0m0.006s
+EVENT delete-archive-all-nodes-2
+
+real	0m0.021s
+user	0m0.004s
+sys	0m0.004s
+EVENT create-leaf-nodes-2
+
+real	0m5.941s
+user	0m2.254s
+sys	0m1.692s
+EVENT distribute-leaf-nodes-2
+
+real	0m2.867s
+user	0m0.000s
+sys	0m0.006s
+EVENT clean-leaf-nodes-2
+
+real	0m0.391s
+user	0m0.000s
+sys	0m0.008s
+EVENT delete-archive-leaf-nodes-2
+
+real	0m0.028s
+user	0m0.003s
+sys	0m0.006s
+EVENT create-middle-nodes-2
+
+real	0m5.985s
+user	0m2.292s
+sys	0m1.683s
+EVENT distribute-middle-nodes-0-2
+
+real	0m2.828s
+user	0m0.000s
+sys	0m0.007s
+EVENT distribute-middle-nodes-1-2
+
+real	0m3.047s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-middle-nodes-2
+
+real	0m0.368s
+user	0m0.000s
+sys	0m0.008s
+EVENT delete-archive-middle-nodes-2
+
+real	0m0.021s
+user	0m0.001s
+sys	0m0.006s
+SCRIPT entrypoint
+
+#!/bin/bash
+# flux-topology.sh
+
+# Print the overlay to show the topology
+echo "NODES"
+echo "4"
+echo "TOPOLOGY diagram"
+flux overlay status
+echo "TOPOLOGY description"
+echo "kary:1"
+
+# Go up to 10 sizes for now (matches container size)
+for size in $(seq 1 2)
+  do
+    # Create the archive and time it
+    echo "EVENT create-archive-${size}"
+    time flux archive create --name create-archive-${size} --dir /chonks ${size}gb.txt
+
+    # Distribute to all nodes, but to /tmp because file exists in /chonks
+    echo "EVENT distribute-all-nodes-${size}"
+    time flux exec -r all -x 0 flux archive extract --name create-archive-${size} -C /tmp
+
+    # Cleanup all archive on all nodes
+    echo "EVENT clean-all-nodes-${size}"
+    time flux exec -r all rm -rf /tmp/${size}gb.txt
+
+    echo "EVENT delete-archive-all-nodes-${size}"
+    time flux exec -r all flux archive remove --name create-archive-${size} 2>/dev/null
+
+    # Next, do the same for the root node (level 0) to the deepest level (leaves)
+    echo "EVENT create-leaf-nodes-${size}"
+    time flux archive create --name create-archive-leaves-${size} --dir /chonks ${size}gb.txt
+    echo "EVENT distribute-leaf-nodes-${size}"
+    time flux exec -r 3 -x 0 flux archive extract --name create-archive-leaves-${size} -C /tmp
+    # Cleanup again    
+    echo "EVENT clean-leaf-nodes-${size}"
+    time flux exec -r all rm -rf /tmp/${size}gb.txt
+    echo "EVENT delete-archive-leaf-nodes-${size}"
+    time flux exec -r all flux archive remove --name create-archive-leaves-${size} 2>/dev/null
+
+    # Finally, get the middle node and distribute to middle level first, then middle to last
+    echo "EVENT create-middle-nodes-${size}"
+    time flux archive create --name create-archive-middle-${size} --dir /chonks ${size}gb.txt
+    echo "EVENT distribute-middle-nodes-0-${size}"
+    time flux exec -r 2 -x 0 flux archive extract --name create-archive-middle-${size} -C /tmp
+    echo "EVENT distribute-middle-nodes-1-${size}"
+    time flux exec -r 3 -x 0 flux archive extract --name create-archive-middle-${size} -C /tmp
+    echo "EVENT clean-middle-nodes-${size}"
+    time flux exec -r all rm -rf /tmp/${size}gb.txt
+    echo "EVENT delete-archive-middle-nodes-${size}"
+    time flux exec -r all flux archive remove --name create-archive-middle-${size} 2>/dev/null
+done
+
+# Show self!
+echo "SCRIPT entrypoint"
+cat $0

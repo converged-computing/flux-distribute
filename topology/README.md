@@ -91,4 +91,3 @@ flux exec -r all ls ${guts_dir}fake*
 # Clean up our fake assets
 flux exec -r all rm -rf ${guts}
 ```
-
