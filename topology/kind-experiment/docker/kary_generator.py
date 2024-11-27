@@ -11,6 +11,7 @@ import json
 import os
 import sys
 import copy
+import re
 
 def get_parser():
     parser = argparse.ArgumentParser(
@@ -37,7 +38,7 @@ def get_parser():
     parser.add_argument(
         "--min-nodes",
         help="minimum number of nodes (defaults to 4)",
-        default=4,
+        default=30,
         type=int,
     )
     parser.add_argument(
@@ -86,7 +87,7 @@ class TopologyParser:
             )
         out, err = p.communicate()
         out = out.decode("utf-8")
-        levels = self.parse_levels(out)
+        levels = self.parse_levels(out, nodes)
 
         # If we have more than one level, ensure the direct children of root
         # >= half the nodes, which indicate a mostly flat graph (our stopping point)
@@ -115,10 +116,13 @@ class TopologyParser:
         # We have seen it!
         return True
 
-    def parse_levels(self, out):
+    def parse_levels(self, out, nodes):
         """
         Parse levels from output into structure.
         """
+        import IPython
+        IPython.embed()
+        sys.exit()
         levels = {0: ["0"]}
         seen = set()
         for i, line in enumerate(out.split("\n")):
@@ -131,9 +135,10 @@ class TopologyParser:
             line = line.split(self.job_name, 1)
 
             # The first part we can parse up to the number to get the level
+            rank = int(re.search('[0-9]+', line[0]).group())            
             for level, char in enumerate(line[0]):
                 try:
-                    rank = int(char)
+                    int(char)
                 except:
                     continue
                 # Each level is 3 in

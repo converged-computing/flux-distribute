@@ -5,7 +5,7 @@ Collecting MarkupSafe>=2.0 (from Jinja2)
   Obtaining dependency information for MarkupSafe>=2.0 from https://files.pythonhosted.org/packages/53/8f/f339c98a178f3c1e545622206b40986a4c3307fe39f70ccd3d9df9a9e425/MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
   Downloading MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
 Downloading jinja2-3.1.4-py3-none-any.whl (133 kB)
-[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/133.3 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m133.3/133.3 kB[0m [31m6.6 MB/s[0m eta [36m0:00:00[0m
+[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/133.3 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m133.3/133.3 kB[0m [31m7.0 MB/s[0m eta [36m0:00:00[0m
 [?25hDownloading MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
 Installing collected packages: MarkupSafe, Jinja2
 Successfully installed Jinja2-3.1.4 MarkupSafe-3.0.2
@@ -24,133 +24,133 @@ TOPOLOGY description
 kary:2
 EVENT create-archive-1
 
-real	0m2.977s
-user	0m1.086s
-sys	0m0.869s
+real	0m2.941s
+user	0m1.103s
+sys	0m0.847s
 EVENT distribute-all-nodes-1
 
-real	0m2.194s
+real	0m2.116s
 user	0m0.001s
 sys	0m0.006s
 EVENT clean-all-nodes-1
 
-real	0m0.251s
-user	0m0.001s
-sys	0m0.007s
+real	0m0.243s
+user	0m0.002s
+sys	0m0.005s
 EVENT delete-archive-all-nodes-1
 
-real	0m0.023s
-user	0m0.003s
-sys	0m0.007s
+real	0m0.022s
+user	0m0.004s
+sys	0m0.005s
 EVENT create-leaf-nodes-1
 
-real	0m2.964s
-user	0m1.156s
-sys	0m0.813s
+real	0m3.118s
+user	0m1.176s
+sys	0m0.893s
 EVENT distribute-leaf-nodes-1
 
-real	0m1.476s
-user	0m0.001s
-sys	0m0.006s
+real	0m1.479s
+user	0m0.002s
+sys	0m0.005s
 EVENT clean-leaf-nodes-1
 
-real	0m0.190s
-user	0m0.003s
-sys	0m0.005s
+real	0m0.187s
+user	0m0.001s
+sys	0m0.006s
 EVENT delete-archive-leaf-nodes-1
 
-real	0m0.019s
-user	0m0.001s
-sys	0m0.007s
+real	0m0.020s
+user	0m0.005s
+sys	0m0.003s
 EVENT create-middle-nodes-1
 
-real	0m2.930s
-user	0m1.127s
-sys	0m0.826s
+real	0m3.080s
+user	0m1.128s
+sys	0m0.889s
 EVENT distribute-middle-nodes-0-1
 
-real	0m1.705s
+real	0m1.640s
 user	0m0.001s
-sys	0m0.006s
+sys	0m0.007s
 EVENT distribute-middle-nodes-1-1
 
-real	0m1.484s
-user	0m0.001s
-sys	0m0.006s
+real	0m1.433s
+user	0m0.002s
+sys	0m0.005s
 EVENT clean-middle-nodes-1
 
 real	0m0.201s
 user	0m0.000s
-sys	0m0.007s
+sys	0m0.008s
 EVENT delete-archive-middle-nodes-1
 
 real	0m0.018s
 user	0m0.000s
-sys	0m0.008s
+sys	0m0.007s
 EVENT create-archive-2
 
-real	0m5.876s
-user	0m2.184s
-sys	0m1.733s
+real	0m5.992s
+user	0m2.307s
+sys	0m1.691s
 EVENT distribute-all-nodes-2
 
-real	0m4.156s
-user	0m0.001s
-sys	0m0.007s
-EVENT clean-all-nodes-2
-
-real	0m0.374s
+real	0m4.209s
 user	0m0.002s
 sys	0m0.006s
+EVENT clean-all-nodes-2
+
+real	0m0.400s
+user	0m0.003s
+sys	0m0.004s
 EVENT delete-archive-all-nodes-2
 
-real	0m0.022s
-user	0m0.000s
-sys	0m0.008s
+real	0m0.023s
+user	0m0.002s
+sys	0m0.006s
 EVENT create-leaf-nodes-2
 
-real	0m6.011s
-user	0m2.285s
-sys	0m1.713s
+real	0m5.937s
+user	0m2.189s
+sys	0m1.766s
 EVENT distribute-leaf-nodes-2
 
-real	0m2.848s
-user	0m0.000s
-sys	0m0.007s
+real	0m3.014s
+user	0m0.001s
+sys	0m0.006s
 EVENT clean-leaf-nodes-2
 
-real	0m0.379s
-user	0m0.003s
+real	0m0.360s
+user	0m0.002s
 sys	0m0.005s
 EVENT delete-archive-leaf-nodes-2
 
 real	0m0.023s
-user	0m0.001s
-sys	0m0.007s
+user	0m0.003s
+sys	0m0.005s
 EVENT create-middle-nodes-2
 
-real	0m5.902s
-user	0m2.211s
-sys	0m1.702s
+real	0m6.053s
+user	0m2.302s
+sys	0m1.716s
 EVENT distribute-middle-nodes-0-2
 
-real	0m3.490s
-user	0m0.002s
-sys	0m0.006s
+real	0m3.281s
+user	0m0.000s
+sys	0m0.007s
 EVENT distribute-middle-nodes-1-2
 
-real	0m3.011s
+real	0m3.120s
 user	0m0.000s
 sys	0m0.007s
 EVENT clean-middle-nodes-2
 
-real	0m0.409s
+real	0m0.378s
 user	0m0.000s
 sys	0m0.008s
 EVENT delete-archive-middle-nodes-2
 
-real	0m0.024s
-user	0m0.002s
+real	0m0.022s
+user	0m0.001s
 sys	0m0.007s
 SCRIPT entrypoint
 

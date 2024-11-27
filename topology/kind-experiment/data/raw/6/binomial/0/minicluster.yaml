@@ -4,12 +4,15 @@ metadata:
   name: flux-sample
 spec:
   size: 6
+  interactive: true
   flux:
     topology: binomial
+    container:
+      image: ghcr.io/converged-computing/flux-view-ubuntu:tag-jammy-flux-0.61.2
   logging:
     quiet: true
   containers:
-    - image: ghcr.io/converged-computing/container-chonks:topology-test
+    - image: ghcr.io/converged-computing/container-chonks:topology-test-ubuntu-small
       command: /bin/bash /entrypoint.sh
       launcher: true
       # pullAlways: true

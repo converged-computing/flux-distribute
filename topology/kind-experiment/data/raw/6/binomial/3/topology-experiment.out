@@ -5,7 +5,7 @@ Collecting MarkupSafe>=2.0 (from Jinja2)
   Obtaining dependency information for MarkupSafe>=2.0 from https://files.pythonhosted.org/packages/53/8f/f339c98a178f3c1e545622206b40986a4c3307fe39f70ccd3d9df9a9e425/MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
   Downloading MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
 Downloading jinja2-3.1.4-py3-none-any.whl (133 kB)
-[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/133.3 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m133.3/133.3 kB[0m [31m5.6 MB/s[0m eta [36m0:00:00[0m
+[?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/133.3 kB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m133.3/133.3 kB[0m [31m7.5 MB/s[0m eta [36m0:00:00[0m
 [?25hDownloading MarkupSafe-3.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
 Installing collected packages: MarkupSafe, Jinja2
 Successfully installed Jinja2-3.1.4 MarkupSafe-3.0.2
@@ -26,132 +26,132 @@ TOPOLOGY description
 binomial
 EVENT create-archive-1
 
-real	0m2.967s
-user	0m1.097s
-sys	0m0.852s
+real	0m3.076s
+user	0m1.150s
+sys	0m0.887s
 EVENT distribute-all-nodes-1
 
-real	0m3.042s
-user	0m0.000s
-sys	0m0.008s
+real	0m3.075s
+user	0m0.002s
+sys	0m0.006s
 EVENT clean-all-nodes-1
 
-real	0m0.209s
-user	0m0.004s
-sys	0m0.004s
+real	0m0.196s
+user	0m0.003s
+sys	0m0.005s
 EVENT delete-archive-all-nodes-1
 
-real	0m0.019s
-user	0m0.003s
-sys	0m0.005s
+real	0m0.020s
+user	0m0.001s
+sys	0m0.007s
 EVENT create-leaf-nodes-1
 
-real	0m3.070s
-user	0m1.108s
-sys	0m0.897s
+real	0m3.027s
+user	0m1.121s
+sys	0m0.868s
 EVENT distribute-leaf-nodes-1
 
-real	0m1.683s
-user	0m0.000s
-sys	0m0.007s
+real	0m1.914s
+user	0m0.003s
+sys	0m0.005s
 EVENT clean-leaf-nodes-1
 
-real	0m0.190s
-user	0m0.000s
-sys	0m0.008s
+real	0m0.201s
+user	0m0.001s
+sys	0m0.007s
 EVENT delete-archive-leaf-nodes-1
 
-real	0m0.018s
-user	0m0.001s
-sys	0m0.007s
+real	0m0.020s
+user	0m0.002s
+sys	0m0.006s
 EVENT create-middle-nodes-1
 
-real	0m2.925s
-user	0m1.102s
-sys	0m0.819s
+real	0m3.052s
+user	0m1.113s
+sys	0m0.915s
 EVENT distribute-middle-nodes-0-1
 
-real	0m2.175s
-user	0m0.000s
-sys	0m0.007s
+real	0m2.243s
+user	0m0.004s
+sys	0m0.005s
 EVENT distribute-middle-nodes-1-1
 
-real	0m1.870s
-user	0m0.002s
-sys	0m0.005s
+real	0m1.799s
+user	0m0.001s
+sys	0m0.006s
 EVENT clean-middle-nodes-1
 
-real	0m0.209s
-user	0m0.003s
-sys	0m0.004s
-EVENT delete-archive-middle-nodes-1
-
-real	0m0.019s
+real	0m0.212s
 user	0m0.001s
 sys	0m0.007s
+EVENT delete-archive-middle-nodes-1
+
+real	0m0.021s
+user	0m0.001s
+sys	0m0.008s
 EVENT create-archive-2
 
-real	0m5.942s
-user	0m2.302s
-sys	0m1.619s
+real	0m6.094s
+user	0m2.303s
+sys	0m1.755s
 EVENT distribute-all-nodes-2
 
-real	0m6.070s
-user	0m0.003s
-sys	0m0.005s
+real	0m5.906s
+user	0m0.002s
+sys	0m0.006s
 EVENT clean-all-nodes-2
 
-real	0m0.393s
-user	0m0.002s
-sys	0m0.006s
+real	0m0.394s
+user	0m0.003s
+sys	0m0.005s
 EVENT delete-archive-all-nodes-2
 
-real	0m0.025s
-user	0m0.002s
-sys	0m0.006s
+real	0m0.023s
+user	0m0.003s
+sys	0m0.005s
 EVENT create-leaf-nodes-2
 
-real	0m5.774s
-user	0m2.145s
-sys	0m1.689s
+real	0m5.981s
+user	0m2.279s
+sys	0m1.699s
 EVENT distribute-leaf-nodes-2
 
-real	0m3.620s
-user	0m0.001s
-sys	0m0.006s
+real	0m3.599s
+user	0m0.002s
+sys	0m0.005s
 EVENT clean-leaf-nodes-2
 
-real	0m0.411s
-user	0m0.002s
-sys	0m0.006s
+real	0m0.385s
+user	0m0.003s
+sys	0m0.005s
 EVENT delete-archive-leaf-nodes-2
 
-real	0m0.023s
+real	0m0.024s
 user	0m0.002s
 sys	0m0.006s
 EVENT create-middle-nodes-2
 
-real	0m5.885s
-user	0m2.196s
-sys	0m1.673s
+real	0m6.041s
+user	0m2.269s
+sys	0m1.690s
 EVENT distribute-middle-nodes-0-2
 
-real	0m4.417s
-user	0m0.001s
-sys	0m0.007s
+real	0m4.409s
+user	0m0.002s
+sys	0m0.006s
 EVENT distribute-middle-nodes-1-2
 
-real	0m3.709s
-user	0m0.001s
+real	0m3.706s
+user	0m0.002s
 sys	0m0.006s
 EVENT clean-middle-nodes-2
 
-real	0m0.422s
-user	0m0.002s
-sys	0m0.007s
+real	0m0.411s
+user	0m0.004s
+sys	0m0.005s
 EVENT delete-archive-middle-nodes-2
 
-real	0m0.023s
+real	0m0.022s
 user	0m0.002s
 sys	0m0.006s
 SCRIPT entrypoint

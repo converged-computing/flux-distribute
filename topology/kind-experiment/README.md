@@ -48,14 +48,14 @@ kubectl apply -f https://raw.githubusercontent.com/flux-framework/flux-operator/
 Run the experiment!
 
 ```bash
-python run-experiment.py --data ./kary-designs.json --max-size=4
+python run-experiment.py --data ./kary-designs.json --max-size=2
 ```
 ```console
 Experiments are done!
 total time to run is 3782.7171614170074 seconds
 ```
 
-Let's look at 6 "nodes"
+Let's look at 6 "nodes" - these go up to size 4, but we didn't include all the ranks (so incorrect)
 
 ![data/parsed/clean-all-nodes-nodes-6.png](data/parsed/clean-all-nodes-nodes-6.png)
 ![data/parsed/clean-leaf-nodes-nodes-6.png](data/parsed/clean-leaf-nodes-nodes-6.png)
@@ -70,5 +70,7 @@ Let's look at 6 "nodes"
 ![data/parsed/distribute-leaf-nodes-nodes-6.png](data/parsed/distribute-leaf-nodes-nodes-6.png)
 ![data/parsed/distribute-middle-nodes-0-nodes-6.png](data/parsed/distribute-middle-nodes-0-nodes-6.png)
 ![data/parsed/distribute-middle-nodes-1-nodes-6.png](data/parsed/distribute-middle-nodes-1-nodes-6.png)
+
+To get data without segfault I had to limit the size of the archive to 2GB.
 
 It looks like topology does matter for distribution steps, but this is on one local machine. We need to test at larger sizes in a cloud.
