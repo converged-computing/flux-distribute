@@ -106,7 +106,7 @@ This will allow for more "kary" designs.
 ![data/parsed-exact-30/delete-archive-leaf-nodes-nodes-30.png](data/parsed-exact-30/delete-archive-leaf-nodes-nodes-30.png)
 ![data/parsed-exact-30/delete-archive-middle-nodes-nodes-30.png](data/parsed-exact-30/delete-archive-middle-nodes-nodes-30.png)
 ![data/parsed-exact-30/distribute-all-nodes-nodes-30.png](data/parsed-exact-30/distribute-all-nodes-nodes-30.png)
-![data/parsed-exact-30/distribute-leaf-nodes-nodes-30.png](data/parsed-exact-30/distribute-leaf-nodes-nodes-6.png)
+![data/parsed-exact-30/distribute-leaf-nodes-nodes-30.png](data/parsed-exact-30/distribute-leaf-nodes-nodes-30.png)
 ![data/parsed-exact-30/distribute-middle-nodes-0-nodes-30.png](data/parsed-exact-30/distribute-middle-nodes-0-nodes-30.png)
 ![data/parsed-exact-30/distribute-middle-nodes-1-nodes-30.png](data/parsed-exact-30/distribute-middle-nodes-1-nodes-30.png)
 
