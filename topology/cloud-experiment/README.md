@@ -96,18 +96,18 @@ Let's look at 6 "nodes"
 
 This will allow for more "kary" designs.
 
-![data/parsed-exact-30/clean-all-nodes-nodes-6.png](data/parsed-exact-30/clean-all-nodes-nodes-6.png)
-![data/parsed-exact-30/clean-leaf-nodes-nodes-6.png](data/parsed-exact-30/clean-leaf-nodes-nodes-6.png)
-![data/parsed-exact-30/clean-middle-nodes-nodes-6.png](data/parsed-exact-30/clean-middle-nodes-nodes-6.png)
-![data/parsed-exact-30/create-archive-nodes-6.png](data/parsed-exact-30/create-archive-nodes-6.png)
-![data/parsed-exact-30/create-leaf-nodes-nodes-6.png](data/parsed-exact-30/create-leaf-nodes-nodes-6.png)
-![data/parsed-exact-30/create-middle-nodes-nodes-6.png](data/parsed-exact-30/create-middle-nodes-nodes-6.png)
-![data/parsed-exact-30/delete-archive-all-nodes-nodes-6.png](data/parsed-exact-30/delete-archive-all-nodes-nodes-6.png)
-![data/parsed-exact-30/delete-archive-leaf-nodes-nodes-6.png](data/parsed-exact-30/delete-archive-leaf-nodes-nodes-6.png)
-![data/parsed-exact-30/delete-archive-middle-nodes-nodes-6.png](data/parsed-exact-30/delete-archive-middle-nodes-nodes-6.png)
-![data/parsed-exact-30/distribute-all-nodes-nodes-6.png](data/parsed-exact-30/distribute-all-nodes-nodes-6.png)
-![data/parsed-exact-30/distribute-leaf-nodes-nodes-6.png](data/parsed-exact-30/distribute-leaf-nodes-nodes-6.png)
-![data/parsed-exact-30/distribute-middle-nodes-0-nodes-6.png](data/parsed-exact-30/distribute-middle-nodes-0-nodes-6.png)
-![data/parsed-exact-30/distribute-middle-nodes-1-nodes-6.png](data/parsed-exact-30/distribute-middle-nodes-1-nodes-6.png)
+![data/parsed-exact-30/clean-all-nodes-nodes-30.png](data/parsed-exact-30/clean-all-nodes-nodes-30.png)
+![data/parsed-exact-30/clean-leaf-nodes-nodes-30.png](data/parsed-exact-30/clean-leaf-nodes-nodes-30.png)
+![data/parsed-exact-30/clean-middle-nodes-nodes-30.png](data/parsed-exact-30/clean-middle-nodes-nodes-30.png)
+![data/parsed-exact-30/create-archive-nodes-30.png](data/parsed-exact-30/create-archive-nodes-30.png)
+![data/parsed-exact-30/create-leaf-nodes-nodes-30.png](data/parsed-exact-30/create-leaf-nodes-nodes-30.png)
+![data/parsed-exact-30/create-middle-nodes-nodes-30.png](data/parsed-exact-30/create-middle-nodes-nodes-30.png)
+![data/parsed-exact-30/delete-archive-all-nodes-nodes-30.png](data/parsed-exact-30/delete-archive-all-nodes-nodes-30.png)
+![data/parsed-exact-30/delete-archive-leaf-nodes-nodes-30.png](data/parsed-exact-30/delete-archive-leaf-nodes-nodes-30.png)
+![data/parsed-exact-30/delete-archive-middle-nodes-nodes-30.png](data/parsed-exact-30/delete-archive-middle-nodes-nodes-30.png)
+![data/parsed-exact-30/distribute-all-nodes-nodes-30.png](data/parsed-exact-30/distribute-all-nodes-nodes-30.png)
+![data/parsed-exact-30/distribute-leaf-nodes-nodes-30.png](data/parsed-exact-30/distribute-leaf-nodes-nodes-6.png)
+![data/parsed-exact-30/distribute-middle-nodes-0-nodes-30.png](data/parsed-exact-30/distribute-middle-nodes-0-nodes-30.png)
+![data/parsed-exact-30/distribute-middle-nodes-1-nodes-30.png](data/parsed-exact-30/distribute-middle-nodes-1-nodes-30.png)
 
 
