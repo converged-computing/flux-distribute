@@ -1,0 +1,19 @@
+apiVersion: flux-framework.org/v1alpha2
+kind: MiniCluster
+metadata:
+  name: flux-sample
+spec:
+  size: 6
+  flux:
+    topology: binomial
+  logging:
+    quiet: true
+  containers:
+    - image: ghcr.io/converged-computing/container-chonks:topology-test
+      command: /bin/bash /entrypoint.sh
+      launcher: true
+      # pullAlways: true
+      commands:
+        pre: |
+          python3 -m pip install Jinja2 
+          python3 /topology_experiment.py --leaf-nodes 3,5 --middle-nodes 1,2,4 --max-size 2 --nodes 6 --topo binomial

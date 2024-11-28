@@ -1,0 +1,19 @@
+apiVersion: flux-framework.org/v1alpha2
+kind: MiniCluster
+metadata:
+  name: flux-sample
+spec:
+  size: 30
+  flux:
+    topology: kary:9
+  logging:
+    quiet: true
+  containers:
+    - image: ghcr.io/converged-computing/container-chonks:topology-test
+      command: /bin/bash /entrypoint.sh
+      launcher: true
+      # pullAlways: true
+      commands:
+        pre: |
+          python3 -m pip install Jinja2 
+          python3 /topology_experiment.py --leaf-nodes 10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29 --middle-nodes 1,2,3,4,5,6,7,8,9 --max-size 2 --nodes 30 --topo kary:9
