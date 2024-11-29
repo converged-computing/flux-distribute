@@ -6,7 +6,26 @@ I am experimenting with topology to figure out how we might map this into a snap
 2. Try to interact with it
 3. Can we make Go bindings to do the same (or do we need to exec call to the host)?
 
-## Usage
+## Docker
+
+Note that we needed to fix a segfault in flux, and then build from the master. To do this, we have a custom
+build in [docker](docker).
+
+```bash
+cd ./docker
+docker build -t ghcr.io/converged-computing/flux-view-ubuntu:tag-noble-flux-0.66.0 .
+docker push ghcr.io/converged-computing/flux-view-ubuntu:tag-noble-flux-0.66.0
+```
+
+## Experiments
+
+After [testing](#testing) we moved into experiments in Kubernetes.
+
+ - [kind-experiment](kind-experiment): local experiment with kind, was challenging due to running the faux nodes (with a large base) on one machine.
+ - [cloud-experiment](cloud-experiment): Run on GKE, much easier to do (but keep aware of costs)
+
+
+## Testing
 
 Install the Flux Operator
 
@@ -91,3 +110,5 @@ flux exec -r all ls ${guts_dir}fake*
 # Clean up our fake assets
 flux exec -r all rm -rf ${guts}
 ```
+
+We will continue with more scaled experiments in the subdirectories.

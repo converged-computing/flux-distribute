@@ -1,0 +1,755 @@
+[1;31merror[0m: [1mexternally-managed-environment[0m
+
+[31m×[0m This environment is externally managed
+[31m╰─>[0m To install Python packages system-wide, try apt install
+[31m   [0m python3-xyz, where xyz is the package you are trying to
+[31m   [0m install.
+[31m   [0m 
+[31m   [0m If you wish to install a non-Debian-packaged Python package,
+[31m   [0m create a virtual environment using python3 -m venv path/to/venv.
+[31m   [0m Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+[31m   [0m sure you have python3-full installed.
+[31m   [0m 
+[31m   [0m If you wish to install a non-Debian packaged Python application,
+[31m   [0m it may be easiest to use pipx install xyz, which will manage a
+[31m   [0m virtual environment for you. Make sure you have pipx installed.
+[31m   [0m 
+[31m   [0m See /usr/share/doc/python3.12/README.venv for more information.
+
+[1;35mnote[0m: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+[1;36mhint[0m: See PEP 668 for the detailed specification.
+MODULE STATS CONTENT
+[1;39m{
+  [0m[1;34m"count"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"valid"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"dirty"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"size"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"flush-batch-count"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"mmap"[0m[1;39m: [0m[1;39m{
+    [0m[1;34m"tags"[0m[1;39m: [0m[1;39m{}[0m[1;39m,
+    [0m[1;34m"blobs"[0m[1;39m: [0m[0;39m0[0m[1;39m
+  [1;39m}[0m[1;39m
+[1;39m}[0m
+NODES
+6
+TOPOLOGY diagram
+0 flux-sample-0: full
+├─ 1 flux-sample-1: full
+│  ├─ 3 flux-sample-3: full
+│  └─ 4 flux-sample-4: full
+└─ 2 flux-sample-2: full
+   └─ 5 flux-sample-5: full
+TOPOLOGY description
+kary:2
+EVENT create-archive-1
+
+real	0m4.007s
+user	0m1.460s
+sys	0m1.189s
+EVENT distribute-all-nodes-1
+
+real	0m2.660s
+user	0m0.000s
+sys	0m0.006s
+EVENT clean-all-nodes-1
+
+real	0m0.305s
+user	0m0.001s
+sys	0m0.005s
+EVENT delete-archive-all-nodes-1
+
+real	0m0.020s
+user	0m0.002s
+sys	0m0.005s
+EVENT create-leaf-nodes-1
+
+real	0m4.040s
+user	0m1.531s
+sys	0m1.153s
+EVENT distribute-leaf-nodes-1
+
+real	0m2.684s
+user	0m0.001s
+sys	0m0.006s
+EVENT clean-leaf-nodes-1
+
+real	0m0.307s
+user	0m0.005s
+sys	0m0.003s
+EVENT delete-archive-leaf-nodes-1
+
+real	0m0.020s
+user	0m0.001s
+sys	0m0.006s
+EVENT create-middle-nodes-1
+
+real	0m4.034s
+user	0m1.504s
+sys	0m1.144s
+EVENT distribute-middle-nodes-0-1
+
+real	0m2.813s
+user	0m0.003s
+sys	0m0.003s
+EVENT distribute-middle-nodes-1-1
+
+real	0m2.684s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-middle-nodes-1
+
+real	0m0.307s
+user	0m0.001s
+sys	0m0.006s
+EVENT delete-archive-middle-nodes-1
+
+real	0m0.020s
+user	0m0.001s
+sys	0m0.006s
+EVENT create-archive-2
+
+real	0m7.887s
+user	0m2.991s
+sys	0m2.222s
+EVENT distribute-all-nodes-2
+
+real	0m5.309s
+user	0m0.003s
+sys	0m0.004s
+EVENT clean-all-nodes-2
+
+real	0m0.589s
+user	0m0.003s
+sys	0m0.004s
+EVENT delete-archive-all-nodes-2
+
+real	0m0.021s
+user	0m0.001s
+sys	0m0.006s
+EVENT create-leaf-nodes-2
+
+real	0m7.912s
+user	0m2.924s
+sys	0m2.342s
+EVENT distribute-leaf-nodes-2
+
+real	0m5.306s
+user	0m0.001s
+sys	0m0.005s
+EVENT clean-leaf-nodes-2
+
+real	0m0.594s
+user	0m0.001s
+sys	0m0.006s
+EVENT delete-archive-leaf-nodes-2
+
+real	0m0.021s
+user	0m0.002s
+sys	0m0.005s
+EVENT create-middle-nodes-2
+
+real	0m7.809s
+user	0m2.913s
+sys	0m2.277s
+EVENT distribute-middle-nodes-0-2
+
+real	0m5.295s
+user	0m0.001s
+sys	0m0.005s
+EVENT distribute-middle-nodes-1-2
+
+real	0m5.248s
+user	0m0.003s
+sys	0m0.003s
+EVENT clean-middle-nodes-2
+
+real	0m7.790s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-middle-nodes-2
+
+real	0m0.022s
+user	0m0.005s
+sys	0m0.003s
+EVENT create-archive-3
+
+real	0m12.059s
+user	0m4.459s
+sys	0m3.531s
+EVENT distribute-all-nodes-3
+
+real	0m8.121s
+user	0m0.004s
+sys	0m0.003s
+EVENT clean-all-nodes-3
+
+real	0m14.756s
+user	0m0.003s
+sys	0m0.005s
+EVENT delete-archive-all-nodes-3
+
+real	0m0.027s
+user	0m0.002s
+sys	0m0.005s
+EVENT create-leaf-nodes-3
+
+real	0m11.969s
+user	0m4.416s
+sys	0m3.501s
+EVENT distribute-leaf-nodes-3
+
+real	0m7.957s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-leaf-nodes-3
+
+real	0m0.877s
+user	0m0.003s
+sys	0m0.004s
+EVENT delete-archive-leaf-nodes-3
+
+real	0m0.027s
+user	0m0.001s
+sys	0m0.006s
+EVENT create-middle-nodes-3
+
+real	0m11.802s
+user	0m4.454s
+sys	0m3.434s
+EVENT distribute-middle-nodes-0-3
+
+real	0m7.937s
+user	0m0.003s
+sys	0m0.004s
+EVENT distribute-middle-nodes-1-3
+
+real	0m7.922s
+user	0m0.004s
+sys	0m0.003s
+EVENT clean-middle-nodes-3
+
+real	0m1.046s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-middle-nodes-3
+
+real	0m0.027s
+user	0m0.006s
+sys	0m0.001s
+EVENT create-archive-4
+
+real	0m15.798s
+user	0m5.970s
+sys	0m4.502s
+EVENT distribute-all-nodes-4
+
+real	0m10.492s
+user	0m0.004s
+sys	0m0.003s
+EVENT clean-all-nodes-4
+
+real	0m1.161s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-all-nodes-4
+
+real	0m0.029s
+user	0m0.002s
+sys	0m0.005s
+EVENT create-leaf-nodes-4
+
+real	0m15.622s
+user	0m5.858s
+sys	0m4.535s
+EVENT distribute-leaf-nodes-4
+
+real	0m10.417s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-leaf-nodes-4
+
+real	0m1.164s
+user	0m0.003s
+sys	0m0.004s
+EVENT delete-archive-leaf-nodes-4
+
+real	0m0.028s
+user	0m0.002s
+sys	0m0.004s
+EVENT create-middle-nodes-4
+
+real	0m16.028s
+user	0m5.852s
+sys	0m4.726s
+EVENT distribute-middle-nodes-0-4
+
+real	0m10.173s
+user	0m0.002s
+sys	0m0.005s
+EVENT distribute-middle-nodes-1-4
+
+real	0m11.104s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-middle-nodes-4
+
+real	0m12.414s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-middle-nodes-4
+
+real	0m0.030s
+user	0m0.004s
+sys	0m0.003s
+EVENT create-archive-5
+
+real	0m19.685s
+user	0m7.482s
+sys	0m5.579s
+EVENT distribute-all-nodes-5
+
+real	0m13.148s
+user	0m0.001s
+sys	0m0.006s
+EVENT clean-all-nodes-5
+
+real	0m1.919s
+user	0m0.003s
+sys	0m0.004s
+EVENT delete-archive-all-nodes-5
+
+real	0m0.030s
+user	0m0.001s
+sys	0m0.005s
+EVENT create-leaf-nodes-5
+
+real	0m19.738s
+user	0m7.387s
+sys	0m5.649s
+EVENT distribute-leaf-nodes-5
+
+real	0m12.888s
+user	0m0.003s
+sys	0m0.004s
+EVENT clean-leaf-nodes-5
+
+real	0m1.456s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-leaf-nodes-5
+
+real	0m0.031s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-middle-nodes-5
+
+real	0m19.533s
+user	0m7.313s
+sys	0m5.693s
+EVENT distribute-middle-nodes-0-5
+
+real	0m14.135s
+user	0m0.001s
+sys	0m0.006s
+EVENT distribute-middle-nodes-1-5
+
+real	0m12.973s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-middle-nodes-5
+
+real	0m1.766s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-middle-nodes-5
+
+real	0m0.031s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-archive-6
+
+real	0m23.959s
+user	0m8.825s
+sys	0m7.022s
+EVENT distribute-all-nodes-6
+
+real	0m15.861s
+user	0m0.003s
+sys	0m0.004s
+EVENT clean-all-nodes-6
+
+real	0m1.826s
+user	0m0.002s
+sys	0m0.006s
+EVENT delete-archive-all-nodes-6
+
+real	0m0.034s
+user	0m0.002s
+sys	0m0.006s
+EVENT create-leaf-nodes-6
+
+real	0m23.319s
+user	0m8.864s
+sys	0m6.717s
+EVENT distribute-leaf-nodes-6
+
+real	0m15.540s
+user	0m0.001s
+sys	0m0.006s
+EVENT clean-leaf-nodes-6
+
+real	0m1.733s
+user	0m0.003s
+sys	0m0.004s
+EVENT delete-archive-leaf-nodes-6
+
+real	0m0.033s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-middle-nodes-6
+
+real	0m23.506s
+user	0m8.982s
+sys	0m6.702s
+EVENT distribute-middle-nodes-0-6
+
+real	0m16.808s
+user	0m0.003s
+sys	0m0.004s
+EVENT distribute-middle-nodes-1-6
+
+real	0m15.932s
+user	0m0.000s
+sys	0m0.007s
+EVENT clean-middle-nodes-6
+
+real	0m12.710s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-middle-nodes-6
+
+real	0m0.033s
+user	0m0.002s
+sys	0m0.005s
+EVENT create-archive-7
+
+real	0m27.690s
+user	0m10.111s
+sys	0m8.242s
+EVENT distribute-all-nodes-7
+
+real	0m18.425s
+user	0m0.003s
+sys	0m0.004s
+EVENT clean-all-nodes-7
+
+real	0m37.892s
+user	0m0.004s
+sys	0m0.004s
+EVENT delete-archive-all-nodes-7
+
+real	0m0.035s
+user	0m0.002s
+sys	0m0.006s
+EVENT create-leaf-nodes-7
+
+real	0m28.110s
+user	0m10.317s
+sys	0m8.270s
+EVENT distribute-leaf-nodes-7
+
+real	0m17.979s
+user	0m0.001s
+sys	0m0.006s
+EVENT clean-leaf-nodes-7
+
+real	0m2.020s
+user	0m0.004s
+sys	0m0.003s
+EVENT delete-archive-leaf-nodes-7
+
+real	0m0.035s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-middle-nodes-7
+
+real	0m27.151s
+user	0m10.375s
+sys	0m7.786s
+EVENT distribute-middle-nodes-0-7
+
+real	0m20.433s
+user	0m0.003s
+sys	0m0.004s
+EVENT distribute-middle-nodes-1-7
+
+real	0m18.491s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-middle-nodes-7
+
+real	0m2.016s
+user	0m0.004s
+sys	0m0.003s
+EVENT delete-archive-middle-nodes-7
+
+real	0m0.035s
+user	0m0.002s
+sys	0m0.004s
+EVENT create-archive-8
+
+real	0m31.404s
+user	0m11.465s
+sys	0m9.483s
+EVENT distribute-all-nodes-8
+
+real	0m24.201s
+user	0m0.001s
+sys	0m0.006s
+EVENT clean-all-nodes-8
+
+real	0m30.193s
+user	0m0.004s
+sys	0m0.004s
+EVENT delete-archive-all-nodes-8
+
+real	0m0.037s
+user	0m0.002s
+sys	0m0.005s
+EVENT create-leaf-nodes-8
+
+real	0m31.554s
+user	0m11.732s
+sys	0m9.229s
+EVENT distribute-leaf-nodes-8
+
+real	0m21.332s
+user	0m0.003s
+sys	0m0.004s
+EVENT clean-leaf-nodes-8
+
+real	0m2.305s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-leaf-nodes-8
+
+real	0m0.036s
+user	0m0.003s
+sys	0m0.003s
+EVENT create-middle-nodes-8
+
+real	0m31.584s
+user	0m11.786s
+sys	0m9.249s
+EVENT distribute-middle-nodes-0-8
+
+real	0m23.117s
+user	0m0.004s
+sys	0m0.002s
+EVENT distribute-middle-nodes-1-8
+
+real	0m24.122s
+user	0m0.003s
+sys	0m0.004s
+EVENT clean-middle-nodes-8
+
+real	0m15.368s
+user	0m0.003s
+sys	0m0.005s
+EVENT delete-archive-middle-nodes-8
+
+real	0m0.037s
+user	0m0.002s
+sys	0m0.005s
+EVENT create-archive-9
+
+real	0m34.976s
+user	0m13.393s
+sys	0m10.043s
+EVENT distribute-all-nodes-9
+
+real	0m28.337s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-all-nodes-9
+
+real	0m34.836s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-all-nodes-9
+
+real	0m0.039s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-leaf-nodes-9
+
+real	0m36.015s
+user	0m13.331s
+sys	0m10.671s
+EVENT distribute-leaf-nodes-9
+
+real	0m27.845s
+user	0m0.005s
+sys	0m0.002s
+EVENT clean-leaf-nodes-9
+
+real	0m2.656s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-leaf-nodes-9
+
+real	0m0.038s
+user	0m0.005s
+sys	0m0.002s
+EVENT create-middle-nodes-9
+
+real	0m36.269s
+user	0m12.897s
+sys	0m11.060s
+EVENT distribute-middle-nodes-0-9
+
+real	0m25.601s
+user	0m0.002s
+sys	0m0.005s
+EVENT distribute-middle-nodes-1-9
+
+real	0m28.043s
+user	0m0.001s
+sys	0m0.006s
+EVENT clean-middle-nodes-9
+
+real	0m15.112s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-middle-nodes-9
+
+real	0m0.039s
+user	0m0.004s
+sys	0m0.003s
+EVENT create-archive-10
+
+real	0m39.732s
+user	0m14.567s
+sys	0m11.786s
+EVENT distribute-all-nodes-10
+
+real	0m29.210s
+user	0m0.003s
+sys	0m0.005s
+EVENT clean-all-nodes-10
+
+real	0m40.098s
+user	0m0.002s
+sys	0m0.006s
+EVENT delete-archive-all-nodes-10
+
+real	0m0.041s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-leaf-nodes-10
+
+real	0m39.800s
+user	0m14.710s
+sys	0m11.669s
+EVENT distribute-leaf-nodes-10
+
+real	0m30.601s
+user	0m0.000s
+sys	0m0.007s
+EVENT clean-leaf-nodes-10
+
+real	0m48.601s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-leaf-nodes-10
+
+real	0m0.041s
+user	0m0.001s
+sys	0m0.006s
+EVENT create-middle-nodes-10
+
+real	0m39.148s
+user	0m14.735s
+sys	0m11.339s
+EVENT distribute-middle-nodes-0-10
+
+real	0m30.237s
+user	0m0.002s
+sys	0m0.005s
+EVENT distribute-middle-nodes-1-10
+
+real	0m29.947s
+user	0m0.004s
+sys	0m0.002s
+EVENT clean-middle-nodes-10
+
+real	0m44.308s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-middle-nodes-10
+
+real	0m0.041s
+user	0m0.003s
+sys	0m0.004s
+SCRIPT entrypoint
+
+#!/bin/bash
+# flux-topology.sh
+
+flux exec -r all flux module reload content purge-target-size=104857600 # 100mb
+echo "MODULE STATS CONTENT"
+flux module stats content | jq
+
+# Print the overlay to show the topology
+echo "NODES"
+echo "6"
+echo "TOPOLOGY diagram"
+flux overlay status
+echo "TOPOLOGY description"
+echo "kary:2"
+
+# Go up to 10 sizes for now (matches container size)
+for size in $(seq 1 10)
+  do
+    # Create the archive and time it
+    echo "EVENT create-archive-${size}"
+    time flux archive create --name create-archive-${size} --dir /chonks ${size}gb.txt
+
+    # Distribute to all nodes, but to /tmp because file exists in /chonks
+    echo "EVENT distribute-all-nodes-${size}"
+    time flux exec -r all -x 0 flux archive extract --name create-archive-${size} -C /tmp
+
+    # Cleanup all archive on all nodes
+    echo "EVENT clean-all-nodes-${size}"
+    time flux exec -r all rm -rf /tmp/${size}gb.txt
+
+    echo "EVENT delete-archive-all-nodes-${size}"
+    time flux exec -r all flux archive remove --name create-archive-${size} 2>/dev/null
+
+    # Next, do the same for the root node (level 0) to the deepest level (leaves)
+    echo "EVENT create-leaf-nodes-${size}"
+    time flux archive create --name create-archive-leaves-${size} --dir /chonks ${size}gb.txt
+    echo "EVENT distribute-leaf-nodes-${size}"
+    time flux exec -r 3,4,5 -x 0 flux archive extract --name create-archive-leaves-${size} -C /tmp
+    # Cleanup again    
+    echo "EVENT clean-leaf-nodes-${size}"
+    time flux exec -r all rm -rf /tmp/${size}gb.txt
+    echo "EVENT delete-archive-leaf-nodes-${size}"
+    time flux exec -r all flux archive remove --name create-archive-leaves-${size} 2>/dev/null
+
+    # Finally, get the middle node and distribute to middle level first, then middle to last
+    echo "EVENT create-middle-nodes-${size}"
+    time flux archive create --name create-archive-middle-${size} --dir /chonks ${size}gb.txt
+    echo "EVENT distribute-middle-nodes-0-${size}"
+    time flux exec -r 1,2 -x 0 flux archive extract --name create-archive-middle-${size} -C /tmp
+    echo "EVENT distribute-middle-nodes-1-${size}"
+    time flux exec -r 3,4,5 -x 0 flux archive extract --name create-archive-middle-${size} -C /tmp
+    echo "EVENT clean-middle-nodes-${size}"
+    time flux exec -r all rm -rf /tmp/${size}gb.txt
+    echo "EVENT delete-archive-middle-nodes-${size}"
+    time flux exec -r all flux archive remove --name create-archive-middle-${size} 2>/dev/null
+done
+
+# Show self!
+echo "SCRIPT entrypoint"
+cat $0

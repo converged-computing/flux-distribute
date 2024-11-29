@@ -16,6 +16,10 @@ entrypoint_template = """
 #!/bin/bash
 # flux-topology.sh
 
+flux exec -r all flux module reload content purge-target-size=104857600 # 100mb
+echo "MODULE STATS CONTENT"
+flux module stats content | jq
+
 # Print the overlay to show the topology
 echo "NODES"
 echo "{{ nodes }}"

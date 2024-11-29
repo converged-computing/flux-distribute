@@ -1,0 +1,34 @@
+{
+    "kary-1-6": [
+        "0 flux-sample-0: full",
+        "\u2514\u2500 1 flux-sample-1: full",
+        "   \u2514\u2500 2 flux-sample-2: full",
+        "      \u2514\u2500 3 flux-sample-3: full",
+        "         \u2514\u2500 4 flux-sample-4: full",
+        "            \u2514\u2500 5 flux-sample-5: full"
+    ],
+    "binomial-6": [
+        "0 flux-sample-0: full",
+        "\u251c\u2500 1 flux-sample-1: full",
+        "\u251c\u2500 2 flux-sample-2: full",
+        "\u2502  \u2514\u2500 3 flux-sample-3: full",
+        "\u2514\u2500 4 flux-sample-4: full",
+        "   \u2514\u2500 5 flux-sample-5: full"
+    ],
+    "kary-2-6": [
+        "0 flux-sample-0: full",
+        "\u251c\u2500 1 flux-sample-1: full",
+        "\u2502  \u251c\u2500 3 flux-sample-3: full",
+        "\u2502  \u2514\u2500 4 flux-sample-4: full",
+        "\u2514\u2500 2 flux-sample-2: full",
+        "   \u2514\u2500 5 flux-sample-5: full"
+    ],
+    "kary-3-6": [
+        "0 flux-sample-0: full",
+        "\u251c\u2500 1 flux-sample-1: full",
+        "\u2502  \u251c\u2500 4 flux-sample-4: full",
+        "\u2502  \u2514\u2500 5 flux-sample-5: full",
+        "\u251c\u2500 2 flux-sample-2: full",
+        "\u2514\u2500 3 flux-sample-3: full"
+    ]
+}

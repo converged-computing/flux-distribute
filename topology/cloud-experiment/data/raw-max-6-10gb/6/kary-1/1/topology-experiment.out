@@ -1,0 +1,865 @@
+[1;31merror[0m: [1mexternally-managed-environment[0m
+
+[31m×[0m This environment is externally managed
+[31m╰─>[0m To install Python packages system-wide, try apt install
+[31m   [0m python3-xyz, where xyz is the package you are trying to
+[31m   [0m install.
+[31m   [0m 
+[31m   [0m If you wish to install a non-Debian-packaged Python package,
+[31m   [0m create a virtual environment using python3 -m venv path/to/venv.
+[31m   [0m Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+[31m   [0m sure you have python3-full installed.
+[31m   [0m 
+[31m   [0m If you wish to install a non-Debian packaged Python application,
+[31m   [0m it may be easiest to use pipx install xyz, which will manage a
+[31m   [0m virtual environment for you. Make sure you have pipx installed.
+[31m   [0m 
+[31m   [0m See /usr/share/doc/python3.12/README.venv for more information.
+
+[1;35mnote[0m: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+[1;36mhint[0m: See PEP 668 for the detailed specification.
+MODULE STATS CONTENT
+[1;39m{
+  [0m[1;34m"count"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"valid"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"dirty"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"size"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"flush-batch-count"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"mmap"[0m[1;39m: [0m[1;39m{
+    [0m[1;34m"tags"[0m[1;39m: [0m[1;39m{}[0m[1;39m,
+    [0m[1;34m"blobs"[0m[1;39m: [0m[0;39m0[0m[1;39m
+  [1;39m}[0m[1;39m
+[1;39m}[0m
+NODES
+6
+TOPOLOGY diagram
+0 flux-sample-0: full
+└─ 1 flux-sample-1: full
+   └─ 2 flux-sample-2: full
+      └─ 3 flux-sample-3: full
+         └─ 4 flux-sample-4: full
+            └─ 5 flux-sample-5: full
+TOPOLOGY description
+kary:1
+EVENT create-archive-1
+
+real	0m3.973s
+user	0m1.491s
+sys	0m1.149s
+EVENT distribute-all-nodes-1
+
+real	0m2.663s
+user	0m0.001s
+sys	0m0.006s
+EVENT clean-all-nodes-1
+
+real	0m0.315s
+user	0m0.001s
+sys	0m0.006s
+EVENT delete-archive-all-nodes-1
+
+real	0m0.029s
+user	0m0.000s
+sys	0m0.007s
+EVENT create-leaf-nodes-1
+
+real	0m4.038s
+user	0m1.470s
+sys	0m1.199s
+EVENT distribute-leaf-nodes-1
+
+real	0m2.666s
+user	0m0.003s
+sys	0m0.004s
+EVENT clean-leaf-nodes-1
+
+real	0m0.309s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-leaf-nodes-1
+
+real	0m0.028s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-middle-nodes-1
+
+real	0m3.896s
+user	0m1.464s
+sys	0m1.142s
+EVENT distribute-middle-nodes-0-1
+
+real	0m2.570s
+user	0m0.001s
+sys	0m0.005s
+EVENT distribute-middle-nodes-1-1
+
+real	0m2.615s
+user	0m0.003s
+sys	0m0.003s
+EVENT clean-middle-nodes-1
+
+real	0m0.308s
+user	0m0.001s
+sys	0m0.006s
+EVENT delete-archive-middle-nodes-1
+
+real	0m0.029s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-archive-2
+
+real	0m7.722s
+user	0m2.899s
+sys	0m2.249s
+EVENT distribute-all-nodes-2
+
+real	0m5.375s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-all-nodes-2
+
+real	0m0.599s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-all-nodes-2
+
+real	0m0.029s
+user	0m0.002s
+sys	0m0.005s
+EVENT create-leaf-nodes-2
+
+real	0m7.967s
+user	0m2.934s
+sys	0m2.321s
+EVENT distribute-leaf-nodes-2
+
+real	0m5.253s
+user	0m0.003s
+sys	0m0.003s
+EVENT clean-leaf-nodes-2
+
+real	0m0.591s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-leaf-nodes-2
+
+real	0m0.028s
+user	0m0.002s
+sys	0m0.005s
+EVENT create-middle-nodes-2
+
+real	0m7.962s
+user	0m3.012s
+sys	0m2.227s
+EVENT distribute-middle-nodes-0-2
+
+real	0m5.227s
+user	0m0.004s
+sys	0m0.003s
+EVENT distribute-middle-nodes-1-2
+
+real	0m5.182s
+user	0m0.003s
+sys	0m0.004s
+EVENT clean-middle-nodes-2
+
+real	0m0.595s
+user	0m0.003s
+sys	0m0.004s
+EVENT delete-archive-middle-nodes-2
+
+real	0m0.029s
+user	0m0.004s
+sys	0m0.003s
+EVENT create-archive-3
+
+real	0m11.881s
+user	0m4.419s
+sys	0m3.524s
+EVENT distribute-all-nodes-3
+
+real	0m8.024s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-all-nodes-3
+
+real	0m0.889s
+user	0m0.003s
+sys	0m0.004s
+EVENT delete-archive-all-nodes-3
+
+real	0m0.029s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-leaf-nodes-3
+
+real	0m11.703s
+user	0m4.442s
+sys	0m3.343s
+EVENT distribute-leaf-nodes-3
+
+real	0m7.699s
+user	0m0.002s
+sys	0m0.004s
+EVENT clean-leaf-nodes-3
+
+real	0m0.880s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-leaf-nodes-3
+
+real	0m0.029s
+user	0m0.001s
+sys	0m0.006s
+EVENT create-middle-nodes-3
+flux-archive: kvs commit: No such file or directory
+
+real	0m11.648s
+user	0m4.393s
+sys	0m3.371s
+EVENT distribute-middle-nodes-0-3
+flux-archive: KVS lookup archive.create-archive-middle-3: No such file or directory
+3: Exit 1
+
+real	0m0.015s
+user	0m0.004s
+sys	0m0.002s
+EVENT distribute-middle-nodes-1-3
+flux-archive: KVS lookup archive.create-archive-middle-3: No such file or directory
+5: Exit 1
+
+real	0m0.016s
+user	0m0.001s
+sys	0m0.005s
+EVENT clean-middle-nodes-3
+
+real	0m0.024s
+user	0m0.000s
+sys	0m0.006s
+EVENT delete-archive-middle-nodes-3
+
+real	0m0.028s
+user	0m0.001s
+sys	0m0.006s
+EVENT create-archive-4
+flux-archive: kvs commit: No such file or directory
+
+real	0m15.891s
+user	0m5.785s
+sys	0m4.818s
+EVENT distribute-all-nodes-4
+flux-archive: KVS lookup archive.create-archive-4: No such file or directory
+flux-archive: KVS lookup archive.create-archive-4: No such file or directory
+flux-archive: KVS lookup archive.create-archive-4: No such file or directory
+flux-archive: KVS lookup archive.create-archive-4: No such file or directory
+flux-archive: KVS lookup archive.create-archive-4: No such file or directory
+[1-5]: Exit 1
+
+real	0m0.027s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-all-nodes-4
+
+real	0m0.022s
+user	0m0.001s
+sys	0m0.005s
+EVENT delete-archive-all-nodes-4
+
+real	0m0.028s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-leaf-nodes-4
+flux-archive: kvs commit: No such file or directory
+
+real	0m15.630s
+user	0m5.893s
+sys	0m4.464s
+EVENT distribute-leaf-nodes-4
+flux-archive: KVS lookup archive.create-archive-leaves-4: No such file or directory
+5: Exit 1
+
+real	0m0.017s
+user	0m0.002s
+sys	0m0.004s
+EVENT clean-leaf-nodes-4
+
+real	0m0.024s
+user	0m0.003s
+sys	0m0.004s
+EVENT delete-archive-leaf-nodes-4
+
+real	0m0.028s
+user	0m0.002s
+sys	0m0.005s
+EVENT create-middle-nodes-4
+flux-archive: kvs commit: No such file or directory
+
+real	0m15.984s
+user	0m5.823s
+sys	0m4.721s
+EVENT distribute-middle-nodes-0-4
+flux-archive: KVS lookup archive.create-archive-middle-4: No such file or directory
+3: Exit 1
+
+real	0m0.016s
+user	0m0.002s
+sys	0m0.004s
+EVENT distribute-middle-nodes-1-4
+flux-archive: KVS lookup archive.create-archive-middle-4: No such file or directory
+5: Exit 1
+
+real	0m0.017s
+user	0m0.002s
+sys	0m0.004s
+EVENT clean-middle-nodes-4
+
+real	0m0.024s
+user	0m0.003s
+sys	0m0.003s
+EVENT delete-archive-middle-nodes-4
+
+real	0m0.028s
+user	0m0.002s
+sys	0m0.005s
+EVENT create-archive-5
+flux-archive: kvs commit: No such file or directory
+
+real	0m19.718s
+user	0m7.372s
+sys	0m5.635s
+EVENT distribute-all-nodes-5
+flux-archive: KVS lookup archive.create-archive-5: No such file or directory
+flux-archive: KVS lookup archive.create-archive-5: No such file or directory
+flux-archive: KVS lookup archive.create-archive-5: No such file or directory
+flux-archive: KVS lookup archive.create-archive-5: No such file or directory
+flux-archive: KVS lookup archive.create-archive-5: No such file or directory
+[1-5]: Exit 1
+
+real	0m0.027s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-all-nodes-5
+
+real	0m0.023s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-all-nodes-5
+
+real	0m0.029s
+user	0m0.005s
+sys	0m0.003s
+EVENT create-leaf-nodes-5
+flux-archive: kvs commit: No such file or directory
+
+real	0m19.337s
+user	0m7.459s
+sys	0m5.445s
+EVENT distribute-leaf-nodes-5
+flux-archive: KVS lookup archive.create-archive-leaves-5: No such file or directory
+5: Exit 1
+
+real	0m0.017s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-leaf-nodes-5
+
+real	0m0.024s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-leaf-nodes-5
+
+real	0m0.028s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-middle-nodes-5
+flux-archive: kvs commit: No such file or directory
+
+real	0m19.896s
+user	0m7.322s
+sys	0m5.828s
+EVENT distribute-middle-nodes-0-5
+flux-archive: KVS lookup archive.create-archive-middle-5: No such file or directory
+3: Exit 1
+
+real	0m0.016s
+user	0m0.001s
+sys	0m0.006s
+EVENT distribute-middle-nodes-1-5
+flux-archive: KVS lookup archive.create-archive-middle-5: No such file or directory
+5: Exit 1
+
+real	0m0.017s
+user	0m0.001s
+sys	0m0.005s
+EVENT clean-middle-nodes-5
+
+real	0m0.023s
+user	0m0.003s
+sys	0m0.003s
+EVENT delete-archive-middle-nodes-5
+
+real	0m0.029s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-archive-6
+flux-archive: kvs commit: No such file or directory
+
+real	0m23.253s
+user	0m8.724s
+sys	0m6.801s
+EVENT distribute-all-nodes-6
+flux-archive: KVS lookup archive.create-archive-6: No such file or directory
+flux-archive: KVS lookup archive.create-archive-6: No such file or directory
+flux-archive: KVS lookup archive.create-archive-6: No such file or directory
+flux-archive: KVS lookup archive.create-archive-6: No such file or directory
+flux-archive: KVS lookup archive.create-archive-6: No such file or directory
+[1-5]: Exit 1
+
+real	0m0.027s
+user	0m0.003s
+sys	0m0.004s
+EVENT clean-all-nodes-6
+
+real	0m0.023s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-all-nodes-6
+
+real	0m0.027s
+user	0m0.002s
+sys	0m0.004s
+EVENT create-leaf-nodes-6
+flux-archive: kvs commit: No such file or directory
+
+real	0m23.388s
+user	0m8.945s
+sys	0m6.693s
+EVENT distribute-leaf-nodes-6
+flux-archive: KVS lookup archive.create-archive-leaves-6: No such file or directory
+5: Exit 1
+
+real	0m0.017s
+user	0m0.003s
+sys	0m0.004s
+EVENT clean-leaf-nodes-6
+
+real	0m0.023s
+user	0m0.003s
+sys	0m0.004s
+EVENT delete-archive-leaf-nodes-6
+
+real	0m0.028s
+user	0m0.000s
+sys	0m0.007s
+EVENT create-middle-nodes-6
+flux-archive: kvs commit: No such file or directory
+
+real	0m23.708s
+user	0m8.854s
+sys	0m6.854s
+EVENT distribute-middle-nodes-0-6
+flux-archive: KVS lookup archive.create-archive-middle-6: No such file or directory
+3: Exit 1
+
+real	0m0.016s
+user	0m0.004s
+sys	0m0.003s
+EVENT distribute-middle-nodes-1-6
+flux-archive: KVS lookup archive.create-archive-middle-6: No such file or directory
+5: Exit 1
+
+real	0m0.017s
+user	0m0.002s
+sys	0m0.004s
+EVENT clean-middle-nodes-6
+
+real	0m0.024s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-middle-nodes-6
+
+real	0m0.028s
+user	0m0.001s
+sys	0m0.006s
+EVENT create-archive-7
+flux-archive: kvs commit: No such file or directory
+
+real	0m29.384s
+user	0m12.341s
+sys	0m7.979s
+EVENT distribute-all-nodes-7
+flux-archive: KVS lookup archive.create-archive-7: No such file or directory
+flux-archive: KVS lookup archive.create-archive-7: No such file or directory
+flux-archive: KVS lookup archive.create-archive-7: No such file or directory
+flux-archive: KVS lookup archive.create-archive-7: No such file or directory
+flux-archive: KVS lookup archive.create-archive-7: No such file or directory
+[1-5]: Exit 1
+
+real	0m0.027s
+user	0m0.003s
+sys	0m0.005s
+EVENT clean-all-nodes-7
+
+real	0m0.022s
+user	0m0.002s
+sys	0m0.004s
+EVENT delete-archive-all-nodes-7
+
+real	0m0.028s
+user	0m0.001s
+sys	0m0.005s
+EVENT create-leaf-nodes-7
+flux-archive: kvs commit: No such file or directory
+
+real	0m27.988s
+user	0m10.713s
+sys	0m7.948s
+EVENT distribute-leaf-nodes-7
+flux-archive: KVS lookup archive.create-archive-leaves-7: No such file or directory
+5: Exit 1
+
+real	0m0.017s
+user	0m0.002s
+sys	0m0.004s
+EVENT clean-leaf-nodes-7
+
+real	0m0.024s
+user	0m0.003s
+sys	0m0.004s
+EVENT delete-archive-leaf-nodes-7
+
+real	0m0.027s
+user	0m0.000s
+sys	0m0.007s
+EVENT create-middle-nodes-7
+flux-archive: kvs commit: No such file or directory
+
+real	0m27.306s
+user	0m10.186s
+sys	0m8.024s
+EVENT distribute-middle-nodes-0-7
+flux-archive: KVS lookup archive.create-archive-middle-7: No such file or directory
+3: Exit 1
+
+real	0m0.016s
+user	0m0.002s
+sys	0m0.004s
+EVENT distribute-middle-nodes-1-7
+flux-archive: KVS lookup archive.create-archive-middle-7: No such file or directory
+5: Exit 1
+
+real	0m0.017s
+user	0m0.002s
+sys	0m0.004s
+EVENT clean-middle-nodes-7
+
+real	0m0.023s
+user	0m0.000s
+sys	0m0.006s
+EVENT delete-archive-middle-nodes-7
+
+real	0m0.028s
+user	0m0.004s
+sys	0m0.003s
+EVENT create-archive-8
+flux-archive: kvs commit: No such file or directory
+
+real	0m31.245s
+user	0m11.765s
+sys	0m9.149s
+EVENT distribute-all-nodes-8
+flux-archive: KVS lookup archive.create-archive-8: No such file or directory
+flux-archive: KVS lookup archive.create-archive-8: No such file or directory
+flux-archive: KVS lookup archive.create-archive-8: No such file or directory
+flux-archive: KVS lookup archive.create-archive-8: No such file or directory
+flux-archive: KVS lookup archive.create-archive-8: No such file or directory
+[1-5]: Exit 1
+
+real	0m0.027s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-all-nodes-8
+
+real	0m0.023s
+user	0m0.004s
+sys	0m0.002s
+EVENT delete-archive-all-nodes-8
+
+real	0m0.027s
+user	0m0.004s
+sys	0m0.003s
+EVENT create-leaf-nodes-8
+flux-archive: kvs commit: No such file or directory
+
+real	0m32.295s
+user	0m11.929s
+sys	0m9.601s
+EVENT distribute-leaf-nodes-8
+flux-archive: KVS lookup archive.create-archive-leaves-8: No such file or directory
+5: Exit 1
+
+real	0m0.017s
+user	0m0.002s
+sys	0m0.004s
+EVENT clean-leaf-nodes-8
+
+real	0m0.025s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-leaf-nodes-8
+
+real	0m0.028s
+user	0m0.001s
+sys	0m0.005s
+EVENT create-middle-nodes-8
+flux-archive: kvs commit: No such file or directory
+
+real	0m31.139s
+user	0m11.791s
+sys	0m9.035s
+EVENT distribute-middle-nodes-0-8
+flux-archive: KVS lookup archive.create-archive-middle-8: No such file or directory
+3: Exit 1
+
+real	0m0.016s
+user	0m0.005s
+sys	0m0.001s
+EVENT distribute-middle-nodes-1-8
+flux-archive: KVS lookup archive.create-archive-middle-8: No such file or directory
+5: Exit 1
+
+real	0m0.017s
+user	0m0.003s
+sys	0m0.003s
+EVENT clean-middle-nodes-8
+
+real	0m0.023s
+user	0m0.002s
+sys	0m0.004s
+EVENT delete-archive-middle-nodes-8
+
+real	0m0.027s
+user	0m0.003s
+sys	0m0.003s
+EVENT create-archive-9
+flux-archive: kvs commit: No such file or directory
+
+real	0m35.646s
+user	0m13.552s
+sys	0m10.222s
+EVENT distribute-all-nodes-9
+flux-archive: KVS lookup archive.create-archive-9: No such file or directory
+flux-archive: KVS lookup archive.create-archive-9: No such file or directory
+flux-archive: KVS lookup archive.create-archive-9: No such file or directory
+flux-archive: KVS lookup archive.create-archive-9: No such file or directory
+flux-archive: KVS lookup archive.create-archive-9: No such file or directory
+[1-5]: Exit 1
+
+real	0m0.027s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-all-nodes-9
+
+real	0m0.023s
+user	0m0.001s
+sys	0m0.005s
+EVENT delete-archive-all-nodes-9
+
+real	0m0.029s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-leaf-nodes-9
+flux-archive: kvs commit: No such file or directory
+
+real	0m35.814s
+user	0m13.068s
+sys	0m10.847s
+EVENT distribute-leaf-nodes-9
+flux-archive: KVS lookup archive.create-archive-leaves-9: No such file or directory
+5: Exit 1
+
+real	0m0.018s
+user	0m0.002s
+sys	0m0.005s
+EVENT clean-leaf-nodes-9
+
+real	0m0.024s
+user	0m0.001s
+sys	0m0.005s
+EVENT delete-archive-leaf-nodes-9
+
+real	0m0.028s
+user	0m0.001s
+sys	0m0.006s
+EVENT create-middle-nodes-9
+flux-archive: kvs commit: No such file or directory
+
+real	0m36.184s
+user	0m13.309s
+sys	0m10.608s
+EVENT distribute-middle-nodes-0-9
+flux-archive: KVS lookup archive.create-archive-middle-9: No such file or directory
+3: Exit 1
+
+real	0m0.016s
+user	0m0.004s
+sys	0m0.003s
+EVENT distribute-middle-nodes-1-9
+flux-archive: KVS lookup archive.create-archive-middle-9: No such file or directory
+5: Exit 1
+
+real	0m0.017s
+user	0m0.004s
+sys	0m0.003s
+EVENT clean-middle-nodes-9
+
+real	0m0.024s
+user	0m0.003s
+sys	0m0.003s
+EVENT delete-archive-middle-nodes-9
+
+real	0m0.028s
+user	0m0.002s
+sys	0m0.005s
+EVENT create-archive-10
+flux-archive: kvs commit: No such file or directory
+
+real	0m39.664s
+user	0m14.613s
+sys	0m11.734s
+EVENT distribute-all-nodes-10
+flux-archive: KVS lookup archive.create-archive-10: No such file or directory
+flux-archive: KVS lookup archive.create-archive-10: No such file or directory
+flux-archive: KVS lookup archive.create-archive-10: No such file or directory
+flux-archive: KVS lookup archive.create-archive-10: No such file or directory
+flux-archive: KVS lookup archive.create-archive-10: No such file or directory
+[1-5]: Exit 1
+
+real	0m0.028s
+user	0m0.002s
+sys	0m0.006s
+EVENT clean-all-nodes-10
+
+real	0m0.023s
+user	0m0.000s
+sys	0m0.007s
+EVENT delete-archive-all-nodes-10
+
+real	0m0.028s
+user	0m0.002s
+sys	0m0.005s
+EVENT create-leaf-nodes-10
+flux-archive: kvs commit: No such file or directory
+
+real	0m39.512s
+user	0m14.890s
+sys	0m11.424s
+EVENT distribute-leaf-nodes-10
+flux-archive: KVS lookup archive.create-archive-leaves-10: No such file or directory
+5: Exit 1
+
+real	0m0.017s
+user	0m0.003s
+sys	0m0.003s
+EVENT clean-leaf-nodes-10
+
+real	0m0.024s
+user	0m0.002s
+sys	0m0.005s
+EVENT delete-archive-leaf-nodes-10
+
+real	0m0.028s
+user	0m0.003s
+sys	0m0.004s
+EVENT create-middle-nodes-10
+flux-archive: kvs commit: No such file or directory
+
+real	0m39.459s
+user	0m14.723s
+sys	0m11.469s
+EVENT distribute-middle-nodes-0-10
+flux-archive: KVS lookup archive.create-archive-middle-10: No such file or directory
+3: Exit 1
+
+real	0m0.016s
+user	0m0.003s
+sys	0m0.004s
+EVENT distribute-middle-nodes-1-10
+flux-archive: KVS lookup archive.create-archive-middle-10: No such file or directory
+5: Exit 1
+
+real	0m0.016s
+user	0m0.001s
+sys	0m0.005s
+EVENT clean-middle-nodes-10
+
+real	0m0.024s
+user	0m0.003s
+sys	0m0.004s
+EVENT delete-archive-middle-nodes-10
+
+real	0m0.028s
+user	0m0.002s
+sys	0m0.004s
+SCRIPT entrypoint
+
+#!/bin/bash
+# flux-topology.sh
+
+flux exec -r all flux module reload content purge-target-size=104857600 # 100mb
+echo "MODULE STATS CONTENT"
+flux module stats content | jq
+
+# Print the overlay to show the topology
+echo "NODES"
+echo "6"
+echo "TOPOLOGY diagram"
+flux overlay status
+echo "TOPOLOGY description"
+echo "kary:1"
+
+# Go up to 10 sizes for now (matches container size)
+for size in $(seq 1 10)
+  do
+    # Create the archive and time it
+    echo "EVENT create-archive-${size}"
+    time flux archive create --name create-archive-${size} --dir /chonks ${size}gb.txt
+
+    # Distribute to all nodes, but to /tmp because file exists in /chonks
+    echo "EVENT distribute-all-nodes-${size}"
+    time flux exec -r all -x 0 flux archive extract --name create-archive-${size} -C /tmp
+
+    # Cleanup all archive on all nodes
+    echo "EVENT clean-all-nodes-${size}"
+    time flux exec -r all rm -rf /tmp/${size}gb.txt
+
+    echo "EVENT delete-archive-all-nodes-${size}"
+    time flux exec -r all flux archive remove --name create-archive-${size} 2>/dev/null
+
+    # Next, do the same for the root node (level 0) to the deepest level (leaves)
+    echo "EVENT create-leaf-nodes-${size}"
+    time flux archive create --name create-archive-leaves-${size} --dir /chonks ${size}gb.txt
+    echo "EVENT distribute-leaf-nodes-${size}"
+    time flux exec -r 5 -x 0 flux archive extract --name create-archive-leaves-${size} -C /tmp
+    # Cleanup again    
+    echo "EVENT clean-leaf-nodes-${size}"
+    time flux exec -r all rm -rf /tmp/${size}gb.txt
+    echo "EVENT delete-archive-leaf-nodes-${size}"
+    time flux exec -r all flux archive remove --name create-archive-leaves-${size} 2>/dev/null
+
+    # Finally, get the middle node and distribute to middle level first, then middle to last
+    echo "EVENT create-middle-nodes-${size}"
+    time flux archive create --name create-archive-middle-${size} --dir /chonks ${size}gb.txt
+    echo "EVENT distribute-middle-nodes-0-${size}"
+    time flux exec -r 3 -x 0 flux archive extract --name create-archive-middle-${size} -C /tmp
+    echo "EVENT distribute-middle-nodes-1-${size}"
+    time flux exec -r 5 -x 0 flux archive extract --name create-archive-middle-${size} -C /tmp
+    echo "EVENT clean-middle-nodes-${size}"
+    time flux exec -r all rm -rf /tmp/${size}gb.txt
+    echo "EVENT delete-archive-middle-nodes-${size}"
+    time flux exec -r all flux archive remove --name create-archive-middle-${size} 2>/dev/null
+done
+
+# Show self!
+echo "SCRIPT entrypoint"
+cat $0

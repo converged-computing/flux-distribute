@@ -16,6 +16,29 @@ We would want to see if there is a more efficient strategy, and then we would wa
 
 We could also JUST use a snapshotter OR the CSI.
 
+## Blob Sizes
+
+This advice comes from [garlick](https://github.com/flux-framework/flux-core/issues/6461#issuecomment-2506714708)
+
+> the performance will be sensitive to the tree fanout because each level of the tree will fetch data once from its parent, then provide it once to each child that is requesting it. Well, that would assume perfect caching but the LRU cache tries to maintain itself below 16MB so for large amounts of data the cache may thrash a bit. If you want to play with that limit, you could do something like
+
+```console
+flux module reload content purge-target-size=104857600 # 100mb
+flux exec -r all flux module reload content purge-target-size=104857600 # 100mb
+```
+
+Not sure what effect that would have since it kind of depends on how the timing works out. You can peek at the cache size with
+
+```bash
+flux module stats content | jq
+```
+
+Note that we likely want to update the size 30 experiment by:
+
+1. Adding the unset of the cache
+2. Have the data file generated programatically (instead of needing to build into container, which will get large).
+3. Test a smaller number of kary sizes (1, 2, and then possibly evens up to the largest size)
+4. Also go up by even sizes for the GB sizes - it takes too long to do every single one!
 
 ## Flux Trees
 
@@ -23,7 +46,11 @@ Note that the flux-design* files were generated in the [kind-experiment](../kind
 
 ## Usage
 
-Run the experiments! First we will do a max size of 2 on 6 nodes.
+Run the experiments! 
+
+### 6 Nodes Test
+
+First we will do a max size of 2 on 6 nodes.
 
 ```bash
 time gcloud container clusters create test-cluster \
@@ -38,7 +65,7 @@ time gcloud container clusters create test-cluster \
 
 kubectl apply -f https://raw.githubusercontent.com/flux-framework/flux-operator/refs/heads/main/examples/dist/flux-operator.yaml
 
-python run-experiment.py --data ./kary-designs.json --max-nodes=6 --max-size=2 --data-dir ./data/raw-max-6
+python run-experiment.py --data ./kary-designs.json --max-nodes=6 --max-size=2 --data-dir ./data/raw-max-6 --template ./templates/minicluster-test.yaml
 time gcloud container clusters delete test-cluster --region=us-central1-a
 python run-analysis.py --out ./data/parsed-max-6 --data ./data/raw-max-6
 ```
@@ -47,10 +74,11 @@ Experiments are done!
 total time to run is 5793.205878019333 seconds
 ```
 
+### 30 Nodes Test
+
 Next, let's just test a large size (30)
 
 ```bash
-6:40
 time gcloud container clusters create test-cluster \
     --threads-per-core=1 \
     --num-nodes=30 \
@@ -63,7 +91,7 @@ time gcloud container clusters create test-cluster \
 
 kubectl apply -f https://raw.githubusercontent.com/flux-framework/flux-operator/refs/heads/main/examples/dist/flux-operator.yaml
 
-python run-experiment.py --data ./kary-designs.json --max-size=2 --exact-nodes=30 --data-dir ./data/raw-exact-30
+python run-experiment.py --data ./kary-designs.json --max-size=2 --exact-nodes=30 --data-dir ./data/raw-exact-30 --template ./templates/minicluster-test.yaml
 time gcloud container clusters delete test-cluster --region=us-central1-a
 python run-analysis.py --out ./data/parsed-exact-30 --data ./data/raw-exact-30
 ```
@@ -72,9 +100,37 @@ Experiments are done!
 total time to run is 9767.250812530518 seconds
 ```
 
+### 6 Nodes
+
+This (non test) has the flux segfault fix so we can go fully up to the max size of 10GB. Since each run takes a LOT longer and this is still just looking, I am just doing one iteration.
+
+```bash
+time gcloud container clusters create test-cluster \
+    --threads-per-core=1 \
+    --num-nodes=6 \
+    --machine-type=c2d-standard-32 \
+    --enable-gvnic \
+    --network=mtu9k \
+    --placement-type=COMPACT \
+    --region=us-central1-a \
+    --project=${GOOGLE_PROJECT} 
+
+kubectl apply -f https://raw.githubusercontent.com/flux-framework/flux-operator/refs/heads/main/examples/dist/flux-operator.yaml
+
+# Don't bother with smaller sizes, just 6
+python run-experiment.py --data ./kary-designs.json --exact-nodes=6 --max-size=10 --data-dir ./data/raw-max-6-10gb --template ./templates/minicluster.yaml --iters 1
+time gcloud container clusters delete test-cluster --region=us-central1-a
+python run-analysis.py --out ./data/parsed-max-6-10gb --data ./data/raw-max-6-10gb
+```
+```
+Experiments are done!
+total time to run is 5793.205878019333 seconds
+```
+
+
 ## Results
 
-### Google Cloud 6 Nodes
+### Google Cloud 6 Nodes Test
 
 Let's look at 6 "nodes"
 
@@ -92,7 +148,7 @@ Let's look at 6 "nodes"
 ![data/parsed-max-6/distribute-middle-nodes-0-nodes-6.png](data/parsed-max-6/distribute-middle-nodes-0-nodes-6.png)
 ![data/parsed-max-6/distribute-middle-nodes-1-nodes-6.png](data/parsed-max-6/distribute-middle-nodes-1-nodes-6.png)
 
-### Google Cloud 30 Nodes
+### Google Cloud 30 Nodes Test
 
 This will allow for more "kary" designs.
 
@@ -109,5 +165,4 @@ This will allow for more "kary" designs.
 ![data/parsed-exact-30/distribute-leaf-nodes-nodes-30.png](data/parsed-exact-30/distribute-leaf-nodes-nodes-30.png)
 ![data/parsed-exact-30/distribute-middle-nodes-0-nodes-30.png](data/parsed-exact-30/distribute-middle-nodes-0-nodes-30.png)
 ![data/parsed-exact-30/distribute-middle-nodes-1-nodes-30.png](data/parsed-exact-30/distribute-middle-nodes-1-nodes-30.png)
-
 

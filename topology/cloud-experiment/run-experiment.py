@@ -26,9 +26,6 @@ def write_file(content, filename):
         fd.write(content)
 
 
-minicluster_template = read_file(os.path.join(here, "minicluster.yaml"))
-template = Template(minicluster_template)
-
 # Max number of nodes for m-ary tree with k levels
 # n = (mk − 1) / (m − 1)
 
@@ -50,7 +47,7 @@ def get_parser():
     )
     parser.add_argument(
         "--max-size",
-        help="Maximum size to transfer",
+        help="Maximum size (GB) to transfer, up to 10",
         default=10,
         type=int,
     )
@@ -59,6 +56,11 @@ def get_parser():
         help="Exact node count to use",
         default=None,
         type=int,
+    )
+    parser.add_argument(
+        "--template",
+        help="minicluster.yaml template to use",
+        default=os.path.join(here, "templates", "minicluster.yaml"),
     )
     parser.add_argument(
         "--max-nodes",
@@ -155,6 +157,11 @@ def run_topology_experiment(exp, args, nodes_dir):
             "middle_nodes": ",".join(levels[middle_level]),
         }
     )
+    # Load the minicluster template
+    minicluster_template = read_file(args.template)
+    template = Template(minicluster_template)
+
+    # Render into it
     render = template.render(**render)
     minicluster_yaml = os.path.join(nodes_dir, "minicluster.yaml")
     write_file(render, minicluster_yaml)
@@ -162,7 +169,8 @@ def run_topology_experiment(exp, args, nodes_dir):
     time.sleep(10)
 
     # This will wait for it to finish
-    run_kubectl(f"wait --for=condition=complete --timeout=600s job/{args.name}")
+    # The long waiting time is based on the 10GB size, 30 minutes
+    run_kubectl(f"wait --for=condition=complete --timeout=3000s job/{args.name}")
 
     cli = client.CoreV1Api()
     for pod in cli.list_namespaced_pod(namespace="default").items:
@@ -172,6 +180,7 @@ def run_topology_experiment(exp, args, nodes_dir):
             )
             break
 
+    # This should no longer be an issue
     if "Segmentation fault" in log or "Segment" in log:
         print(f"Possible segmentation fault for {exp}!")
 
@@ -251,6 +260,9 @@ def main():
     if not os.path.exists(args.data):
         sys.exit(f"{args.data} does not exist.")
     plans = read_json(args.data)
+
+    if args.max_size > 10:
+        raise ValueError("Currently only support for 10GB.")
 
     # plan experiments!
     print("🧪️ Experiments:")

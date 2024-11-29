@@ -1,7 +1,8 @@
-FROM rockylinux:9
+FROM ghcr.io/converged-computing/flux-view-ubuntu:tag-noble-flux-0.66.0
 
-# docker build -t ghcr.io/converged-computing/container-chonks:topology-test .
-# docker push ghcr.io/converged-computing/container-chonks:topology-test
+# This has flux built into the image, larger but no segfault
+# docker build -t ghcr.io/converged-computing/container-chonks:topology-flux-0.66.0 .
+# docker push ghcr.io/converged-computing/container-chonks:topology-flux-0.66.0
 
 # 1GB to 10GB!
 WORKDIR /chonks
