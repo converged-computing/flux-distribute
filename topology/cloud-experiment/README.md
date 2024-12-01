@@ -100,7 +100,7 @@ Experiments are done!
 total time to run is 9767.250812530518 seconds
 ```
 
-### 6 Nodes
+### 6 Nodes on AWS
 
 Google cloud was issuing an error, I switched to aws and it went away.
 
@@ -128,6 +128,40 @@ flux proxy local:///mnt/flux/view/run/flux/local bash
 ```
 flux dmesg
 flux module stats content | jq
+```
+### 30 Nodes on AWS
+
+For cost, these are 0.6160 * 30 == 18.48/hour. For the size 30 test, we previously did 16 runs with 5 iterations each.  If for the 6 node test we did 12 and it took 161 minutes, assuming the same time (which we can't because the experiment is about half the size) if we did that same size it would take ~17 hours, which is too long. If we assume 16 kary designs * 2 iterations each * 2.02375 minutes / iteration, then that's 64.76 minutes. Since we just want a sample, let's start with just one iteration for 30 nodes (and time it) and we can always do another one. 
+
+For actual timings:
+
+ - the cluster is 18.48/hour
+ - the first run takes 20 minutes because of the image pull
+ - subsequent runs take 13 minutes
+ - that means for 1 iteration and 16 topologies, the experiment should take 208 (let's say 215) minutes (rounded up) and thus (215 / 60) * 18.48 == $66.22 and we can also round up to $70. I was aiming for under $100 so that is within budget.
+
+```bash
+time eksctl create cluster --config-file ./eks-config-30.yaml
+```
+```console
+2024-12-01 08:04:14 [ℹ]  cluster should be functional despite missing (or misconfigured) client binaries
+2024-12-01 08:04:14 [✔]  EKS cluster "topology-study" in "us-east-2" region is ready
+
+real	15m46.129s
+user	0m0.420s
+sys	0m0.189s
+```
+```bash
+aws eks update-kubeconfig --region us-east-2 --name topology-study
+
+kubectl apply -f https://raw.githubusercontent.com/flux-framework/flux-operator/refs/heads/main/examples/dist/flux-operator.yaml
+python run-experiment.py --data ./kary-designs.json --exact-nodes=30 --min-size=1 --max-size=10 --data-dir ./data/raw-exact-30-aws --template ./templates/minicluster.yaml --iters 1
+eksctl delete cluster --config-file ./eks-config-30.yaml --wait
+python run-analysis.py --out ./data/parsed-exact-30-aws --data ./data/raw-exact-30-aws
+```
+```console
+Experiments (N=16) are done!
+total time to run is 12480.895931243896 seconds
 ```
 
 ## Results
@@ -176,3 +210,13 @@ Without any bugs. I removed the middle distribution layer to reduce experiment r
 ![data/parsed-exact-6-aws/create-archive-nodes-6.png](data/parsed-exact-6-aws/create-archive-nodes-6.png)
 ![data/parsed-exact-6-aws/delete-archive-all-nodes-nodes-6.png](data/parsed-exact-6-aws/delete-archive-all-nodes-nodes-6.png)
 ![data/parsed-exact-6-aws/distribute-all-nodes-nodes-6.png](data/parsed-exact-6-aws/distribute-all-nodes-nodes-6.png)
+
+
+### AWS 30 Node Test
+
+Based on the time, that did come out to cost what I estimated! We likely should discuss what we see and decide what to test next. I'm not seeing any differences with respect to distribution, but maybe creation? We would also want to compare this strategy against just downloading the same size archive, by each node.
+
+![data/parsed-exact-30-aws/clean-all-nodes-nodes-30.png](data/parsed-exact-30-aws/clean-all-nodes-nodes-30.png)
+![data/parsed-exact-30-aws/create-archive-nodes-30.png](data/parsed-exact-30-aws/create-archive-nodes-30.png)
+![data/parsed-exact-30-aws/delete-archive-all-nodes-nodes-30.png](data/parsed-exact-30-aws/delete-archive-all-nodes-nodes-30.png)
+![data/parsed-exact-30-aws/distribute-all-nodes-nodes-30.png](data/parsed-exact-30-aws/distribute-all-nodes-nodes-30.png)

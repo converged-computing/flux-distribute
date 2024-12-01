@@ -1,0 +1,289 @@
+MODULE STATS CONTENT
+[1;39m{
+  [0m[1;34m"count"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"valid"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"dirty"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"size"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"flush-batch-count"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"mmap"[0m[1;39m: [0m[1;39m{
+    [0m[1;34m"tags"[0m[1;39m: [0m[1;39m{}[0m[1;39m,
+    [0m[1;34m"blobs"[0m[1;39m: [0m[0;39m0[0m[1;39m
+  [1;39m}[0m[1;39m
+[1;39m}[0m
+NODES
+30
+TOPOLOGY diagram
+0 flux-sample-0: full
+├─ 1 flux-sample-1: full
+│  ├─ 12 flux-sample-12: full
+│  ├─ 13 flux-sample-13: full
+│  ├─ 14 flux-sample-14: full
+│  ├─ 15 flux-sample-15: full
+│  ├─ 16 flux-sample-16: full
+│  ├─ 17 flux-sample-17: full
+│  ├─ 18 flux-sample-18: full
+│  ├─ 19 flux-sample-19: full
+│  ├─ 20 flux-sample-20: full
+│  ├─ 21 flux-sample-21: full
+│  └─ 22 flux-sample-22: full
+├─ 2 flux-sample-2: full
+│  ├─ 23 flux-sample-23: full
+│  ├─ 24 flux-sample-24: full
+│  ├─ 25 flux-sample-25: full
+│  ├─ 26 flux-sample-26: full
+│  ├─ 27 flux-sample-27: full
+│  ├─ 28 flux-sample-28: full
+│  └─ 29 flux-sample-29: full
+├─ 3 flux-sample-3: full
+├─ 4 flux-sample-4: full
+├─ 5 flux-sample-5: full
+├─ 6 flux-sample-6: full
+├─ 7 flux-sample-7: full
+├─ 8 flux-sample-8: full
+├─ 9 flux-sample-9: full
+├─ 10 flux-sample-10: full
+└─ 11 flux-sample-11: full
+TOPOLOGY description
+kary:11
+EVENT create-archive-1
+
+real	0m9.059s
+user	0m1.801s
+sys	0m1.256s
+EVENT distribute-all-nodes-1
+
+real	0m2.012s
+user	0m0.005s
+sys	0m0.006s
+EVENT delete-archive-all-nodes-1
+
+real	0m0.020s
+user	0m0.003s
+sys	0m0.007s
+EVENT clean-all-nodes-1
+
+real	0m0.185s
+user	0m0.003s
+sys	0m0.007s
+EVENT create-archive-2
+
+real	0m19.142s
+user	0m3.652s
+sys	0m2.506s
+EVENT distribute-all-nodes-2
+
+real	0m4.045s
+user	0m0.000s
+sys	0m0.012s
+EVENT delete-archive-all-nodes-2
+
+real	0m0.022s
+user	0m0.005s
+sys	0m0.005s
+EVENT clean-all-nodes-2
+
+real	0m0.659s
+user	0m0.000s
+sys	0m0.010s
+EVENT create-archive-3
+
+real	0m29.259s
+user	0m4.927s
+sys	0m4.252s
+EVENT distribute-all-nodes-3
+
+real	0m5.934s
+user	0m0.000s
+sys	0m0.011s
+EVENT delete-archive-all-nodes-3
+
+real	0m0.028s
+user	0m0.000s
+sys	0m0.009s
+EVENT clean-all-nodes-3
+
+real	0m0.975s
+user	0m0.000s
+sys	0m0.012s
+EVENT create-archive-4
+
+real	0m39.459s
+user	0m7.042s
+sys	0m5.336s
+EVENT distribute-all-nodes-4
+
+real	0m7.676s
+user	0m0.000s
+sys	0m0.011s
+EVENT delete-archive-all-nodes-4
+
+real	0m0.030s
+user	0m0.010s
+sys	0m0.000s
+EVENT clean-all-nodes-4
+
+real	0m0.666s
+user	0m0.000s
+sys	0m0.010s
+EVENT create-archive-5
+
+real	0m49.709s
+user	0m8.634s
+sys	0m6.961s
+EVENT distribute-all-nodes-5
+
+real	0m9.884s
+user	0m0.005s
+sys	0m0.006s
+EVENT delete-archive-all-nodes-5
+
+real	0m0.032s
+user	0m0.010s
+sys	0m0.000s
+EVENT clean-all-nodes-5
+
+real	0m1.307s
+user	0m0.000s
+sys	0m0.011s
+EVENT create-archive-6
+
+real	0m59.578s
+user	0m10.091s
+sys	0m8.408s
+EVENT distribute-all-nodes-6
+
+real	0m12.036s
+user	0m0.006s
+sys	0m0.006s
+EVENT delete-archive-all-nodes-6
+
+real	0m0.035s
+user	0m0.000s
+sys	0m0.010s
+EVENT clean-all-nodes-6
+
+real	0m1.473s
+user	0m0.000s
+sys	0m0.011s
+EVENT create-archive-7
+
+real	1m9.960s
+user	0m12.115s
+sys	0m9.533s
+EVENT distribute-all-nodes-7
+
+real	0m17.348s
+user	0m0.011s
+sys	0m0.000s
+EVENT delete-archive-all-nodes-7
+
+real	0m0.037s
+user	0m0.005s
+sys	0m0.005s
+EVENT clean-all-nodes-7
+
+real	0m1.573s
+user	0m0.000s
+sys	0m0.011s
+EVENT create-archive-8
+
+real	1m19.717s
+user	0m13.750s
+sys	0m10.689s
+EVENT distribute-all-nodes-8
+
+real	0m23.487s
+user	0m0.000s
+sys	0m0.011s
+EVENT delete-archive-all-nodes-8
+
+real	0m0.038s
+user	0m0.000s
+sys	0m0.010s
+EVENT clean-all-nodes-8
+
+real	0m1.731s
+user	0m0.000s
+sys	0m0.010s
+EVENT create-archive-9
+
+real	1m15.331s
+user	0m15.603s
+sys	0m11.826s
+EVENT distribute-all-nodes-9
+
+real	0m30.193s
+user	0m0.006s
+sys	0m0.006s
+EVENT delete-archive-all-nodes-9
+
+real	0m0.041s
+user	0m0.000s
+sys	0m0.010s
+EVENT clean-all-nodes-9
+
+real	0m1.843s
+user	0m0.000s
+sys	0m0.012s
+EVENT create-archive-10
+
+real	1m39.892s
+user	0m17.283s
+sys	0m16.275s
+EVENT distribute-all-nodes-10
+
+real	0m37.523s
+user	0m0.004s
+sys	0m0.008s
+EVENT delete-archive-all-nodes-10
+
+real	0m0.043s
+user	0m0.005s
+sys	0m0.005s
+EVENT clean-all-nodes-10
+
+real	0m1.954s
+user	0m0.003s
+sys	0m0.007s
+SCRIPT entrypoint
+
+#!/bin/bash
+# flux-topology.sh
+
+flux exec -r all flux module reload content purge-target-size=104857600 # 100mb
+echo "MODULE STATS CONTENT"
+flux module stats content | jq
+
+# Print the overlay to show the topology
+echo "NODES"
+echo "30"
+echo "TOPOLOGY diagram"
+flux overlay status
+echo "TOPOLOGY description"
+echo "kary:11"
+
+# Go up to 10 sizes for now (matches container size)
+for size in $(seq 1 10)
+  do
+    # Create the archive and time it
+    echo "EVENT create-archive-${size}"
+    time  flux archive create --name create-archive-${size} --dir /chonks ${size}gb.txt
+
+    # Distribute to all nodes, but to /tmp because file exists in /chonks
+    echo "EVENT distribute-all-nodes-${size}"
+    time flux exec -r all -x 0  flux archive extract --name create-archive-${size} -C /tmp
+    sleep 2
+
+    echo "EVENT delete-archive-all-nodes-${size}"
+    time flux exec -r all  flux archive remove --name create-archive-${size} 2>/dev/null
+    sleep 2
+
+    # Cleanup all archive on all nodes
+    echo "EVENT clean-all-nodes-${size}"
+    time flux exec -r all rm -rf /tmp/${size}gb.txt
+    sleep 2
+done
+
+# Show self!
+echo "SCRIPT entrypoint"
+cat $0

@@ -1,0 +1,23 @@
+apiVersion: flux-framework.org/v1alpha2
+kind: MiniCluster
+metadata:
+  name: flux-sample
+spec:
+  size: 30
+  flux:
+    topology: kary:7
+    container:
+      disable: true
+  logging:
+    quiet: true
+  containers:
+    - image: ghcr.io/converged-computing/container-chonks:topology-flux-0.66.0
+      command: /bin/bash /entrypoint.sh
+      launcher: true
+      pullAlways: true
+      commands:
+        pre: |
+          # There are already installed in the image above
+          # apt-get update && apt-get install -y valgrind
+          # python3 -m pip install Jinja2 --break-system-packages
+          python3 /topology_experiment.py --max-size 10 --min-size 1 --nodes 30 --topo kary:7
