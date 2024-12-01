@@ -38,16 +38,36 @@ for size in $(seq {{ min_size }} {{ max_size }})
     # Distribute to all nodes, but to /tmp because file exists in /chonks
     echo "EVENT distribute-all-nodes-${size}"
     time flux exec -r all -x 0 {% if valgrind_extract %}valgrind --leak-check=full{% endif %} flux archive extract --name create-archive-${size} -C /tmp
-    sleep 2
-
-    echo "EVENT delete-archive-all-nodes-${size}"
-    time flux exec -r all {% if valgrind_remove %}valgrind --leak-check=full{% endif %} flux archive remove --name create-archive-${size} 2>/dev/null
-    sleep 2
 
     # Cleanup all archive on all nodes
     echo "EVENT clean-all-nodes-${size}"
     time flux exec -r all rm -rf /tmp/${size}gb.txt
-    sleep 2
+
+    echo "EVENT delete-archive-all-nodes-${size}"
+    time flux exec -r all {% if valgrind_remove %}valgrind --leak-check=full{% endif %} flux archive remove --name create-archive-${size} 2>/dev/null
+
+    # Next, do the same for the root node (level 0) to the deepest level (leaves)
+    echo "EVENT create-leaf-nodes-${size}"
+    time flux archive create --name create-archive-leaves-${size} --dir /chonks ${size}gb.txt
+    echo "EVENT distribute-leaf-nodes-${size}"
+    time flux exec -r {{leaf_nodes}} -x 0 {% if valgrind_extract %}valgrind --leak-check=full{% endif %} flux archive extract --name create-archive-leaves-${size} -C /tmp
+    # Cleanup again    
+    echo "EVENT clean-leaf-nodes-${size}"
+    time flux exec -r all rm -rf /tmp/${size}gb.txt
+    echo "EVENT delete-archive-leaf-nodes-${size}"
+    time flux exec -r all flux archive remove --name create-archive-leaves-${size} 2>/dev/null
+
+    # Finally, get the middle node and distribute to middle level first, then middle to last
+    echo "EVENT create-middle-nodes-${size}"
+    time flux archive create --name create-archive-middle-${size} --dir /chonks ${size}gb.txt
+    echo "EVENT distribute-middle-nodes-0-${size}"
+    time flux exec -r {{middle_nodes}} -x 0 {% if valgrind_extract %}valgrind --leak-check=full{% endif %} flux archive extract --name create-archive-middle-${size} -C /tmp
+    echo "EVENT distribute-middle-nodes-1-${size}"
+    time flux exec -r {{leaf_nodes}} -x 0 {% if valgrind_extract %}valgrind --leak-check=full{% endif %} flux archive extract --name create-archive-middle-${size} -C /tmp
+    echo "EVENT clean-middle-nodes-${size}"
+    time flux exec -r all rm -rf /tmp/${size}gb.txt
+    echo "EVENT delete-archive-middle-nodes-${size}"
+    time flux exec -r all flux archive remove --name create-archive-middle-${size} 2>/dev/null
 done
 
 # Show self!
@@ -61,12 +81,20 @@ def get_parser():
         formatter_class=argparse.RawTextHelpFormatter,
     )
     parser.add_argument(
+        "--middle-nodes",
+        help="List of middle nodes",
+    )
+    parser.add_argument(
         "--topo",
         help="Topology description",
     )
     parser.add_argument(
         "--nodes",
         help="Total number of nodes",
+    )
+    parser.add_argument(
+        "--leaf-nodes",
+        help="List of leaf nodes",
     )
     parser.add_argument(
         "--valgrind-create",
@@ -127,6 +155,8 @@ def main():
     
     # For each level, first derive testing commands to send data from rank0 to (leaves)
     render = {
+        "leaf_nodes": args.leaf_nodes,
+        "middle_nodes": args.middle_nodes,
         "min_size": args.min_size,
         "max_size": args.max_size,
         "nodes": str(args.nodes),

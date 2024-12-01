@@ -46,6 +46,12 @@ def get_parser():
         default=os.path.join(here, "data", "raw"),
     )
     parser.add_argument(
+        "--min-size",
+        help="Minimum size (GB) to transfer, up to 10",
+        default=1,
+        type=int,
+    )
+    parser.add_argument(
         "--max-size",
         help="Maximum size (GB) to transfer, up to 10",
         default=10,
@@ -67,6 +73,12 @@ def get_parser():
         help="Maximum nodes from design to use",
         default=None,
         type=int,
+    )
+    parser.add_argument(
+        "--topo",
+        help="Filter to run just one or more topologies",
+        action="append",
+        default=None,
     )
     parser.add_argument(
         "--iters",
@@ -134,29 +146,23 @@ def run_topology_experiment(exp, args, nodes_dir):
         "topo": exp["topo"],
         "name": args.name,
         "max_size": args.max_size,
+        "min_size": args.min_size,
     }
     outfile = os.path.join(nodes_dir, "topology-experiment.out")
     if os.path.exists(outfile):
         print(f"{outfile} exists, skipping")
         return False
     print(f"\n🍔 Running topology experiment size {nodes}")
-    levels = exp["levels"]
-
+    
+    # Skip levels for now - extra time and might be buggy to do?
+    # levels = exp["levels"]
     # Get the last level - where the leaves are
-    all_levels = list(levels)
-    all_levels.sort()
-    deepest_level = all_levels[-1]
-
+    # all_levels = list(levels)
+    # all_levels.sort()
+    # deepest_level = all_levels[-1]
     # This will be lower half
-    middle_level = str(int(len(all_levels) / 2))
+    # middle_level = str(int(len(all_levels) / 2))
 
-    # For each level, first derive testing commands to send data from rank0 to (leaves)
-    render.update(
-        {
-            "leaf_nodes": ",".join(levels[deepest_level]),
-            "middle_nodes": ",".join(levels[middle_level]),
-        }
-    )
     # Load the minicluster template
     minicluster_template = read_file(args.template)
     template = Template(minicluster_template)
@@ -209,6 +215,29 @@ def run_kubectl(command, allow_fail=False):
     return res
 
 
+def filter_plans(args, plans):
+    """
+    Filter plans in advance to tell user how many experiments we will run
+    """
+    updated = []
+    
+    # If we have specific topologies, make a regex
+    regex = None
+    if args.topo is not None:
+       regex = "(%s)" % "|".join(args.topo)
+
+    for exp in plans:
+        nodes = exp["nodes"]
+        topo = exp["topo"].replace(":", "-")
+        if regex and not re.search(regex, topo):
+            continue
+        if args.exact_nodes is not None and nodes != args.exact_nodes:
+            continue
+        elif args.max_nodes is not None and nodes > args.max_nodes:
+            continue
+        updated.append(exp)
+    return updated
+
 def run_experiments(args, plans):
     """
     Generate runs for topology sizes
@@ -223,26 +252,32 @@ def run_experiments(args, plans):
         # Save the entire table just once
         topo = exp["topo"].replace(":", "-")
         nodes = exp["nodes"]
-        if args.exact_nodes is not None and nodes != args.exact_nodes:
-            continue
-        elif args.max_nodes is not None and nodes > args.max_nodes:
-            continue
-
         for ii in range(args.iters):
             path = os.path.join(args.data_dir, str(nodes), topo, str(ii))
             if not os.path.exists(path):
                 os.makedirs(path)
 
             # EXPERIMENTS: ---
-            # Run LAMMPS a number of iterations in the cluster
-            # This writes all iteration runs to one output file
             try:
                 if run_topology_experiment(exp, args, path):
                     count += 1
             except:
                 print(f"Issue with {exp} - investigate!")
 
-    print("Experiments are done!")
+    print(f"Experiments (N={count}) are done!")
+
+def validate(args):
+    """
+    Validate args, primarily sizes
+    """
+    if args.min_size > args.max_size:
+        raise ValueError("Min size cannot be > Max size.")
+    if args.min_size < 1 or args.max_size < 1:
+        raise ValueError("Min and Max sizes cannot be less than 1")
+    if args.max_size > 10:
+        raise ValueError("Currently only support for 10GB.")
+    if args.max_nodes and args.exact_nodes:
+        raise ValueError("You must choose one of --max-nodes OR --exact-nodes")
 
 
 def main():
@@ -256,19 +291,27 @@ def main():
     if not os.path.exists(args.data_dir):
         os.makedirs(args.data_dir)
 
+    # Validate sizes and relationships between them
+    validate(args)
+
     # Read in kary designs
     if not os.path.exists(args.data):
         sys.exit(f"{args.data} does not exist.")
     plans = read_json(args.data)
 
-    if args.max_size > 10:
-        raise ValueError("Currently only support for 10GB.")
+    # Filter plans so we can show user exactly number to run
+    plans = filter_plans(args, plans)
 
     # plan experiments!
     print("🧪️ Experiments:")
     print("🪴️ Planning to run:")
     print(f"   Output Data         : {args.data_dir}")
     print(f"   Experiments         : {len(plans)}")
+    if args.exact_nodes:
+        print(f"   Exact Nodes         : {args.exact_nodes}")
+    if args.max_nodes:
+        print(f"     Max Nodes         : {args.max_nodes}")
+    print(f"      Min Size         : {args.min_size}")
     print(f"      Max Size         : {args.max_size}")
     print(f"         Iters         : {args.iters}")
     if not confirm_action("Would you like to continue?"):

@@ -1,11 +1,11 @@
 apiVersion: flux-framework.org/v1alpha2
 kind: MiniCluster
 metadata:
-  name: {{ name }}
+  name: flux-sample
 spec:
-  size: {{ nodes }}
+  size: 6
   flux:
-    topology: {{ topo }}
+    topology: kary:2
     container:
       disable: true
   logging:
@@ -20,4 +20,4 @@ spec:
           # There are already installed in the image above
           # apt-get update && apt-get install -y valgrind
           # python3 -m pip install Jinja2 --break-system-packages
-          python3 /topology_experiment.py --max-size {{ max_size }} --min-size {{ min_size }} --nodes {{ nodes }} --topo {{ topo }}
+          python3 /topology_experiment.py --max-size 10 --min-size 1 --nodes 6 --topo kary:2

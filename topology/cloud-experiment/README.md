@@ -102,31 +102,33 @@ total time to run is 9767.250812530518 seconds
 
 ### 6 Nodes
 
-This (non test) has the flux segfault fix so we can go fully up to the max size of 10GB. Since each run takes a LOT longer and this is still just looking, I am just doing one iteration.
+Google cloud was issuing an error, I switched to aws and it went away.
 
 ```bash
-time gcloud container clusters create test-cluster \
-    --threads-per-core=1 \
-    --num-nodes=6 \
-    --machine-type=c2d-standard-32 \
-    --enable-gvnic \
-    --network=mtu9k \
-    --placement-type=COMPACT \
-    --region=us-central1-a \
-    --project=${GOOGLE_PROJECT} 
+eksctl create cluster --config-file ./eks-config-6.yaml
+aws eks update-kubeconfig --region us-east-2 --name topology-study
 
 kubectl apply -f https://raw.githubusercontent.com/flux-framework/flux-operator/refs/heads/main/examples/dist/flux-operator.yaml
 
 # Don't bother with smaller sizes, just 6
-python run-experiment.py --data ./kary-designs.json --exact-nodes=6 --max-size=10 --data-dir ./data/raw-max-6-10gb --template ./templates/minicluster.yaml --iters 1
-time gcloud container clusters delete test-cluster --region=us-central1-a
-python run-analysis.py --out ./data/parsed-max-6-10gb --data ./data/raw-max-6-10gb
+python run-experiment.py --data ./kary-designs.json --exact-nodes=6 --min-size=1 --max-size=10 --data-dir ./data/raw-exact-6-aws --template ./templates/minicluster.yaml --iters 3
+eksctl delete cluster --config-file ./eks-config-6.yaml --wait
+python run-analysis.py --out ./data/parsed-exact-6-aws --data ./data/raw-exact-6-aws
 ```
-```
-Experiments are done!
-total time to run is 5793.205878019333 seconds
+```console
+Experiments (N=12) are done!
+total time to run is 9715.973370552063 seconds
 ```
 
+For this updated setup without a view, here is how to connect to the broker's socket:
+
+```bash
+flux proxy local:///mnt/flux/view/run/flux/local bash
+```
+```
+flux dmesg
+flux module stats content | jq
+```
 
 ## Results
 
@@ -166,3 +168,11 @@ This will allow for more "kary" designs.
 ![data/parsed-exact-30/distribute-middle-nodes-0-nodes-30.png](data/parsed-exact-30/distribute-middle-nodes-0-nodes-30.png)
 ![data/parsed-exact-30/distribute-middle-nodes-1-nodes-30.png](data/parsed-exact-30/distribute-middle-nodes-1-nodes-30.png)
 
+### AWS 6 Node Test
+
+Without any bugs. I removed the middle distribution layer to reduce experiment running time.
+
+![data/parsed-exact-6-aws/clean-all-nodes-nodes-6.png](data/parsed-exact-6-aws/clean-all-nodes-nodes-6.png)
+![data/parsed-exact-6-aws/create-archive-nodes-6.png](data/parsed-exact-6-aws/create-archive-nodes-6.png)
+![data/parsed-exact-6-aws/delete-archive-all-nodes-nodes-6.png](data/parsed-exact-6-aws/delete-archive-all-nodes-nodes-6.png)
+![data/parsed-exact-6-aws/distribute-all-nodes-nodes-6.png](data/parsed-exact-6-aws/distribute-all-nodes-nodes-6.png)
