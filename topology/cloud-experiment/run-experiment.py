@@ -5,6 +5,7 @@ import json
 import os
 import time
 import sys
+import re
 from jinja2 import Template
 
 from kubernetes import client, config
@@ -153,7 +154,7 @@ def run_topology_experiment(exp, args, nodes_dir):
         print(f"{outfile} exists, skipping")
         return False
     print(f"\n🍔 Running topology experiment size {nodes}")
-    
+
     # Skip levels for now - extra time and might be buggy to do?
     # levels = exp["levels"]
     # Get the last level - where the leaves are
@@ -219,17 +220,18 @@ def filter_plans(args, plans):
     """
     Filter plans in advance to tell user how many experiments we will run
     """
+    # Quick hack so we don't need to regenerate the topology file for larger size
     updated = []
-    
-    # If we have specific topologies, make a regex
-    regex = None
-    if args.topo is not None:
-       regex = "(%s)" % "|".join(args.topo)
+    if args.exact_nodes == 256 and args.topo is not None:
+        for topo in args.topo:
+            updated.append({"nodes": 256, "topo": topo})
+    print(updated)
+    return updated
 
     for exp in plans:
         nodes = exp["nodes"]
         topo = exp["topo"].replace(":", "-")
-        if regex and not re.search(regex, topo):
+        if args.topo is not None and exp["topo"] not in args.topo:
             continue
         if args.exact_nodes is not None and nodes != args.exact_nodes:
             continue
@@ -237,6 +239,7 @@ def filter_plans(args, plans):
             continue
         updated.append(exp)
     return updated
+
 
 def run_experiments(args, plans):
     """
@@ -265,6 +268,7 @@ def run_experiments(args, plans):
                 print(f"Issue with {exp} - investigate!")
 
     print(f"Experiments (N={count}) are done!")
+
 
 def validate(args):
     """

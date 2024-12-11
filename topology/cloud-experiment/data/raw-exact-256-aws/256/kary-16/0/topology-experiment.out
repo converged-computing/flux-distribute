@@ -1,0 +1,515 @@
+MODULE STATS CONTENT
+[1;39m{
+  [0m[1;34m"count"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"valid"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"dirty"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"size"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"flush-batch-count"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[1;34m"mmap"[0m[1;39m: [0m[1;39m{
+    [0m[1;34m"tags"[0m[1;39m: [0m[1;39m{}[0m[1;39m,
+    [0m[1;34m"blobs"[0m[1;39m: [0m[0;39m0[0m[1;39m
+  [1;39m}[0m[1;39m
+[1;39m}[0m
+NODES
+256
+TOPOLOGY diagram
+0 flux-sample-0: full
+├─ 1 flux-sample-1: full
+│  ├─ 17 flux-sample-17: full
+│  ├─ 18 flux-sample-18: full
+│  ├─ 19 flux-sample-19: full
+│  ├─ 20 flux-sample-20: full
+│  ├─ 21 flux-sample-21: full
+│  ├─ 22 flux-sample-22: full
+│  ├─ 23 flux-sample-23: full
+│  ├─ 24 flux-sample-24: full
+│  ├─ 25 flux-sample-25: full
+│  ├─ 26 flux-sample-26: full
+│  ├─ 27 flux-sample-27: full
+│  ├─ 28 flux-sample-28: full
+│  ├─ 29 flux-sample-29: full
+│  ├─ 30 flux-sample-30: full
+│  ├─ 31 flux-sample-31: full
+│  └─ 32 flux-sample-32: full
+├─ 2 flux-sample-2: full
+│  ├─ 33 flux-sample-33: full
+│  ├─ 34 flux-sample-34: full
+│  ├─ 35 flux-sample-35: full
+│  ├─ 36 flux-sample-36: full
+│  ├─ 37 flux-sample-37: full
+│  ├─ 38 flux-sample-38: full
+│  ├─ 39 flux-sample-39: full
+│  ├─ 40 flux-sample-40: full
+│  ├─ 41 flux-sample-41: full
+│  ├─ 42 flux-sample-42: full
+│  ├─ 43 flux-sample-43: full
+│  ├─ 44 flux-sample-44: full
+│  ├─ 45 flux-sample-45: full
+│  ├─ 46 flux-sample-46: full
+│  ├─ 47 flux-sample-47: full
+│  └─ 48 flux-sample-48: full
+├─ 3 flux-sample-3: full
+│  ├─ 49 flux-sample-49: full
+│  ├─ 50 flux-sample-50: full
+│  ├─ 51 flux-sample-51: full
+│  ├─ 52 flux-sample-52: full
+│  ├─ 53 flux-sample-53: full
+│  ├─ 54 flux-sample-54: full
+│  ├─ 55 flux-sample-55: full
+│  ├─ 56 flux-sample-56: full
+│  ├─ 57 flux-sample-57: full
+│  ├─ 58 flux-sample-58: full
+│  ├─ 59 flux-sample-59: full
+│  ├─ 60 flux-sample-60: full
+│  ├─ 61 flux-sample-61: full
+│  ├─ 62 flux-sample-62: full
+│  ├─ 63 flux-sample-63: full
+│  └─ 64 flux-sample-64: full
+├─ 4 flux-sample-4: full
+│  ├─ 65 flux-sample-65: full
+│  ├─ 66 flux-sample-66: full
+│  ├─ 67 flux-sample-67: full
+│  ├─ 68 flux-sample-68: full
+│  ├─ 69 flux-sample-69: full
+│  ├─ 70 flux-sample-70: full
+│  ├─ 71 flux-sample-71: full
+│  ├─ 72 flux-sample-72: full
+│  ├─ 73 flux-sample-73: full
+│  ├─ 74 flux-sample-74: full
+│  ├─ 75 flux-sample-75: full
+│  ├─ 76 flux-sample-76: full
+│  ├─ 77 flux-sample-77: full
+│  ├─ 78 flux-sample-78: full
+│  ├─ 79 flux-sample-79: full
+│  └─ 80 flux-sample-80: full
+├─ 5 flux-sample-5: full
+│  ├─ 81 flux-sample-81: full
+│  ├─ 82 flux-sample-82: full
+│  ├─ 83 flux-sample-83: full
+│  ├─ 84 flux-sample-84: full
+│  ├─ 85 flux-sample-85: full
+│  ├─ 86 flux-sample-86: full
+│  ├─ 87 flux-sample-87: full
+│  ├─ 88 flux-sample-88: full
+│  ├─ 89 flux-sample-89: full
+│  ├─ 90 flux-sample-90: full
+│  ├─ 91 flux-sample-91: full
+│  ├─ 92 flux-sample-92: full
+│  ├─ 93 flux-sample-93: full
+│  ├─ 94 flux-sample-94: full
+│  ├─ 95 flux-sample-95: full
+│  └─ 96 flux-sample-96: full
+├─ 6 flux-sample-6: full
+│  ├─ 97 flux-sample-97: full
+│  ├─ 98 flux-sample-98: full
+│  ├─ 99 flux-sample-99: full
+│  ├─ 100 flux-sample-100: full
+│  ├─ 101 flux-sample-101: full
+│  ├─ 102 flux-sample-102: full
+│  ├─ 103 flux-sample-103: full
+│  ├─ 104 flux-sample-104: full
+│  ├─ 105 flux-sample-105: full
+│  ├─ 106 flux-sample-106: full
+│  ├─ 107 flux-sample-107: full
+│  ├─ 108 flux-sample-108: full
+│  ├─ 109 flux-sample-109: full
+│  ├─ 110 flux-sample-110: full
+│  ├─ 111 flux-sample-111: full
+│  └─ 112 flux-sample-112: full
+├─ 7 flux-sample-7: full
+│  ├─ 113 flux-sample-113: full
+│  ├─ 114 flux-sample-114: full
+│  ├─ 115 flux-sample-115: full
+│  ├─ 116 flux-sample-116: full
+│  ├─ 117 flux-sample-117: full
+│  ├─ 118 flux-sample-118: full
+│  ├─ 119 flux-sample-119: full
+│  ├─ 120 flux-sample-120: full
+│  ├─ 121 flux-sample-121: full
+│  ├─ 122 flux-sample-122: full
+│  ├─ 123 flux-sample-123: full
+│  ├─ 124 flux-sample-124: full
+│  ├─ 125 flux-sample-125: full
+│  ├─ 126 flux-sample-126: full
+│  ├─ 127 flux-sample-127: full
+│  └─ 128 flux-sample-128: full
+├─ 8 flux-sample-8: full
+│  ├─ 129 flux-sample-129: full
+│  ├─ 130 flux-sample-130: full
+│  ├─ 131 flux-sample-131: full
+│  ├─ 132 flux-sample-132: full
+│  ├─ 133 flux-sample-133: full
+│  ├─ 134 flux-sample-134: full
+│  ├─ 135 flux-sample-135: full
+│  ├─ 136 flux-sample-136: full
+│  ├─ 137 flux-sample-137: full
+│  ├─ 138 flux-sample-138: full
+│  ├─ 139 flux-sample-139: full
+│  ├─ 140 flux-sample-140: full
+│  ├─ 141 flux-sample-141: full
+│  ├─ 142 flux-sample-142: full
+│  ├─ 143 flux-sample-143: full
+│  └─ 144 flux-sample-144: full
+├─ 9 flux-sample-9: full
+│  ├─ 145 flux-sample-145: full
+│  ├─ 146 flux-sample-146: full
+│  ├─ 147 flux-sample-147: full
+│  ├─ 148 flux-sample-148: full
+│  ├─ 149 flux-sample-149: full
+│  ├─ 150 flux-sample-150: full
+│  ├─ 151 flux-sample-151: full
+│  ├─ 152 flux-sample-152: full
+│  ├─ 153 flux-sample-153: full
+│  ├─ 154 flux-sample-154: full
+│  ├─ 155 flux-sample-155: full
+│  ├─ 156 flux-sample-156: full
+│  ├─ 157 flux-sample-157: full
+│  ├─ 158 flux-sample-158: full
+│  ├─ 159 flux-sample-159: full
+│  └─ 160 flux-sample-160: full
+├─ 10 flux-sample-10: full
+│  ├─ 161 flux-sample-161: full
+│  ├─ 162 flux-sample-162: full
+│  ├─ 163 flux-sample-163: full
+│  ├─ 164 flux-sample-164: full
+│  ├─ 165 flux-sample-165: full
+│  ├─ 166 flux-sample-166: full
+│  ├─ 167 flux-sample-167: full
+│  ├─ 168 flux-sample-168: full
+│  ├─ 169 flux-sample-169: full
+│  ├─ 170 flux-sample-170: full
+│  ├─ 171 flux-sample-171: full
+│  ├─ 172 flux-sample-172: full
+│  ├─ 173 flux-sample-173: full
+│  ├─ 174 flux-sample-174: full
+│  ├─ 175 flux-sample-175: full
+│  └─ 176 flux-sample-176: full
+├─ 11 flux-sample-11: full
+│  ├─ 177 flux-sample-177: full
+│  ├─ 178 flux-sample-178: full
+│  ├─ 179 flux-sample-179: full
+│  ├─ 180 flux-sample-180: full
+│  ├─ 181 flux-sample-181: full
+│  ├─ 182 flux-sample-182: full
+│  ├─ 183 flux-sample-183: full
+│  ├─ 184 flux-sample-184: full
+│  ├─ 185 flux-sample-185: full
+│  ├─ 186 flux-sample-186: full
+│  ├─ 187 flux-sample-187: full
+│  ├─ 188 flux-sample-188: full
+│  ├─ 189 flux-sample-189: full
+│  ├─ 190 flux-sample-190: full
+│  ├─ 191 flux-sample-191: full
+│  └─ 192 flux-sample-192: full
+├─ 12 flux-sample-12: full
+│  ├─ 193 flux-sample-193: full
+│  ├─ 194 flux-sample-194: full
+│  ├─ 195 flux-sample-195: full
+│  ├─ 196 flux-sample-196: full
+│  ├─ 197 flux-sample-197: full
+│  ├─ 198 flux-sample-198: full
+│  ├─ 199 flux-sample-199: full
+│  ├─ 200 flux-sample-200: full
+│  ├─ 201 flux-sample-201: full
+│  ├─ 202 flux-sample-202: full
+│  ├─ 203 flux-sample-203: full
+│  ├─ 204 flux-sample-204: full
+│  ├─ 205 flux-sample-205: full
+│  ├─ 206 flux-sample-206: full
+│  ├─ 207 flux-sample-207: full
+│  └─ 208 flux-sample-208: full
+├─ 13 flux-sample-13: full
+│  ├─ 209 flux-sample-209: full
+│  ├─ 210 flux-sample-210: full
+│  ├─ 211 flux-sample-211: full
+│  ├─ 212 flux-sample-212: full
+│  ├─ 213 flux-sample-213: full
+│  ├─ 214 flux-sample-214: full
+│  ├─ 215 flux-sample-215: full
+│  ├─ 216 flux-sample-216: full
+│  ├─ 217 flux-sample-217: full
+│  ├─ 218 flux-sample-218: full
+│  ├─ 219 flux-sample-219: full
+│  ├─ 220 flux-sample-220: full
+│  ├─ 221 flux-sample-221: full
+│  ├─ 222 flux-sample-222: full
+│  ├─ 223 flux-sample-223: full
+│  └─ 224 flux-sample-224: full
+├─ 14 flux-sample-14: full
+│  ├─ 225 flux-sample-225: full
+│  ├─ 226 flux-sample-226: full
+│  ├─ 227 flux-sample-227: full
+│  ├─ 228 flux-sample-228: full
+│  ├─ 229 flux-sample-229: full
+│  ├─ 230 flux-sample-230: full
+│  ├─ 231 flux-sample-231: full
+│  ├─ 232 flux-sample-232: full
+│  ├─ 233 flux-sample-233: full
+│  ├─ 234 flux-sample-234: full
+│  ├─ 235 flux-sample-235: full
+│  ├─ 236 flux-sample-236: full
+│  ├─ 237 flux-sample-237: full
+│  ├─ 238 flux-sample-238: full
+│  ├─ 239 flux-sample-239: full
+│  └─ 240 flux-sample-240: full
+├─ 15 flux-sample-15: full
+│  ├─ 241 flux-sample-241: full
+│  ├─ 242 flux-sample-242: full
+│  ├─ 243 flux-sample-243: full
+│  ├─ 244 flux-sample-244: full
+│  ├─ 245 flux-sample-245: full
+│  ├─ 246 flux-sample-246: full
+│  ├─ 247 flux-sample-247: full
+│  ├─ 248 flux-sample-248: full
+│  ├─ 249 flux-sample-249: full
+│  ├─ 250 flux-sample-250: full
+│  ├─ 251 flux-sample-251: full
+│  ├─ 252 flux-sample-252: full
+│  ├─ 253 flux-sample-253: full
+│  ├─ 254 flux-sample-254: full
+│  └─ 255 flux-sample-255: full
+└─ 16 flux-sample-16: full
+TOPOLOGY description
+kary:16
+EVENT create-archive-1
+
+real	0m9.071s
+user	0m1.812s
+sys	0m1.287s
+EVENT distribute-all-nodes-1
+
+real	0m2.527s
+user	0m0.015s
+sys	0m0.039s
+EVENT delete-archive-all-nodes-1
+
+real	0m0.046s
+user	0m0.019s
+sys	0m0.025s
+EVENT clean-all-nodes-1
+
+real	0m0.563s
+user	0m0.021s
+sys	0m0.017s
+EVENT create-archive-2
+
+real	0m19.383s
+user	0m3.420s
+sys	0m2.820s
+EVENT distribute-all-nodes-2
+
+real	0m18.307s
+user	0m0.032s
+sys	0m0.017s
+EVENT delete-archive-all-nodes-2
+
+real	0m0.049s
+user	0m0.026s
+sys	0m0.018s
+EVENT clean-all-nodes-2
+
+real	0m0.892s
+user	0m0.019s
+sys	0m0.024s
+EVENT create-archive-3
+
+real	0m29.352s
+user	0m5.143s
+sys	0m4.225s
+EVENT distribute-all-nodes-3
+
+real	0m48.867s
+user	0m0.017s
+sys	0m0.033s
+EVENT delete-archive-all-nodes-3
+
+real	0m0.068s
+user	0m0.005s
+sys	0m0.037s
+EVENT clean-all-nodes-3
+
+real	0m1.037s
+user	0m0.023s
+sys	0m0.023s
+EVENT create-archive-4
+
+real	0m39.683s
+user	0m7.021s
+sys	0m5.634s
+EVENT distribute-all-nodes-4
+
+real	1m19.371s
+user	0m0.023s
+sys	0m0.028s
+EVENT delete-archive-all-nodes-4
+
+real	0m0.071s
+user	0m0.018s
+sys	0m0.022s
+EVENT clean-all-nodes-4
+
+real	0m1.095s
+user	0m0.014s
+sys	0m0.029s
+EVENT create-archive-5
+
+real	0m49.986s
+user	0m8.907s
+sys	0m7.071s
+EVENT distribute-all-nodes-5
+
+real	1m48.630s
+user	0m0.029s
+sys	0m0.023s
+EVENT delete-archive-all-nodes-5
+
+real	0m0.241s
+user	0m0.021s
+sys	0m0.021s
+EVENT clean-all-nodes-5
+
+real	0m1.305s
+user	0m0.034s
+sys	0m0.011s
+EVENT create-archive-6
+
+real	0m59.924s
+user	0m10.650s
+sys	0m8.220s
+EVENT distribute-all-nodes-6
+
+real	2m19.188s
+user	0m0.029s
+sys	0m0.023s
+EVENT delete-archive-all-nodes-6
+
+real	0m0.071s
+user	0m0.009s
+sys	0m0.032s
+EVENT clean-all-nodes-6
+
+real	0m1.433s
+user	0m0.036s
+sys	0m0.007s
+EVENT create-archive-7
+
+real	1m10.090s
+user	0m12.164s
+sys	0m9.902s
+EVENT distribute-all-nodes-7
+
+real	2m48.896s
+user	0m0.034s
+sys	0m0.027s
+EVENT delete-archive-all-nodes-7
+
+real	0m0.192s
+user	0m0.015s
+sys	0m0.029s
+EVENT clean-all-nodes-7
+
+real	0m1.478s
+user	0m0.018s
+sys	0m0.027s
+EVENT create-archive-8
+
+real	1m20.389s
+user	0m14.124s
+sys	0m11.145s
+EVENT distribute-all-nodes-8
+
+real	3m18.864s
+user	0m0.023s
+sys	0m0.032s
+EVENT delete-archive-all-nodes-8
+
+real	0m0.272s
+user	0m0.005s
+sys	0m0.037s
+EVENT clean-all-nodes-8
+
+real	0m1.680s
+user	0m0.029s
+sys	0m0.013s
+EVENT create-archive-9
+
+real	1m30.230s
+user	0m15.730s
+sys	0m12.338s
+EVENT distribute-all-nodes-9
+
+real	3m47.779s
+user	0m0.018s
+sys	0m0.041s
+EVENT delete-archive-all-nodes-9
+
+real	0m0.251s
+user	0m0.037s
+sys	0m0.014s
+EVENT clean-all-nodes-9
+
+real	0m1.801s
+user	0m0.017s
+sys	0m0.029s
+EVENT create-archive-10
+
+real	1m30.913s
+user	0m17.288s
+sys	0m13.330s
+EVENT distribute-all-nodes-10
+
+real	4m18.081s
+user	0m0.035s
+sys	0m0.018s
+EVENT delete-archive-all-nodes-10
+
+real	0m0.281s
+user	0m0.010s
+sys	0m0.039s
+EVENT clean-all-nodes-10
+
+real	0m1.902s
+user	0m0.029s
+sys	0m0.017s
+SCRIPT entrypoint
+
+#!/bin/bash
+# flux-topology.sh
+
+flux exec -r all flux module reload content purge-target-size=104857600 # 100mb
+echo "MODULE STATS CONTENT"
+flux module stats content | jq
+
+# Print the overlay to show the topology
+echo "NODES"
+echo "256"
+echo "TOPOLOGY diagram"
+flux overlay status
+echo "TOPOLOGY description"
+echo "kary:16"
+
+# Go up to 10 sizes for now (matches container size)
+for size in $(seq 1 10)
+  do
+    # Create the archive and time it
+    echo "EVENT create-archive-${size}"
+    time  flux archive create --name create-archive-${size} --dir /chonks ${size}gb.txt
+
+    # Distribute to all nodes, but to /tmp because file exists in /chonks
+    echo "EVENT distribute-all-nodes-${size}"
+    time flux exec -r all -x 0  flux archive extract --name create-archive-${size} -C /tmp
+    sleep 2
+
+    echo "EVENT delete-archive-all-nodes-${size}"
+    time flux exec -r all  flux archive remove --name create-archive-${size} 2>/dev/null
+    sleep 2
+
+    # Cleanup all archive on all nodes
+    echo "EVENT clean-all-nodes-${size}"
+    time flux exec -r all rm -rf /tmp/${size}gb.txt
+    sleep 2
+done
+
+# Show self!
+echo "SCRIPT entrypoint"
+cat $0

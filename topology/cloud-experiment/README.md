@@ -129,6 +129,7 @@ flux proxy local:///mnt/flux/view/run/flux/local bash
 flux dmesg
 flux module stats content | jq
 ```
+
 ### 30 Nodes on AWS
 
 For cost, these are 0.6160 * 30 == 18.48/hour. For the size 30 test, we previously did 16 runs with 5 iterations each.  If for the 6 node test we did 12 and it took 161 minutes, assuming the same time (which we can't because the experiment is about half the size) if we did that same size it would take ~17 hours, which is too long. If we assume 16 kary designs * 2 iterations each * 2.02375 minutes / iteration, then that's 64.76 minutes. Since we just want a sample, let's start with just one iteration for 30 nodes (and time it) and we can always do another one. 
@@ -158,6 +159,75 @@ kubectl apply -f https://raw.githubusercontent.com/flux-framework/flux-operator/
 python run-experiment.py --data ./kary-designs.json --exact-nodes=30 --min-size=1 --max-size=10 --data-dir ./data/raw-exact-30-aws --template ./templates/minicluster.yaml --iters 1
 eksctl delete cluster --config-file ./eks-config-30.yaml --wait
 python run-analysis.py --out ./data/parsed-exact-30-aws --data ./data/raw-exact-30-aws
+```
+```console
+Experiments (N=16) are done!
+total time to run is 12480.895931243896 seconds
+```
+
+
+### 256 Nodes on AWS
+
+For cost, these are 0.6160 * 256 == 157.70/hour. I am just going to do one iteration here, the idea being we want to see the result For this larger test. Let's limit the kary's to 2 and start with 2 iterations, and we can increase if they are quicker than we expect. 
+
+For actual timings:
+
+ - the cluster is 18.48/hour
+ - the first run takes 20 minutes because of the image pull
+ - subsequent runs take 13 minutes
+ - that means for 1 iteration and 16 topologies, the experiment should take 208 (let's say 215) minutes (rounded up) and thus (215 / 60) * 18.48 == $66.22 and we can also round up to $70. I was aiming for under $100 so that is within budget.
+
+```bash
+# Going up at 11:00
+time eksctl create cluster --config-file ./eks-config-256.yaml
+```
+```bash
+aws eks update-kubeconfig --region us-east-2 --name topology-study
+
+# Note that topology does not work for these instances
+aws ec2 describe-instances --filters "Name=instance-type,Values=c5a.4xlarge" --region us-east-2 > aws-instances-256.json
+
+kubectl apply -f https://raw.githubusercontent.com/flux-framework/flux-operator/refs/heads/main/examples/dist/flux-operator.yaml
+time python run-experiment.py --data ./kary-designs.json --exact-nodes=256 --min-size=1 --max-size=10 --data-dir ./data/raw-exact-256-aws --template ./templates/minicluster.yaml --topo kary:1 --topo kary:16 --iters 1
+```
+```console
+[{'nodes': 256, 'topo': 'kary:1'}, {'nodes': 256, 'topo': 'kary:16'}]
+🧪️ Experiments:
+🪴️ Planning to run:
+   Output Data         : ./data/raw-exact-256-aws
+   Experiments         : 2
+   Exact Nodes         : 256
+      Min Size         : 1
+      Max Size         : 10
+         Iters         : 1
+Would you like to continue? (yes/no)? yes
+== Running experiment {'nodes': 256, 'topo': 'kary:1'}: 0 of 2
+
+🍔 Running topology experiment size 256
+minicluster.flux-framework.org/flux-sample created
+job.batch/flux-sample condition met
+Writing topology log and recordings to ./data/raw-exact-256-aws/256/kary-1/0/topology-experiment.out
+minicluster.flux-framework.org "flux-sample" deleted
+== Running experiment {'nodes': 256, 'topo': 'kary:16'}: 1 of 2
+
+🍔 Running topology experiment size 256
+minicluster.flux-framework.org/flux-sample created
+job.batch/flux-sample condition met
+Writing topology log and recordings to ./data/raw-exact-256-aws/256/kary-16/0/topology-experiment.out
+minicluster.flux-framework.org "flux-sample" deleted
+Experiments (N=2) are done!
+total time to run is 4008.657091140747 seconds
+
+real	66m58.074s
+user	0m6.175s
+sys	0m1.354s
+```
+
+And then:
+
+```bash
+eksctl delete cluster --config-file ./eks-config-256.yaml --wait
+python run-analysis.py --out ./data/parsed-exact-256-aws --data ./data/raw-exact-256-aws
 ```
 ```console
 Experiments (N=16) are done!
@@ -220,3 +290,13 @@ Based on the time, that did come out to cost what I estimated! We likely should 
 ![data/parsed-exact-30-aws/create-archive-nodes-30.png](data/parsed-exact-30-aws/create-archive-nodes-30.png)
 ![data/parsed-exact-30-aws/delete-archive-all-nodes-nodes-30.png](data/parsed-exact-30-aws/delete-archive-all-nodes-nodes-30.png)
 ![data/parsed-exact-30-aws/distribute-all-nodes-nodes-30.png](data/parsed-exact-30-aws/distribute-all-nodes-nodes-30.png)
+
+
+### AWS 256 Node Test
+
+This took about 66 minutes, just 1 iteration for 2 sizes. The result is flipped from what I would expect (and I checked the data, indeed kary-16 was slower).
+
+![data/parsed-exact-256-aws/clean-all-nodes-nodes-256.png](data/parsed-exact-256-aws/clean-all-nodes-nodes-256.png)
+![data/parsed-exact-256-aws/create-archive-nodes-256.png](data/parsed-exact-256-aws/create-archive-nodes-256.png)
+![data/parsed-exact-256-aws/delete-archive-all-nodes-nodes-256.png](data/parsed-exact-256-aws/delete-archive-all-nodes-nodes-256.png)
+![data/parsed-exact-256-aws/distribute-all-nodes-nodes-256.png](data/parsed-exact-256-aws/distribute-all-nodes-nodes-256.png)
