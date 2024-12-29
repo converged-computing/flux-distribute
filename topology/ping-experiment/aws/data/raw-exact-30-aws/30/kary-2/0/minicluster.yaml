@@ -1,0 +1,19 @@
+apiVersion: flux-framework.org/v1alpha2
+kind: MiniCluster
+metadata:
+  name: flux-sample
+spec:
+  size: 30
+  flux:
+    topology: kary:2
+    container:
+      disable: true
+  containers:
+    - image: ghcr.io/converged-computing/topology-experiment:test
+      launcher: true
+      pullAlways: true
+      # The topology_experiment.py below writes this file
+      command: /bin/bash /entrypoint.sh
+      # pullAlways: true
+      commands:
+        pre: python3 /topology_experiment_quick.py --nodes 30 --topo kary:2

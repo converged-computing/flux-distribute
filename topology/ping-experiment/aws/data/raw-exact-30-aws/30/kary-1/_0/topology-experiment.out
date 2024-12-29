@@ -1,0 +1,720 @@
+🟧️  wait-fs: 2024/12/29 13:36:05 wait-fs.go:40: /mnt/flux/flux-operator-done.txt
+🟧️  wait-fs: 2024/12/29 13:36:05 wait-fs.go:49: Found existing path /mnt/flux/flux-operator-done.txt
+
+Hello user root
+
+🌟️ Curve Certificate
+curve.cert
+#   ****  Generated on 2023-04-26 22:54:42 by CZMQ  ****
+#   ZeroMQ CURVE **Secret** Certificate
+#   DO NOT PROVIDE THIS FILE TO OTHER USERS nor change its permissions.
+    
+metadata
+    name = "flux-cert-generator"
+    keygen.hostname = "flux-sample-0"
+curve
+    public-key = "(p3ZzTyFZC{Gm4zFo]/p{K.nXojHCA040U-u9Z{-"
+    secret-key = "wMDm.2+&D=7*Ej]&s/6lv?zE[!+WSRMEfv%ZKP<@"
+
+📦 Resources
+flux R encode --hosts=flux-sample-[0-29] --local
+{"version": 1, "execution": {"R_lite": [{"rank": "0-29", "children": {"core": "0-7"}}], "starttime": 0.0, "expiration": 0.0, "nodelist": ["flux-sample-[0-29]"]}}
+👋 Hello, I'm flux-sample-0
+The main host is flux-sample-0
+The working directory is /home/fluxuser, contents include:
+🚩️ Flux Option Flags defined
+Command provided is: /bin/bash /entrypoint.sh
+
+🌀 Launcher Mode: flux start -o --config /mnt/flux/view/etc/flux/config -Scron.directory=/etc/flux/system/cron.d   -Stbon.fanout=256   -Srundir=/mnt/flux/view/run/flux    -Sstatedir=/mnt/flux/view/var/lib/flux -Slocal-uri=local:///mnt/flux/view/run/flux/local -Stbon.connect_timeout=5s -Stbon.topo=kary:1    -Slog-stderr-level=6    -Slog-stderr-mode=local  
+broker.info[0]: start: none->join 0.35725ms
+broker.info[0]: parent-none: join->init 0.01498ms
+cron.info[0]: synchronizing cron tasks to event heartbeat.pulse
+job-manager.info[0]: restart: 0 jobs
+job-manager.info[0]: restart: 0 running jobs
+job-manager.info[0]: restart: checkpoint.job-manager not found
+broker.info[0]: rc1.0: running /etc/flux/rc1.d/01-sched-fluxion
+sched-fluxion-resource.info[0]: version 0.40.0-4-g3fb0b4e7
+sched-fluxion-resource.warning[0]: create_reader: allowlist unsupported
+sched-fluxion-resource.info[0]: populate_resource_db: loaded resources from core's resource.acquire
+sched-fluxion-qmanager.info[0]: version 0.40.0-4-g3fb0b4e7
+broker.info[0]: rc1.0: running /etc/flux/rc1.d/02-cron
+broker.info[0]: rc1.0: /etc/flux/rc1 Exited (rc=0) 0.2s
+broker.info[0]: rc1-success: init->quorum 0.228502s
+broker.info[0]: online: flux-sample-0 (ranks 0)
+broker.info[0]: online: flux-sample-[0-1] (ranks 0-1)
+broker.info[0]: online: flux-sample-[0-26] (ranks 0-26)
+broker.info[0]: online: flux-sample-[0-29] (ranks 0-29)
+broker.info[0]: quorum-full: quorum->run 10.9228s
+MODULE STATS CONTENT
+[1;39m{
+  [0m[34;1m"count"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[34;1m"valid"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[34;1m"dirty"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[34;1m"size"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[34;1m"flush-batch-count"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[34;1m"mmap"[0m[1;39m: [0m[1;39m{
+    [0m[34;1m"tags"[0m[1;39m: [0m[1;39m{}[0m[1;39m,
+    [0m[34;1m"blobs"[0m[1;39m: [0m[0;39m0[0m[1;39m
+  [1;39m}[0m[1;39m
+[1;39m}[0m
+NODES
+30
+TOPOLOGY diagram
+0 flux-sample-0: full
+└─ 1 flux-sample-1: full
+   └─ 2 flux-sample-2: full
+      └─ 3 flux-sample-3: full
+         └─ 4 flux-sample-4: full
+            └─ 5 flux-sample-5: full
+               └─ 6 flux-sample-6: full
+                  └─ 7 flux-sample-7: full
+                     └─ 8 flux-sample-8: full
+                        └─ 9 flux-sample-9: full
+                           └─ 10 flux-sample-10: full
+                              └─ 11 flux-sample-11: full
+                                 └─ 12 flux-sample-12: full
+                                    └─ 13 flux-sample-13: full
+                                       └─ 14 flux-sample-14: full
+                                          └─ 15 flux-sample-15: full
+                                             └─ 16 flux-sample-16: full
+                                                └─ 17 flux-sample-17: full
+                                                   └─ 18 flux-sample-18: full
+                                                      └─ 19 flux-sample-19: full
+                                                         └─ 20 flux-sample-20: full
+                                                            └─ 21 flux-sample-21: full
+                                                               └─ 22 flux-sample-22: full
+                                                                  └─ 23 flux-sample-23: full
+                                                                     └─ 24 flux-sample-24: full
+                                                                        └─ 25 flux-sample-25: full
+                                                                           └─ 26 flux-sample-26: full
+                                                                              └─ 27 flux-sample-27: full
+                                                                                 └─ 28 flux-sample-28: full
+                                                                                    └─ 29 flux-sample-29: full
+TOPOLOGY description
+kary:1
+RANKS 30
+EVENT flux-ping-broker-size-0-rank-0
+flux-ping 0!broker
+0!broker.ping pad=0 seq=0 time=0.185 ms (861ee690!0ef5a0ce!142dda3e)
+EVENT flux-ping-kvs-size-0-rank-0
+flux-ping 0!kvs
+0!kvs.ping pad=0 seq=0 time=0.208 ms (6f3ec674!0ef5a0ce!142dda3e!142dda3e)
+EVENT flux-ping-broker-size-0-rank-1
+flux-ping 1!broker
+1!broker.ping pad=0 seq=0 time=0.469 ms (bf42219d!0ef5a0ce!142dda3e!3a443fcd)
+EVENT flux-ping-kvs-size-0-rank-1
+flux-ping 1!kvs
+1!kvs.ping pad=0 seq=0 time=0.517 ms (0921d22f!0ef5a0ce!142dda3e!3a443fcd!3a443fcd)
+EVENT flux-ping-broker-size-0-rank-2
+flux-ping 2!broker
+2!broker.ping pad=0 seq=0 time=0.905 ms (1062b2f7!0ef5a0ce!142dda3e!3a443fcd!86b8b825)
+EVENT flux-ping-kvs-size-0-rank-2
+flux-ping 2!kvs
+2!kvs.ping pad=0 seq=0 time=0.888 ms (257f8ee8!0ef5a0ce!142dda3e!3a443fcd!86b8b825!86b8b825)
+EVENT flux-ping-broker-size-0-rank-3
+flux-ping 3!broker
+3!broker.ping pad=0 seq=0 time=1.001 ms (af79481d!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41)
+EVENT flux-ping-kvs-size-0-rank-3
+flux-ping 3!kvs
+3!kvs.ping pad=0 seq=0 time=1.180 ms (4ea925b2!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!56e77c41)
+EVENT flux-ping-broker-size-0-rank-4
+flux-ping 4!broker
+4!broker.ping pad=0 seq=0 time=1.553 ms (186be4c3!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4)
+EVENT flux-ping-kvs-size-0-rank-4
+flux-ping 4!kvs
+4!kvs.ping pad=0 seq=0 time=1.408 ms (eb0824a1!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!b6a48cf4)
+EVENT flux-ping-broker-size-0-rank-5
+flux-ping 5!broker
+5!broker.ping pad=0 seq=0 time=1.774 ms (66975875!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd)
+EVENT flux-ping-kvs-size-0-rank-5
+flux-ping 5!kvs
+5!kvs.ping pad=0 seq=0 time=1.669 ms (e923660e!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0841f2dd)
+EVENT flux-ping-broker-size-0-rank-6
+flux-ping 6!broker
+6!broker.ping pad=0 seq=0 time=1.880 ms (ef96b7dc!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4)
+EVENT flux-ping-kvs-size-0-rank-6
+flux-ping 6!kvs
+6!kvs.ping pad=0 seq=0 time=1.925 ms (6b24230e!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!0b2abab4)
+EVENT flux-ping-broker-size-0-rank-7
+flux-ping 7!broker
+7!broker.ping pad=0 seq=0 time=2.277 ms (3ec9bed5!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2)
+EVENT flux-ping-kvs-size-0-rank-7
+flux-ping 7!kvs
+7!kvs.ping pad=0 seq=0 time=2.628 ms (b2c4fe6e!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!c6a543c2)
+EVENT flux-ping-broker-size-0-rank-8
+flux-ping 8!broker
+8!broker.ping pad=0 seq=0 time=2.775 ms (93935712!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e)
+EVENT flux-ping-kvs-size-0-rank-8
+flux-ping 8!kvs
+8!kvs.ping pad=0 seq=0 time=2.730 ms (df4f6b11!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!2671976e)
+EVENT flux-ping-broker-size-0-rank-9
+flux-ping 9!broker
+9!broker.ping pad=0 seq=0 time=3.153 ms (7ec053a9!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee)
+EVENT flux-ping-kvs-size-0-rank-9
+flux-ping 9!kvs
+9!kvs.ping pad=0 seq=0 time=3.132 ms (d4feb1e6!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!c91a5bee)
+EVENT flux-ping-broker-size-0-rank-10
+flux-ping 10!broker
+10!broker.ping pad=0 seq=0 time=3.337 ms (b93cd1cc!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b)
+EVENT flux-ping-kvs-size-0-rank-10
+flux-ping 10!kvs
+10!kvs.ping pad=0 seq=0 time=3.361 ms (99ec8f54!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!6cbc360b)
+EVENT flux-ping-broker-size-0-rank-11
+flux-ping 11!broker
+11!broker.ping pad=0 seq=0 time=3.753 ms (0ef74c85!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67)
+EVENT flux-ping-kvs-size-0-rank-11
+flux-ping 11!kvs
+11!kvs.ping pad=0 seq=0 time=3.781 ms (d2bb61e8!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!a1b7ec67)
+EVENT flux-ping-broker-size-0-rank-12
+flux-ping 12!broker
+12!broker.ping pad=0 seq=0 time=4.205 ms (a9e4adb3!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914)
+EVENT flux-ping-kvs-size-0-rank-12
+flux-ping 12!kvs
+12!kvs.ping pad=0 seq=0 time=3.981 ms (7834208e!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!1e909914)
+EVENT flux-ping-broker-size-0-rank-13
+flux-ping 13!broker
+13!broker.ping pad=0 seq=0 time=4.346 ms (249635c8!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943)
+EVENT flux-ping-kvs-size-0-rank-13
+flux-ping 13!kvs
+13!kvs.ping pad=0 seq=0 time=4.589 ms (7d35e88d!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!53fd8943)
+EVENT flux-ping-broker-size-0-rank-14
+flux-ping 14!broker
+14!broker.ping pad=0 seq=0 time=4.891 ms (d13e57b9!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d)
+EVENT flux-ping-kvs-size-0-rank-14
+flux-ping 14!kvs
+14!kvs.ping pad=0 seq=0 time=4.754 ms (1ce35cf6!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!c7090b6d)
+EVENT flux-ping-broker-size-0-rank-15
+flux-ping 15!broker
+15!broker.ping pad=0 seq=0 time=5.356 ms (d5e6d619!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a)
+EVENT flux-ping-kvs-size-0-rank-15
+flux-ping 15!kvs
+15!kvs.ping pad=0 seq=0 time=5.348 ms (ed6c99d8!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!2248859a)
+EVENT flux-ping-broker-size-0-rank-16
+flux-ping 16!broker
+16!broker.ping pad=0 seq=0 time=5.647 ms (2e1c155d!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6)
+EVENT flux-ping-kvs-size-0-rank-16
+flux-ping 16!kvs
+16!kvs.ping pad=0 seq=0 time=5.858 ms (3569c586!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!e86b7ce6)
+EVENT flux-ping-broker-size-0-rank-17
+flux-ping 17!broker
+17!broker.ping pad=0 seq=0 time=6.043 ms (6b67e0a4!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad)
+EVENT flux-ping-kvs-size-0-rank-17
+flux-ping 17!kvs
+17!kvs.ping pad=0 seq=0 time=6.356 ms (0cec4e02!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!af5859ad)
+EVENT flux-ping-broker-size-0-rank-18
+flux-ping 18!broker
+18!broker.ping pad=0 seq=0 time=6.281 ms (338e8c99!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d)
+EVENT flux-ping-kvs-size-0-rank-18
+flux-ping 18!kvs
+18!kvs.ping pad=0 seq=0 time=6.331 ms (19295509!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!b7e7116d)
+EVENT flux-ping-broker-size-0-rank-19
+flux-ping 19!broker
+19!broker.ping pad=0 seq=0 time=7.132 ms (fda71f3f!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa)
+EVENT flux-ping-kvs-size-0-rank-19
+flux-ping 19!kvs
+19!kvs.ping pad=0 seq=0 time=6.713 ms (8965e5a9!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!5a0af1fa)
+EVENT flux-ping-broker-size-0-rank-20
+flux-ping 20!broker
+20!broker.ping pad=0 seq=0 time=7.403 ms (003784bc!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531)
+EVENT flux-ping-kvs-size-0-rank-20
+flux-ping 20!kvs
+20!kvs.ping pad=0 seq=0 time=7.579 ms (8505fec0!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!8ec8c531)
+EVENT flux-ping-broker-size-0-rank-21
+flux-ping 21!broker
+21!broker.ping pad=0 seq=0 time=8.142 ms (816a5a01!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5)
+EVENT flux-ping-kvs-size-0-rank-21
+flux-ping 21!kvs
+21!kvs.ping pad=0 seq=0 time=8.519 ms (2c29ad98!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!c7f3d1b5)
+EVENT flux-ping-broker-size-0-rank-22
+flux-ping 22!broker
+22!broker.ping pad=0 seq=0 time=8.312 ms (26ab997b!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f)
+EVENT flux-ping-kvs-size-0-rank-22
+flux-ping 22!kvs
+22!kvs.ping pad=0 seq=0 time=8.054 ms (13a915ed!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!38681b0f)
+EVENT flux-ping-broker-size-0-rank-23
+flux-ping 23!broker
+23!broker.ping pad=0 seq=0 time=8.358 ms (0b456ee5!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba)
+EVENT flux-ping-kvs-size-0-rank-23
+flux-ping 23!kvs
+23!kvs.ping pad=0 seq=0 time=8.507 ms (ccdeb05c!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!6021bbba)
+EVENT flux-ping-broker-size-0-rank-24
+flux-ping 24!broker
+24!broker.ping pad=0 seq=0 time=9.451 ms (3b7444e2!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f)
+EVENT flux-ping-kvs-size-0-rank-24
+flux-ping 24!kvs
+24!kvs.ping pad=0 seq=0 time=9.273 ms (9dc8655f!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!124bcb5f)
+EVENT flux-ping-broker-size-0-rank-25
+flux-ping 25!broker
+25!broker.ping pad=0 seq=0 time=9.695 ms (938f514e!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a)
+EVENT flux-ping-kvs-size-0-rank-25
+flux-ping 25!kvs
+25!kvs.ping pad=0 seq=0 time=9.634 ms (f3f26772!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!d08b149a)
+EVENT flux-ping-broker-size-0-rank-26
+flux-ping 26!broker
+26!broker.ping pad=0 seq=0 time=10.245 ms (0edb38db!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2)
+EVENT flux-ping-kvs-size-0-rank-26
+flux-ping 26!kvs
+26!kvs.ping pad=0 seq=0 time=10.071 ms (b2857d28!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!24d521b2)
+EVENT flux-ping-broker-size-0-rank-27
+flux-ping 27!broker
+27!broker.ping pad=0 seq=0 time=10.091 ms (92d068f2!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f)
+EVENT flux-ping-kvs-size-0-rank-27
+flux-ping 27!kvs
+27!kvs.ping pad=0 seq=0 time=10.433 ms (64549313!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!1a1a632f)
+EVENT flux-ping-broker-size-0-rank-28
+flux-ping 28!broker
+28!broker.ping pad=0 seq=0 time=11.316 ms (6a3f950b!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!0b05e52d)
+EVENT flux-ping-kvs-size-0-rank-28
+flux-ping 28!kvs
+28!kvs.ping pad=0 seq=0 time=10.323 ms (bcc9761f!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!0b05e52d!0b05e52d)
+EVENT flux-ping-broker-size-0-rank-29
+flux-ping 29!broker
+29!broker.ping pad=0 seq=0 time=11.878 ms (6242c1aa!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!0b05e52d!abc9f9e2)
+EVENT flux-ping-kvs-size-0-rank-29
+flux-ping 29!kvs
+29!kvs.ping pad=0 seq=0 time=11.473 ms (598c5670!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!0b05e52d!abc9f9e2!abc9f9e2)
+EVENT flux-ping-broker-size-200-rank-0
+flux-ping 0!broker
+0!broker.ping pad=209715200 seq=0 time=8680.482 ms (ca8d36e1!0ef5a0ce!142dda3e)
+EVENT flux-ping-kvs-size-200-rank-0
+flux-ping 0!kvs
+0!kvs.ping pad=209715200 seq=0 time=8753.039 ms (373af661!0ef5a0ce!142dda3e!142dda3e)
+EVENT flux-ping-broker-size-200-rank-1
+flux-ping 1!broker
+1!broker.ping pad=209715200 seq=0 time=10718.269 ms (2a5e3cf4!0ef5a0ce!142dda3e!3a443fcd)
+EVENT flux-ping-kvs-size-200-rank-1
+flux-ping 1!kvs
+1!kvs.ping pad=209715200 seq=0 time=10641.623 ms (49f50a42!0ef5a0ce!142dda3e!3a443fcd!3a443fcd)
+EVENT flux-ping-broker-size-200-rank-2
+flux-ping 2!broker
+2!broker.ping pad=209715200 seq=0 time=12751.596 ms (29997d6d!0ef5a0ce!142dda3e!3a443fcd!86b8b825)
+EVENT flux-ping-kvs-size-200-rank-2
+flux-ping 2!kvs
+2!kvs.ping pad=209715200 seq=0 time=12652.591 ms (c1601699!0ef5a0ce!142dda3e!3a443fcd!86b8b825!86b8b825)
+EVENT flux-ping-broker-size-200-rank-3
+flux-ping 3!broker
+3!broker.ping pad=209715200 seq=0 time=14762.214 ms (b81c0859!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41)
+EVENT flux-ping-kvs-size-200-rank-3
+flux-ping 3!kvs
+3!kvs.ping pad=209715200 seq=0 time=14760.237 ms (4697dd99!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!56e77c41)
+EVENT flux-ping-broker-size-200-rank-4
+flux-ping 4!broker
+4!broker.ping pad=209715200 seq=0 time=16835.317 ms (31ac5c9d!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4)
+EVENT flux-ping-kvs-size-200-rank-4
+flux-ping 4!kvs
+4!kvs.ping pad=209715200 seq=0 time=16842.122 ms (0beab225!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!b6a48cf4)
+EVENT flux-ping-broker-size-200-rank-5
+flux-ping 5!broker
+5!broker.ping pad=209715200 seq=0 time=18798.848 ms (77959a86!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd)
+EVENT flux-ping-kvs-size-200-rank-5
+flux-ping 5!kvs
+5!kvs.ping pad=209715200 seq=0 time=18735.129 ms (2188292a!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0841f2dd)
+EVENT flux-ping-broker-size-200-rank-6
+flux-ping 6!broker
+6!broker.ping pad=209715200 seq=0 time=20907.827 ms (30bf3aa1!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4)
+EVENT flux-ping-kvs-size-200-rank-6
+flux-ping 6!kvs
+6!kvs.ping pad=209715200 seq=0 time=20929.632 ms (71a280fd!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!0b2abab4)
+EVENT flux-ping-broker-size-200-rank-7
+flux-ping 7!broker
+7!broker.ping pad=209715200 seq=0 time=22778.831 ms (47f0a153!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2)
+EVENT flux-ping-kvs-size-200-rank-7
+flux-ping 7!kvs
+7!kvs.ping pad=209715200 seq=0 time=22747.757 ms (45d2a52d!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!c6a543c2)
+EVENT flux-ping-broker-size-200-rank-8
+flux-ping 8!broker
+8!broker.ping pad=209715200 seq=0 time=24825.387 ms (f87eaa65!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e)
+EVENT flux-ping-kvs-size-200-rank-8
+flux-ping 8!kvs
+8!kvs.ping pad=209715200 seq=0 time=24813.506 ms (56b95d63!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!2671976e)
+EVENT flux-ping-broker-size-200-rank-9
+flux-ping 9!broker
+9!broker.ping pad=209715200 seq=0 time=26748.785 ms (4f3103c6!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee)
+EVENT flux-ping-kvs-size-200-rank-9
+flux-ping 9!kvs
+9!kvs.ping pad=209715200 seq=0 time=26795.891 ms (96990c02!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!c91a5bee)
+EVENT flux-ping-broker-size-200-rank-10
+flux-ping 10!broker
+10!broker.ping pad=209715200 seq=0 time=28817.080 ms (9f02e5aa!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b)
+EVENT flux-ping-kvs-size-200-rank-10
+flux-ping 10!kvs
+10!kvs.ping pad=209715200 seq=0 time=28767.295 ms (1a8d026e!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!6cbc360b)
+EVENT flux-ping-broker-size-200-rank-11
+flux-ping 11!broker
+11!broker.ping pad=209715200 seq=0 time=30783.907 ms (152afa06!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67)
+EVENT flux-ping-kvs-size-200-rank-11
+flux-ping 11!kvs
+11!kvs.ping pad=209715200 seq=0 time=30727.293 ms (b26db6dd!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!a1b7ec67)
+EVENT flux-ping-broker-size-200-rank-12
+flux-ping 12!broker
+12!broker.ping pad=209715200 seq=0 time=32831.460 ms (51ec44e8!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914)
+EVENT flux-ping-kvs-size-200-rank-12
+flux-ping 12!kvs
+12!kvs.ping pad=209715200 seq=0 time=32810.485 ms (10921c92!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!1e909914)
+EVENT flux-ping-broker-size-200-rank-13
+flux-ping 13!broker
+13!broker.ping pad=209715200 seq=0 time=34799.223 ms (a0e1c771!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943)
+EVENT flux-ping-kvs-size-200-rank-13
+flux-ping 13!kvs
+13!kvs.ping pad=209715200 seq=0 time=34772.344 ms (c42de0f5!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!53fd8943)
+EVENT flux-ping-broker-size-200-rank-14
+flux-ping 14!broker
+14!broker.ping pad=209715200 seq=0 time=36746.437 ms (4f395521!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d)
+EVENT flux-ping-kvs-size-200-rank-14
+flux-ping 14!kvs
+14!kvs.ping pad=209715200 seq=0 time=36756.976 ms (c0593eb6!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!c7090b6d)
+EVENT flux-ping-broker-size-200-rank-15
+flux-ping 15!broker
+15!broker.ping pad=209715200 seq=0 time=38759.463 ms (b3799190!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a)
+EVENT flux-ping-kvs-size-200-rank-15
+flux-ping 15!kvs
+15!kvs.ping pad=209715200 seq=0 time=38886.481 ms (cb4efaeb!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!2248859a)
+EVENT flux-ping-broker-size-200-rank-16
+flux-ping 16!broker
+16!broker.ping pad=209715200 seq=0 time=40765.315 ms (dd46128d!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6)
+EVENT flux-ping-kvs-size-200-rank-16
+flux-ping 16!kvs
+16!kvs.ping pad=209715200 seq=0 time=40786.004 ms (d9078e1b!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!e86b7ce6)
+EVENT flux-ping-broker-size-200-rank-17
+flux-ping 17!broker
+17!broker.ping pad=209715200 seq=0 time=42734.586 ms (81060818!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad)
+EVENT flux-ping-kvs-size-200-rank-17
+flux-ping 17!kvs
+17!kvs.ping pad=209715200 seq=0 time=42788.124 ms (e52742ee!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!af5859ad)
+EVENT flux-ping-broker-size-200-rank-18
+flux-ping 18!broker
+18!broker.ping pad=209715200 seq=0 time=44720.076 ms (08b5e38b!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d)
+EVENT flux-ping-kvs-size-200-rank-18
+flux-ping 18!kvs
+18!kvs.ping pad=209715200 seq=0 time=44702.260 ms (a47d320b!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!b7e7116d)
+EVENT flux-ping-broker-size-200-rank-19
+flux-ping 19!broker
+19!broker.ping pad=209715200 seq=0 time=46778.327 ms (8280ba2a!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa)
+EVENT flux-ping-kvs-size-200-rank-19
+flux-ping 19!kvs
+19!kvs.ping pad=209715200 seq=0 time=46785.751 ms (81ef279a!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!5a0af1fa)
+EVENT flux-ping-broker-size-200-rank-20
+flux-ping 20!broker
+20!broker.ping pad=209715200 seq=0 time=48758.957 ms (4bc43a4f!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531)
+EVENT flux-ping-kvs-size-200-rank-20
+flux-ping 20!kvs
+20!kvs.ping pad=209715200 seq=0 time=48821.722 ms (f833c6ab!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!8ec8c531)
+EVENT flux-ping-broker-size-200-rank-21
+flux-ping 21!broker
+21!broker.ping pad=209715200 seq=0 time=50710.651 ms (cb443630!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5)
+EVENT flux-ping-kvs-size-200-rank-21
+flux-ping 21!kvs
+21!kvs.ping pad=209715200 seq=0 time=50694.950 ms (cb5c61c6!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!c7f3d1b5)
+EVENT flux-ping-broker-size-200-rank-22
+flux-ping 22!broker
+22!broker.ping pad=209715200 seq=0 time=53002.013 ms (162a9226!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f)
+EVENT flux-ping-kvs-size-200-rank-22
+flux-ping 22!kvs
+22!kvs.ping pad=209715200 seq=0 time=52866.310 ms (faef93ac!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!38681b0f)
+EVENT flux-ping-broker-size-200-rank-23
+flux-ping 23!broker
+23!broker.ping pad=209715200 seq=0 time=54754.568 ms (8bb83e86!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba)
+EVENT flux-ping-kvs-size-200-rank-23
+flux-ping 23!kvs
+23!kvs.ping pad=209715200 seq=0 time=54738.487 ms (efb8ef72!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!6021bbba)
+EVENT flux-ping-broker-size-200-rank-24
+flux-ping 24!broker
+24!broker.ping pad=209715200 seq=0 time=56791.892 ms (22143481!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f)
+EVENT flux-ping-kvs-size-200-rank-24
+flux-ping 24!kvs
+24!kvs.ping pad=209715200 seq=0 time=56812.853 ms (fd39db3e!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!124bcb5f)
+EVENT flux-ping-broker-size-200-rank-25
+flux-ping 25!broker
+25!broker.ping pad=209715200 seq=0 time=58801.587 ms (baa4c3c1!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a)
+EVENT flux-ping-kvs-size-200-rank-25
+flux-ping 25!kvs
+25!kvs.ping pad=209715200 seq=0 time=58745.843 ms (ff2494dd!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!d08b149a)
+EVENT flux-ping-broker-size-200-rank-26
+flux-ping 26!broker
+26!broker.ping pad=209715200 seq=0 time=60823.038 ms (6f722c2c!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2)
+EVENT flux-ping-kvs-size-200-rank-26
+flux-ping 26!kvs
+26!kvs.ping pad=209715200 seq=0 time=60892.216 ms (966e264d!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!24d521b2)
+EVENT flux-ping-broker-size-200-rank-27
+flux-ping 27!broker
+27!broker.ping pad=209715200 seq=0 time=62778.885 ms (a0d6a04b!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f)
+EVENT flux-ping-kvs-size-200-rank-27
+flux-ping 27!kvs
+27!kvs.ping pad=209715200 seq=0 time=62783.384 ms (f49ac477!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!1a1a632f)
+EVENT flux-ping-broker-size-200-rank-28
+flux-ping 28!broker
+28!broker.ping pad=209715200 seq=0 time=65068.181 ms (9414d53a!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!0b05e52d)
+EVENT flux-ping-kvs-size-200-rank-28
+flux-ping 28!kvs
+28!kvs.ping pad=209715200 seq=0 time=64979.712 ms (2210b1ee!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!0b05e52d!0b05e52d)
+EVENT flux-ping-broker-size-200-rank-29
+flux-ping 29!broker
+29!broker.ping pad=209715200 seq=0 time=66950.296 ms (cd807e6d!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!0b05e52d!abc9f9e2)
+EVENT flux-ping-kvs-size-200-rank-29
+flux-ping 29!kvs
+29!kvs.ping pad=209715200 seq=0 time=66910.432 ms (01ecb2f1!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!0b05e52d!abc9f9e2!abc9f9e2)
+EVENT flux-ping-broker-size-400-rank-0
+flux-ping 0!broker
+0!broker.ping pad=419430400 seq=0 time=17384.524 ms (15649ec8!0ef5a0ce!142dda3e)
+EVENT flux-ping-kvs-size-400-rank-0
+flux-ping 0!kvs
+0!kvs.ping pad=419430400 seq=0 time=17226.559 ms (81caa556!0ef5a0ce!142dda3e!142dda3e)
+EVENT flux-ping-broker-size-400-rank-1
+flux-ping 1!broker
+1!broker.ping pad=419430400 seq=0 time=21322.541 ms (8ea34025!0ef5a0ce!142dda3e!3a443fcd)
+EVENT flux-ping-kvs-size-400-rank-1
+flux-ping 1!kvs
+1!kvs.ping pad=419430400 seq=0 time=21308.878 ms (76aff4c3!0ef5a0ce!142dda3e!3a443fcd!3a443fcd)
+EVENT flux-ping-broker-size-400-rank-2
+flux-ping 2!broker
+2!broker.ping pad=419430400 seq=0 time=25339.935 ms (12c46d88!0ef5a0ce!142dda3e!3a443fcd!86b8b825)
+EVENT flux-ping-kvs-size-400-rank-2
+flux-ping 2!kvs
+2!kvs.ping pad=419430400 seq=0 time=25264.695 ms (bac5f4eb!0ef5a0ce!142dda3e!3a443fcd!86b8b825!86b8b825)
+EVENT flux-ping-broker-size-400-rank-3
+flux-ping 3!broker
+3!broker.ping pad=419430400 seq=0 time=29790.080 ms (555e2e21!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41)
+EVENT flux-ping-kvs-size-400-rank-3
+flux-ping 3!kvs
+3!kvs.ping pad=419430400 seq=0 time=29521.110 ms (fab81c17!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!56e77c41)
+EVENT flux-ping-broker-size-400-rank-4
+flux-ping 4!broker
+4!broker.ping pad=419430400 seq=0 time=33542.749 ms (63742cb4!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4)
+EVENT flux-ping-kvs-size-400-rank-4
+flux-ping 4!kvs
+4!kvs.ping pad=419430400 seq=0 time=33548.719 ms (b7322430!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!b6a48cf4)
+EVENT flux-ping-broker-size-400-rank-5
+flux-ping 5!broker
+5!broker.ping pad=419430400 seq=0 time=37535.533 ms (521f24cf!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd)
+EVENT flux-ping-kvs-size-400-rank-5
+flux-ping 5!kvs
+5!kvs.ping pad=419430400 seq=0 time=37524.658 ms (9af2fcfc!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0841f2dd)
+EVENT flux-ping-broker-size-400-rank-6
+flux-ping 6!broker
+6!broker.ping pad=419430400 seq=0 time=41787.438 ms (c7f16d5d!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4)
+EVENT flux-ping-kvs-size-400-rank-6
+flux-ping 6!kvs
+6!kvs.ping pad=419430400 seq=0 time=41732.559 ms (1f658501!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!0b2abab4)
+EVENT flux-ping-broker-size-400-rank-7
+flux-ping 7!broker
+7!broker.ping pad=419430400 seq=0 time=45553.100 ms (1a86e5ea!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2)
+EVENT flux-ping-kvs-size-400-rank-7
+flux-ping 7!kvs
+7!kvs.ping pad=419430400 seq=0 time=45513.794 ms (6dfd02f4!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!c6a543c2)
+EVENT flux-ping-broker-size-400-rank-8
+flux-ping 8!broker
+8!broker.ping pad=419430400 seq=0 time=49540.495 ms (54834c9d!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e)
+EVENT flux-ping-kvs-size-400-rank-8
+flux-ping 8!kvs
+8!kvs.ping pad=419430400 seq=0 time=49619.391 ms (2bce124e!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!2671976e)
+EVENT flux-ping-broker-size-400-rank-9
+flux-ping 9!broker
+9!broker.ping pad=419430400 seq=0 time=53504.944 ms (d2a1f9b5!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee)
+EVENT flux-ping-kvs-size-400-rank-9
+flux-ping 9!kvs
+9!kvs.ping pad=419430400 seq=0 time=53576.806 ms (9ed78382!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!c91a5bee)
+EVENT flux-ping-broker-size-400-rank-10
+flux-ping 10!broker
+10!broker.ping pad=419430400 seq=0 time=57569.221 ms (76dd4dac!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b)
+EVENT flux-ping-kvs-size-400-rank-10
+flux-ping 10!kvs
+10!kvs.ping pad=419430400 seq=0 time=57510.255 ms (0f9c0bd9!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!6cbc360b)
+EVENT flux-ping-broker-size-400-rank-11
+flux-ping 11!broker
+11!broker.ping pad=419430400 seq=0 time=61553.756 ms (3fbb09a6!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67)
+EVENT flux-ping-kvs-size-400-rank-11
+flux-ping 11!kvs
+11!kvs.ping pad=419430400 seq=0 time=61536.503 ms (4d2a4bc6!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!a1b7ec67)
+EVENT flux-ping-broker-size-400-rank-12
+flux-ping 12!broker
+12!broker.ping pad=419430400 seq=0 time=65693.005 ms (858af010!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914)
+EVENT flux-ping-kvs-size-400-rank-12
+flux-ping 12!kvs
+12!kvs.ping pad=419430400 seq=0 time=65691.467 ms (f36f65b6!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!1e909914)
+EVENT flux-ping-broker-size-400-rank-13
+flux-ping 13!broker
+13!broker.ping pad=419430400 seq=0 time=69641.907 ms (fa22dfb1!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943)
+EVENT flux-ping-kvs-size-400-rank-13
+flux-ping 13!kvs
+13!kvs.ping pad=419430400 seq=0 time=69715.708 ms (dabf86e5!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!53fd8943)
+EVENT flux-ping-broker-size-400-rank-14
+flux-ping 14!broker
+14!broker.ping pad=419430400 seq=0 time=73648.744 ms (0c497bb8!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d)
+EVENT flux-ping-kvs-size-400-rank-14
+flux-ping 14!kvs
+14!kvs.ping pad=419430400 seq=0 time=73648.259 ms (400eaf72!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!c7090b6d)
+EVENT flux-ping-broker-size-400-rank-15
+flux-ping 15!broker
+15!broker.ping pad=419430400 seq=0 time=77587.320 ms (72efa086!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a)
+EVENT flux-ping-kvs-size-400-rank-15
+flux-ping 15!kvs
+15!kvs.ping pad=419430400 seq=0 time=77545.344 ms (a5ca7328!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!2248859a)
+EVENT flux-ping-broker-size-400-rank-16
+flux-ping 16!broker
+16!broker.ping pad=419430400 seq=0 time=81527.350 ms (223f148a!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6)
+EVENT flux-ping-kvs-size-400-rank-16
+flux-ping 16!kvs
+16!kvs.ping pad=419430400 seq=0 time=81544.419 ms (6e4f33de!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!e86b7ce6)
+EVENT flux-ping-broker-size-400-rank-17
+flux-ping 17!broker
+17!broker.ping pad=419430400 seq=0 time=85474.094 ms (2a139e2c!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad)
+EVENT flux-ping-kvs-size-400-rank-17
+flux-ping 17!kvs
+17!kvs.ping pad=419430400 seq=0 time=85476.827 ms (8819605a!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!af5859ad)
+EVENT flux-ping-broker-size-400-rank-18
+flux-ping 18!broker
+18!broker.ping pad=419430400 seq=0 time=89513.524 ms (d5543a0d!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d)
+EVENT flux-ping-kvs-size-400-rank-18
+flux-ping 18!kvs
+18!kvs.ping pad=419430400 seq=0 time=89458.101 ms (b203866b!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!b7e7116d)
+EVENT flux-ping-broker-size-400-rank-19
+flux-ping 19!broker
+19!broker.ping pad=419430400 seq=0 time=93729.123 ms (10f56d9f!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa)
+EVENT flux-ping-kvs-size-400-rank-19
+flux-ping 19!kvs
+19!kvs.ping pad=419430400 seq=0 time=93662.454 ms (53ed142c!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!5a0af1fa)
+EVENT flux-ping-broker-size-400-rank-20
+flux-ping 20!broker
+20!broker.ping pad=419430400 seq=0 time=97634.720 ms (06248427!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531)
+EVENT flux-ping-kvs-size-400-rank-20
+flux-ping 20!kvs
+20!kvs.ping pad=419430400 seq=0 time=97681.199 ms (71ec6c01!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!8ec8c531)
+EVENT flux-ping-broker-size-400-rank-21
+flux-ping 21!broker
+21!broker.ping pad=419430400 seq=0 time=101677.707 ms (be25f1e1!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5)
+EVENT flux-ping-kvs-size-400-rank-21
+flux-ping 21!kvs
+21!kvs.ping pad=419430400 seq=0 time=101683.844 ms (a2bbe9d3!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!c7f3d1b5)
+EVENT flux-ping-broker-size-400-rank-22
+flux-ping 22!broker
+22!broker.ping pad=419430400 seq=0 time=105585.437 ms (69395c4d!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f)
+EVENT flux-ping-kvs-size-400-rank-22
+flux-ping 22!kvs
+22!kvs.ping pad=419430400 seq=0 time=105528.734 ms (e151d24a!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!38681b0f)
+EVENT flux-ping-broker-size-400-rank-23
+flux-ping 23!broker
+23!broker.ping pad=419430400 seq=0 time=109570.046 ms (027a2817!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba)
+EVENT flux-ping-kvs-size-400-rank-23
+flux-ping 23!kvs
+23!kvs.ping pad=419430400 seq=0 time=109562.527 ms (1fa6c7ef!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!6021bbba)
+EVENT flux-ping-broker-size-400-rank-24
+flux-ping 24!broker
+24!broker.ping pad=419430400 seq=0 time=113759.000 ms (f683da10!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f)
+EVENT flux-ping-kvs-size-400-rank-24
+flux-ping 24!kvs
+24!kvs.ping pad=419430400 seq=0 time=113752.946 ms (1ae12e9a!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!124bcb5f)
+EVENT flux-ping-broker-size-400-rank-25
+flux-ping 25!broker
+25!broker.ping pad=419430400 seq=0 time=117551.892 ms (9039b6f9!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a)
+EVENT flux-ping-kvs-size-400-rank-25
+flux-ping 25!kvs
+25!kvs.ping pad=419430400 seq=0 time=117494.207 ms (29de751f!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!d08b149a)
+EVENT flux-ping-broker-size-400-rank-26
+flux-ping 26!broker
+26!broker.ping pad=419430400 seq=0 time=121936.048 ms (b3a153d7!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2)
+EVENT flux-ping-kvs-size-400-rank-26
+flux-ping 26!kvs
+26!kvs.ping pad=419430400 seq=0 time=121733.416 ms (72f03cc6!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!24d521b2)
+EVENT flux-ping-broker-size-400-rank-27
+flux-ping 27!broker
+27!broker.ping pad=419430400 seq=0 time=125501.254 ms (2e7bf1f6!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f)
+EVENT flux-ping-kvs-size-400-rank-27
+flux-ping 27!kvs
+27!kvs.ping pad=419430400 seq=0 time=125472.219 ms (8f7b8b55!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!1a1a632f)
+EVENT flux-ping-broker-size-400-rank-28
+flux-ping 28!broker
+28!broker.ping pad=419430400 seq=0 time=129793.156 ms (8bad4b11!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!0b05e52d)
+EVENT flux-ping-kvs-size-400-rank-28
+flux-ping 28!kvs
+28!kvs.ping pad=419430400 seq=0 time=129700.214 ms (bed96700!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!0b05e52d!0b05e52d)
+EVENT flux-ping-broker-size-400-rank-29
+flux-ping 29!broker
+29!broker.ping pad=419430400 seq=0 time=133756.642 ms (67035a68!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!0b05e52d!abc9f9e2)
+EVENT flux-ping-kvs-size-400-rank-29
+flux-ping 29!kvs
+29!kvs.ping pad=419430400 seq=0 time=133669.946 ms (ab0e90e3!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!0841f2dd!0b2abab4!c6a543c2!2671976e!c91a5bee!6cbc360b!a1b7ec67!1e909914!53fd8943!c7090b6d!2248859a!e86b7ce6!af5859ad!b7e7116d!5a0af1fa!8ec8c531!c7f3d1b5!38681b0f!6021bbba!124bcb5f!d08b149a!24d521b2!1a1a632f!0b05e52d!abc9f9e2!abc9f9e2)
+EVENT flux-ping-broker-size-600-rank-0
+flux-ping 0!broker
+0!broker.ping pad=629145600 seq=0 time=26299.742 ms (84ee6bb5!0ef5a0ce!142dda3e)
+EVENT flux-ping-kvs-size-600-rank-0
+flux-ping 0!kvs
+0!kvs.ping pad=629145600 seq=0 time=26199.865 ms (1476744a!0ef5a0ce!142dda3e!142dda3e)
+EVENT flux-ping-broker-size-600-rank-1
+flux-ping 1!broker
+1!broker.ping pad=629145600 seq=0 time=32375.563 ms (e67c463b!0ef5a0ce!142dda3e!3a443fcd)
+EVENT flux-ping-kvs-size-600-rank-1
+flux-ping 1!kvs
+1!kvs.ping pad=629145600 seq=0 time=32259.767 ms (fbee8c42!0ef5a0ce!142dda3e!3a443fcd!3a443fcd)
+EVENT flux-ping-broker-size-600-rank-2
+flux-ping 2!broker
+2!broker.ping pad=629145600 seq=0 time=38468.931 ms (ac5c8431!0ef5a0ce!142dda3e!3a443fcd!86b8b825)
+EVENT flux-ping-kvs-size-600-rank-2
+flux-ping 2!kvs
+2!kvs.ping pad=629145600 seq=0 time=38249.468 ms (9251ea59!0ef5a0ce!142dda3e!3a443fcd!86b8b825!86b8b825)
+EVENT flux-ping-broker-size-600-rank-3
+flux-ping 3!broker
+3!broker.ping pad=629145600 seq=0 time=44675.241 ms (8ca86df9!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41)
+EVENT flux-ping-kvs-size-600-rank-3
+flux-ping 3!kvs
+3!kvs.ping pad=629145600 seq=0 time=44548.063 ms (ad0d4d5b!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!56e77c41)
+EVENT flux-ping-broker-size-600-rank-4
+flux-ping 4!broker
+4!broker.ping pad=629145600 seq=0 time=50655.380 ms (10247343!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4)
+EVENT flux-ping-kvs-size-600-rank-4
+flux-ping 4!kvs
+4!kvs.ping pad=629145600 seq=0 time=50655.375 ms (3785e58e!0ef5a0ce!142dda3e!3a443fcd!86b8b825!56e77c41!b6a48cf4!b6a48cf4)
+EVENT flux-ping-broker-size-600-rank-5
+flux-ping 5!broker
+
+SCRIPT entrypoint.sh
+#!/bin/bash
+# flux-topology.sh
+
+flux exec -r all flux module reload content purge-target-size=104857600 # 100mb
+echo "MODULE STATS CONTENT"
+flux module stats content | jq
+
+# Print the overlay to show the topology
+echo "NODES"
+echo "30"
+echo "TOPOLOGY diagram"
+flux overlay status
+echo "TOPOLOGY description"
+echo "kary:1"
+
+# Get the total size (number of children)
+ranks=$(flux getattr size)
+echo "RANKS ${ranks}"
+
+# But we are testing this many...
+nodes=30
+
+# We start counting at 0
+max_rank="$((nodes-1))"
+
+# --pad
+# Include in the payload a string of length *N* bytes. *N* may be a floating point number with optional multiplicative suffix (K,M,G). The payload will be echoed back in the response. This option can be used to explore the effect of message size on latency. Default: no padding.
+
+# Limit is 2G
+# flux-ping: flux-ping: pad: value 8192M too large (must be < 2G)
+
+# target may be the name of a Flux service, e.g. "kvs". :program:`flux ping` will send a request to "kvs.ping". As a shorthand, target can include a rank or host prefix delimited by an exclamation point. :program:`flux ping 4!kvs` is equivalent to :option:`flux ping --rank 4 kvs` (see :option:`--rank` option below). Don't forget to quote the exclamation point if it is interpreted by your shell.
+
+# As a shorthand, target may also simply be a rank or host by itself indicating that the broker on that rank/host, rather than a Flux service, is to be pinged. :command:`flux ping 1` is equivalent to :option:`flux ping --rank 1 broker`.
+# Sizes 0, 200, 400, 600, 800, 1000 M
+
+# Run flux ping for each of the kvs and broker, across all ranks (testing the topology) and message sizes up to
+# Go up to 1000MB (1GB) 
+for size in $(echo 0 200 400 600 800 1000)
+  do
+  for rank in $(seq 0 ${max_rank})
+    do
+    echo "EVENT flux-ping-broker-size-${size}-rank-${rank}"
+    flux ping -c1 --pad=${size}M --rank ${rank} broker
+    echo "EVENT flux-ping-kvs-size-${size}-rank-${rank}"
+    flux ping -c1 --pad=${size}M --rank ${rank} kvs
+  done
+done
+
+# Show self!
+echo "SCRIPT entrypoint"

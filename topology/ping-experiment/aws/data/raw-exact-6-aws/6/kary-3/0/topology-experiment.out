@@ -1,0 +1,354 @@
+🟧️  wait-fs: 2024/12/29 08:04:06 wait-fs.go:40: /mnt/flux/flux-operator-done.txt
+🟧️  wait-fs: 2024/12/29 08:04:06 wait-fs.go:49: Found existing path /mnt/flux/flux-operator-done.txt
+
+Hello user root
+
+🌟️ Curve Certificate
+curve.cert
+#   ****  Generated on 2023-04-26 22:54:42 by CZMQ  ****
+#   ZeroMQ CURVE **Secret** Certificate
+#   DO NOT PROVIDE THIS FILE TO OTHER USERS nor change its permissions.
+    
+metadata
+    name = "flux-cert-generator"
+    keygen.hostname = "flux-sample-0"
+curve
+    public-key = "{H>3+v@8WuhH#mVkd:9yO<tf#LSXIJ!w>MFl{]9k"
+    secret-key = "GfYqfQh@YLT+ZdKKNlU#og{S96m@W#B^A?8LMYII"
+
+📦 Resources
+flux R encode --hosts=flux-sample-[0-5] --local
+{"version": 1, "execution": {"R_lite": [{"rank": "0-5", "children": {"core": "0-7"}}], "starttime": 0.0, "expiration": 0.0, "nodelist": ["flux-sample-[0-5]"]}}
+👋 Hello, I'm flux-sample-0
+The main host is flux-sample-0
+The working directory is /home/fluxuser, contents include:
+🚩️ Flux Option Flags defined
+Command provided is: /bin/bash /entrypoint.sh
+
+🌀 Launcher Mode: flux start -o --config /mnt/flux/view/etc/flux/config -Scron.directory=/etc/flux/system/cron.d   -Stbon.fanout=256   -Srundir=/mnt/flux/view/run/flux    -Sstatedir=/mnt/flux/view/var/lib/flux -Slocal-uri=local:///mnt/flux/view/run/flux/local -Stbon.connect_timeout=5s -Stbon.topo=kary:3    -Slog-stderr-level=6    -Slog-stderr-mode=local  
+broker.info[0]: start: none->join 0.329859ms
+broker.info[0]: parent-none: join->init 0.01501ms
+cron.info[0]: synchronizing cron tasks to event heartbeat.pulse
+job-manager.info[0]: restart: 0 jobs
+job-manager.info[0]: restart: 0 running jobs
+job-manager.info[0]: restart: checkpoint.job-manager not found
+broker.info[0]: rc1.0: running /etc/flux/rc1.d/01-sched-fluxion
+sched-fluxion-resource.info[0]: version 0.40.0-4-g3fb0b4e7
+sched-fluxion-resource.warning[0]: create_reader: allowlist unsupported
+sched-fluxion-resource.info[0]: populate_resource_db: loaded resources from core's resource.acquire
+sched-fluxion-qmanager.info[0]: version 0.40.0-4-g3fb0b4e7
+broker.info[0]: rc1.0: running /etc/flux/rc1.d/02-cron
+broker.info[0]: rc1.0: /etc/flux/rc1 Exited (rc=0) 0.2s
+broker.info[0]: rc1-success: init->quorum 0.224311s
+broker.info[0]: online: flux-sample-0 (ranks 0)
+broker.info[0]: online: flux-sample-[0-5] (ranks 0-5)
+broker.info[0]: quorum-full: quorum->run 5.12367s
+MODULE STATS CONTENT
+[1;39m{
+  [0m[34;1m"count"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[34;1m"valid"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[34;1m"dirty"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[34;1m"size"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[34;1m"flush-batch-count"[0m[1;39m: [0m[0;39m0[0m[1;39m,
+  [0m[34;1m"mmap"[0m[1;39m: [0m[1;39m{
+    [0m[34;1m"tags"[0m[1;39m: [0m[1;39m{}[0m[1;39m,
+    [0m[34;1m"blobs"[0m[1;39m: [0m[0;39m0[0m[1;39m
+  [1;39m}[0m[1;39m
+[1;39m}[0m
+NODES
+6
+TOPOLOGY diagram
+0 flux-sample-0: full
+├─ 1 flux-sample-1: full
+│  ├─ 4 flux-sample-4: full
+│  └─ 5 flux-sample-5: full
+├─ 2 flux-sample-2: full
+└─ 3 flux-sample-3: full
+TOPOLOGY description
+kary:3
+RANKS 6
+EVENT flux-ping-broker-size-0-rank-0
+flux-ping 0!broker
+0!broker.ping pad=0 seq=0 time=0.143 ms (36edb2a2!59ad6ccb!058ee4df)
+EVENT flux-ping-kvs-size-0-rank-0
+flux-ping 0!kvs
+0!kvs.ping pad=0 seq=0 time=0.210 ms (05d783d7!59ad6ccb!058ee4df!058ee4df)
+EVENT flux-ping-broker-size-0-rank-1
+flux-ping 1!broker
+1!broker.ping pad=0 seq=0 time=0.543 ms (14b632e4!59ad6ccb!058ee4df!8daaa4b5)
+EVENT flux-ping-kvs-size-0-rank-1
+flux-ping 1!kvs
+1!kvs.ping pad=0 seq=0 time=0.543 ms (179d11fa!59ad6ccb!058ee4df!8daaa4b5!8daaa4b5)
+EVENT flux-ping-broker-size-0-rank-2
+flux-ping 2!broker
+2!broker.ping pad=0 seq=0 time=0.514 ms (eeee7a7d!59ad6ccb!058ee4df!db212904)
+EVENT flux-ping-kvs-size-0-rank-2
+flux-ping 2!kvs
+2!kvs.ping pad=0 seq=0 time=0.660 ms (adb72280!59ad6ccb!058ee4df!db212904!db212904)
+EVENT flux-ping-broker-size-0-rank-3
+flux-ping 3!broker
+3!broker.ping pad=0 seq=0 time=0.539 ms (39bb53db!59ad6ccb!058ee4df!700406df)
+EVENT flux-ping-kvs-size-0-rank-3
+flux-ping 3!kvs
+3!kvs.ping pad=0 seq=0 time=0.526 ms (8952917f!59ad6ccb!058ee4df!700406df!700406df)
+EVENT flux-ping-broker-size-0-rank-4
+flux-ping 4!broker
+4!broker.ping pad=0 seq=0 time=0.759 ms (3d89ea6a!59ad6ccb!058ee4df!8daaa4b5!f50b8d03)
+EVENT flux-ping-kvs-size-0-rank-4
+flux-ping 4!kvs
+4!kvs.ping pad=0 seq=0 time=0.862 ms (e88665ab!59ad6ccb!058ee4df!8daaa4b5!f50b8d03!f50b8d03)
+EVENT flux-ping-broker-size-0-rank-5
+flux-ping 5!broker
+5!broker.ping pad=0 seq=0 time=0.878 ms (b066b3c5!59ad6ccb!058ee4df!8daaa4b5!6af754f6)
+EVENT flux-ping-kvs-size-0-rank-5
+flux-ping 5!kvs
+5!kvs.ping pad=0 seq=0 time=0.889 ms (ea0020c3!59ad6ccb!058ee4df!8daaa4b5!6af754f6!6af754f6)
+EVENT flux-ping-broker-size-200-rank-0
+flux-ping 0!broker
+0!broker.ping pad=209715200 seq=0 time=8665.889 ms (bcb68986!59ad6ccb!058ee4df)
+EVENT flux-ping-kvs-size-200-rank-0
+flux-ping 0!kvs
+0!kvs.ping pad=209715200 seq=0 time=8643.068 ms (e0320728!59ad6ccb!058ee4df!058ee4df)
+EVENT flux-ping-broker-size-200-rank-1
+flux-ping 1!broker
+1!broker.ping pad=209715200 seq=0 time=10811.881 ms (008311aa!59ad6ccb!058ee4df!8daaa4b5)
+EVENT flux-ping-kvs-size-200-rank-1
+flux-ping 1!kvs
+1!kvs.ping pad=209715200 seq=0 time=10837.334 ms (f7e62475!59ad6ccb!058ee4df!8daaa4b5!8daaa4b5)
+EVENT flux-ping-broker-size-200-rank-2
+flux-ping 2!broker
+2!broker.ping pad=209715200 seq=0 time=10697.286 ms (5a297455!59ad6ccb!058ee4df!db212904)
+EVENT flux-ping-kvs-size-200-rank-2
+flux-ping 2!kvs
+2!kvs.ping pad=209715200 seq=0 time=10690.476 ms (8f800f54!59ad6ccb!058ee4df!db212904!db212904)
+EVENT flux-ping-broker-size-200-rank-3
+flux-ping 3!broker
+3!broker.ping pad=209715200 seq=0 time=10693.565 ms (d34bbb62!59ad6ccb!058ee4df!700406df)
+EVENT flux-ping-kvs-size-200-rank-3
+flux-ping 3!kvs
+3!kvs.ping pad=209715200 seq=0 time=10689.038 ms (9614e5f4!59ad6ccb!058ee4df!700406df!700406df)
+EVENT flux-ping-broker-size-200-rank-4
+flux-ping 4!broker
+4!broker.ping pad=209715200 seq=0 time=12705.797 ms (90fcdab9!59ad6ccb!058ee4df!8daaa4b5!f50b8d03)
+EVENT flux-ping-kvs-size-200-rank-4
+flux-ping 4!kvs
+4!kvs.ping pad=209715200 seq=0 time=12679.739 ms (3a9fba5f!59ad6ccb!058ee4df!8daaa4b5!f50b8d03!f50b8d03)
+EVENT flux-ping-broker-size-200-rank-5
+flux-ping 5!broker
+5!broker.ping pad=209715200 seq=0 time=12740.587 ms (fb2f9705!59ad6ccb!058ee4df!8daaa4b5!6af754f6)
+EVENT flux-ping-kvs-size-200-rank-5
+flux-ping 5!kvs
+5!kvs.ping pad=209715200 seq=0 time=12696.372 ms (473e9e10!59ad6ccb!058ee4df!8daaa4b5!6af754f6!6af754f6)
+EVENT flux-ping-broker-size-400-rank-0
+flux-ping 0!broker
+0!broker.ping pad=419430400 seq=0 time=17344.453 ms (268f859d!59ad6ccb!058ee4df)
+EVENT flux-ping-kvs-size-400-rank-0
+flux-ping 0!kvs
+0!kvs.ping pad=419430400 seq=0 time=17258.544 ms (958174b7!59ad6ccb!058ee4df!058ee4df)
+EVENT flux-ping-broker-size-400-rank-1
+flux-ping 1!broker
+1!broker.ping pad=419430400 seq=0 time=21534.766 ms (1c79030a!59ad6ccb!058ee4df!8daaa4b5)
+EVENT flux-ping-kvs-size-400-rank-1
+flux-ping 1!kvs
+1!kvs.ping pad=419430400 seq=0 time=21544.142 ms (c28f887c!59ad6ccb!058ee4df!8daaa4b5!8daaa4b5)
+EVENT flux-ping-broker-size-400-rank-2
+flux-ping 2!broker
+2!broker.ping pad=419430400 seq=0 time=21361.560 ms (c3497301!59ad6ccb!058ee4df!db212904)
+EVENT flux-ping-kvs-size-400-rank-2
+flux-ping 2!kvs
+2!kvs.ping pad=419430400 seq=0 time=21322.257 ms (46b7d95d!59ad6ccb!058ee4df!db212904!db212904)
+EVENT flux-ping-broker-size-400-rank-3
+flux-ping 3!broker
+3!broker.ping pad=419430400 seq=0 time=21335.623 ms (d8df2581!59ad6ccb!058ee4df!700406df)
+EVENT flux-ping-kvs-size-400-rank-3
+flux-ping 3!kvs
+3!kvs.ping pad=419430400 seq=0 time=21427.994 ms (813ebbc7!59ad6ccb!058ee4df!700406df!700406df)
+EVENT flux-ping-broker-size-400-rank-4
+flux-ping 4!broker
+4!broker.ping pad=419430400 seq=0 time=25387.749 ms (180409d9!59ad6ccb!058ee4df!8daaa4b5!f50b8d03)
+EVENT flux-ping-kvs-size-400-rank-4
+flux-ping 4!kvs
+4!kvs.ping pad=419430400 seq=0 time=25329.132 ms (10301ee7!59ad6ccb!058ee4df!8daaa4b5!f50b8d03!f50b8d03)
+EVENT flux-ping-broker-size-400-rank-5
+flux-ping 5!broker
+5!broker.ping pad=419430400 seq=0 time=25324.292 ms (f6cb2bad!59ad6ccb!058ee4df!8daaa4b5!6af754f6)
+EVENT flux-ping-kvs-size-400-rank-5
+flux-ping 5!kvs
+5!kvs.ping pad=419430400 seq=0 time=25320.857 ms (7bd49ea7!59ad6ccb!058ee4df!8daaa4b5!6af754f6!6af754f6)
+EVENT flux-ping-broker-size-600-rank-0
+flux-ping 0!broker
+0!broker.ping pad=629145600 seq=0 time=26332.878 ms (1ecd523d!59ad6ccb!058ee4df)
+EVENT flux-ping-kvs-size-600-rank-0
+flux-ping 0!kvs
+0!kvs.ping pad=629145600 seq=0 time=26322.962 ms (b7c9ae7d!59ad6ccb!058ee4df!058ee4df)
+EVENT flux-ping-broker-size-600-rank-1
+flux-ping 1!broker
+1!broker.ping pad=629145600 seq=0 time=32238.884 ms (f4a61db0!59ad6ccb!058ee4df!8daaa4b5)
+EVENT flux-ping-kvs-size-600-rank-1
+flux-ping 1!kvs
+1!kvs.ping pad=629145600 seq=0 time=32238.863 ms (c3b2e5d6!59ad6ccb!058ee4df!8daaa4b5!8daaa4b5)
+EVENT flux-ping-broker-size-600-rank-2
+flux-ping 2!broker
+2!broker.ping pad=629145600 seq=0 time=32467.100 ms (f353f6fc!59ad6ccb!058ee4df!db212904)
+EVENT flux-ping-kvs-size-600-rank-2
+flux-ping 2!kvs
+2!kvs.ping pad=629145600 seq=0 time=32216.857 ms (51cc5fa3!59ad6ccb!058ee4df!db212904!db212904)
+EVENT flux-ping-broker-size-600-rank-3
+flux-ping 3!broker
+3!broker.ping pad=629145600 seq=0 time=32298.183 ms (5765a240!59ad6ccb!058ee4df!700406df)
+EVENT flux-ping-kvs-size-600-rank-3
+flux-ping 3!kvs
+3!kvs.ping pad=629145600 seq=0 time=32232.350 ms (bdfd198e!59ad6ccb!058ee4df!700406df!700406df)
+EVENT flux-ping-broker-size-600-rank-4
+flux-ping 4!broker
+4!broker.ping pad=629145600 seq=0 time=38278.950 ms (f81c5dbd!59ad6ccb!058ee4df!8daaa4b5!f50b8d03)
+EVENT flux-ping-kvs-size-600-rank-4
+flux-ping 4!kvs
+4!kvs.ping pad=629145600 seq=0 time=38235.438 ms (a2b895fe!59ad6ccb!058ee4df!8daaa4b5!f50b8d03!f50b8d03)
+EVENT flux-ping-broker-size-600-rank-5
+flux-ping 5!broker
+5!broker.ping pad=629145600 seq=0 time=38282.079 ms (4da017b0!59ad6ccb!058ee4df!8daaa4b5!6af754f6)
+EVENT flux-ping-kvs-size-600-rank-5
+flux-ping 5!kvs
+5!kvs.ping pad=629145600 seq=0 time=38212.637 ms (c44b9c3b!59ad6ccb!058ee4df!8daaa4b5!6af754f6!6af754f6)
+EVENT flux-ping-broker-size-800-rank-0
+flux-ping 0!broker
+0!broker.ping pad=838860800 seq=0 time=34717.840 ms (7bf64d80!59ad6ccb!058ee4df)
+EVENT flux-ping-kvs-size-800-rank-0
+flux-ping 0!kvs
+0!kvs.ping pad=838860800 seq=0 time=34553.901 ms (8d9c39b9!59ad6ccb!058ee4df!058ee4df)
+EVENT flux-ping-broker-size-800-rank-1
+flux-ping 1!broker
+1!broker.ping pad=838860800 seq=0 time=42871.753 ms (ced2804c!59ad6ccb!058ee4df!8daaa4b5)
+EVENT flux-ping-kvs-size-800-rank-1
+flux-ping 1!kvs
+1!kvs.ping pad=838860800 seq=0 time=42652.471 ms (6586788f!59ad6ccb!058ee4df!8daaa4b5!8daaa4b5)
+EVENT flux-ping-broker-size-800-rank-2
+flux-ping 2!broker
+2!broker.ping pad=838860800 seq=0 time=42700.547 ms (95536c47!59ad6ccb!058ee4df!db212904)
+EVENT flux-ping-kvs-size-800-rank-2
+flux-ping 2!kvs
+2!kvs.ping pad=838860800 seq=0 time=42843.228 ms (1827a3cd!59ad6ccb!058ee4df!db212904!db212904)
+EVENT flux-ping-broker-size-800-rank-3
+flux-ping 3!broker
+3!broker.ping pad=838860800 seq=0 time=42715.890 ms (7b0ddf87!59ad6ccb!058ee4df!700406df)
+EVENT flux-ping-kvs-size-800-rank-3
+flux-ping 3!kvs
+3!kvs.ping pad=838860800 seq=0 time=42935.131 ms (03e51f7d!59ad6ccb!058ee4df!700406df!700406df)
+EVENT flux-ping-broker-size-800-rank-4
+flux-ping 4!broker
+4!broker.ping pad=838860800 seq=0 time=50577.926 ms (d6726abf!59ad6ccb!058ee4df!8daaa4b5!f50b8d03)
+EVENT flux-ping-kvs-size-800-rank-4
+flux-ping 4!kvs
+4!kvs.ping pad=838860800 seq=0 time=50682.773 ms (7f5e9db3!59ad6ccb!058ee4df!8daaa4b5!f50b8d03!f50b8d03)
+EVENT flux-ping-broker-size-800-rank-5
+flux-ping 5!broker
+5!broker.ping pad=838860800 seq=0 time=50782.847 ms (36f41017!59ad6ccb!058ee4df!8daaa4b5!6af754f6)
+EVENT flux-ping-kvs-size-800-rank-5
+flux-ping 5!kvs
+5!kvs.ping pad=838860800 seq=0 time=50854.432 ms (a62ffd53!59ad6ccb!058ee4df!8daaa4b5!6af754f6!6af754f6)
+EVENT flux-ping-broker-size-1000-rank-0
+flux-ping 0!broker
+0!broker.ping pad=1048576000 seq=0 time=43155.159 ms (cb5237a4!59ad6ccb!058ee4df)
+EVENT flux-ping-kvs-size-1000-rank-0
+flux-ping 0!kvs
+0!kvs.ping pad=1048576000 seq=0 time=42854.501 ms (bb5b060d!59ad6ccb!058ee4df!058ee4df)
+EVENT flux-ping-broker-size-1000-rank-1
+flux-ping 1!broker
+1!broker.ping pad=1048576000 seq=0 time=53257.090 ms (110d5daf!59ad6ccb!058ee4df!8daaa4b5)
+EVENT flux-ping-kvs-size-1000-rank-1
+flux-ping 1!kvs
+1!kvs.ping pad=1048576000 seq=0 time=53066.076 ms (9b7c2a51!59ad6ccb!058ee4df!8daaa4b5!8daaa4b5)
+EVENT flux-ping-broker-size-1000-rank-2
+flux-ping 2!broker
+2!broker.ping pad=1048576000 seq=0 time=52989.492 ms (ff4c78ae!59ad6ccb!058ee4df!db212904)
+EVENT flux-ping-kvs-size-1000-rank-2
+flux-ping 2!kvs
+2!kvs.ping pad=1048576000 seq=0 time=53065.726 ms (9e7e6a83!59ad6ccb!058ee4df!db212904!db212904)
+EVENT flux-ping-broker-size-1000-rank-3
+flux-ping 3!broker
+3!broker.ping pad=1048576000 seq=0 time=53039.791 ms (17d89fd6!59ad6ccb!058ee4df!700406df)
+EVENT flux-ping-kvs-size-1000-rank-3
+flux-ping 3!kvs
+3!kvs.ping pad=1048576000 seq=0 time=53108.185 ms (89a055c4!59ad6ccb!058ee4df!700406df!700406df)
+EVENT flux-ping-broker-size-1000-rank-4
+flux-ping 4!broker
+4!broker.ping pad=1048576000 seq=0 time=62979.796 ms (29478e99!59ad6ccb!058ee4df!8daaa4b5!f50b8d03)
+EVENT flux-ping-kvs-size-1000-rank-4
+flux-ping 4!kvs
+4!kvs.ping pad=1048576000 seq=0 time=63102.400 ms (0645d40e!59ad6ccb!058ee4df!8daaa4b5!f50b8d03!f50b8d03)
+EVENT flux-ping-broker-size-1000-rank-5
+flux-ping 5!broker
+5!broker.ping pad=1048576000 seq=0 time=63138.419 ms (7881a923!59ad6ccb!058ee4df!8daaa4b5!6af754f6)
+EVENT flux-ping-kvs-size-1000-rank-5
+flux-ping 5!kvs
+5!kvs.ping pad=1048576000 seq=0 time=63096.694 ms (c86ee784!59ad6ccb!058ee4df!8daaa4b5!6af754f6!6af754f6)
+SCRIPT entrypoint
+
+#!/bin/bash
+# flux-topology.sh
+
+flux exec -r all flux module reload content purge-target-size=104857600 # 100mb
+echo "MODULE STATS CONTENT"
+flux module stats content | jq
+
+# Print the overlay to show the topology
+echo "NODES"
+echo "6"
+echo "TOPOLOGY diagram"
+flux overlay status
+echo "TOPOLOGY description"
+echo "kary:3"
+
+# Get the total size (number of children)
+ranks=$(flux getattr size)
+echo "RANKS ${ranks}"
+
+# But we are testing this many...
+nodes=6
+
+# We start counting at 0
+max_rank="$((nodes-1))"
+
+# --pad
+# Include in the payload a string of length *N* bytes. *N* may be a floating point number with optional multiplicative suffix (K,M,G). The payload will be echoed back in the response. This option can be used to explore the effect of message size on latency. Default: no padding.
+
+# Limit is 2G
+# flux-ping: flux-ping: pad: value 8192M too large (must be < 2G)
+
+# target may be the name of a Flux service, e.g. "kvs". :program:`flux ping` will send a request to "kvs.ping". As a shorthand, target can include a rank or host prefix delimited by an exclamation point. :program:`flux ping 4!kvs` is equivalent to :option:`flux ping --rank 4 kvs` (see :option:`--rank` option below). Don't forget to quote the exclamation point if it is interpreted by your shell.
+
+# As a shorthand, target may also simply be a rank or host by itself indicating that the broker on that rank/host, rather than a Flux service, is to be pinged. :command:`flux ping 1` is equivalent to :option:`flux ping --rank 1 broker`.
+# Sizes 0, 200, 400, 600, 800, 1000 M
+
+# Run flux ping for each of the kvs and broker, across all ranks (testing the topology) and message sizes up to
+# Go up to 1000MB (1GB) 
+for size in $(echo 0 200 400 600 800 1000)
+  do
+  for rank in $(seq 0 ${max_rank})
+    do
+    echo "EVENT flux-ping-broker-size-${size}-rank-${rank}"
+    flux ping -c1 --pad=${size}M --rank ${rank} broker
+    echo "EVENT flux-ping-kvs-size-${size}-rank-${rank}"
+    flux ping -c1 --pad=${size}M --rank ${rank} kvs
+  done
+done
+
+# Show self!
+echo "SCRIPT entrypoint"
+cat $0broker.info[0]: rc2.0: /bin/bash /entrypoint.sh Exited (rc=0) 2007.8s
+broker.info[0]: rc2-success: run->cleanup 33.4631m
+broker.info[0]: cleanup.0: flux queue stop --quiet --all --nocheckpoint Exited (rc=0) 0.1s
+broker.info[0]: cleanup.1: flux resource acquire-mute Exited (rc=0) 0.1s
+broker.info[0]: cleanup.2: flux cancel --user=all --quiet --states RUN Exited (rc=0) 0.1s
+broker.info[0]: cleanup.3: flux queue idle --quiet Exited (rc=0) 0.1s
+broker.info[0]: cleanup-success: cleanup->shutdown 0.373944s
+broker.info[0]: children-complete: shutdown->finalize 0.113491s
+broker.info[0]: rc3.0: running /etc/flux/rc3.d/01-sched-fluxion
+kvs.err[0]: content_load_completion: content_load_get: No such file or directory
+broker.err[0]: rc3.0: flux: Error committing finish event: No such file or directory
+broker.err[0]: rc3.0: flux-content: content.flush: Function not implemented
+content-sqlite.err[0]: unregister-backing: content backing store is not active: Invalid argument
+broker.err[0]: rc3.0: /etc/flux/rc3 Exited (rc=1) 0.1s
+broker.info[0]: rc3-fail: finalize->goodbye 0.111974s
+broker.info[0]: goodbye: goodbye->exit 0.042571ms
